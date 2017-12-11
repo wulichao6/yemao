@@ -63,6 +63,11 @@ ul {
   top: 0;
   right: 0.18rem;
 }
+.header .header-right img{
+  width: 0.4rem;
+  margin-top: 0.2rem;
+  margin-left: 0.4rem;
+}
 /*首页列表模块公共样式*/
 .gz-list {
   width: 100%;
@@ -737,4 +742,119 @@ ul {
   right: 0.2rem;
   color: #9e9e9e;
 }
+/*待处理*/
+.ddlist-sjsdai {
+  height: 2.6rem;
+  background-color: white;
+  margin-top: 0.1rem;
+}
 
+.ddlist-sjsdai .ds-top {
+  height: 1.8rem;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+ .ddlist-sjsdai .ds-top .ds-img {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #CCCCCC;
+  margin: 0.1rem 0.18rem;
+  float: left;
+}
+ .ddlist-sjsdai .ds-top .ds-img img{
+  width: 100%;
+  height: 100%;
+}
+.ddlist-sjsdai .ds-top .ds-jianjie {
+  float: left;
+  width: 5.4rem;
+  height: 1.6rem;
+  line-height: 0.4rem;
+  margin: 0.1rem 0px;
+}
+
+.ddlist-sjsdai .ds-top .ds-jianjie .jianjie-top {
+  width: 100%;
+  height: 1rem;
+  font-size: 0.26rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #4e4e4e;
+}
+
+.ddlist-sjsdai .ds-top .ds-jianjie .jianjie-bottom {
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.2rem;
+}
+
+.ddlist-sjsdai .ds-top .ds-jianjie .jianjie-bottom .db-leixin {
+  float: left;
+  line-height: 0.6rem;
+  height: 0.6rem;
+}
+
+ .ddlist-sjsdai .ds-top .ds-jianjie .jianjie-bottom .db-leixin .yuan {
+  color: #f74d9f;
+}
+
+ .ddlist-sjsdai .ds-top .ds-jianjie .jianjie-bottom .db-djs {
+  float: right;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+
+.ddlist-sjsdai .ds-bottom {
+  width: 100%;
+  height: 0.8rem;
+  font-size: 0.22rem;
+}
+
+.ddlist-sjsdai .ds-bottom .db-right {
+  float: right;
+  height: 0.8rem;
+}
+
+.ddlist-sjsdai .ds-bottom .db-right .db-qxdd {
+  float: left;
+  width: 1.5rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  border: 1px solid #CCCCCC;
+  border-radius: 0.5rem;
+  color: #CCCCCC;
+  margin-right: 0.24rem;
+  margin-top: 0.15rem;
+}
+
+.ddlist-sjsdai .ds-bottom .db-right .db-sxdd {
+  float: left;
+  width: 1.5rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  border: 1px solid #f75ea7;
+  border-radius: 0.5rem;
+  color: #f75ea7;
+  margin-right: 0.24rem;
+  margin-top: 0.15rem;
+}
+
+.ddlist-sjsdai .ds-bottom .db-right .db-qrdd {
+  float: left;
+  width: 1.5rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: white;
+  margin-right: 0.24rem;
+  margin-top: 0.15rem;
+  background: -webkit-linear-gradient(left, #f74f9c, #fd7376);
+  background: -o-linear-gradient(right, #f74f9c, #fd7376);
+  background: -moz-linear-gradient(right, #f74f9c, #fd7376);
+  background: linear-gradient(to right, #f74f9c, #fd7376);
+}
