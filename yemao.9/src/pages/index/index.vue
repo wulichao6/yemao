@@ -51,7 +51,7 @@
         <div class="lb-img">
           <img src="../../assets/images/index/jipaishui.png" />
         </div>
-        <p>给排水</p>
+        <p>给排水123</p>
       </div>
       <div class="list-box">
         <div class="lb-img">
