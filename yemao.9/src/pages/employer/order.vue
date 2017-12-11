@@ -12,7 +12,8 @@
       <!--订单确认后详情页-->
       <div class="ddxq">
         <div class="ddxq-top">
-          <div class="ddxq-img" :style="cover" @click="toUrl('emporderimgs')">
+          <div class="ddxq-img"@click="toUrl('emporderimgs')">
+            <img src='../../assets/images/bj.jpg'>
             <div class="num">5</div>
           </div>
           <div class="ddxq-jianjie">
@@ -28,7 +29,7 @@
         <div class="ddxq-list">
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="images/leixin.png"/></span><span>预计完成：</span>
+              <span><img src='../../assets/images/employer/leixin.png'></span><span>预计完成：</span>
             </div>
             <div class="box-right">
               <span>2017-05-24</span>
@@ -36,7 +37,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="images/leixin.png"/></span><span>交易状态：</span>
+              <span><img src='../../assets/images/employer/leixin.png'></span><span>交易状态：</span>
             </div>
             <div class="box-right">
               <span>建筑设计</span>
@@ -44,7 +45,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="images/leixin.png"/></span><span>设计深度：</span>
+              <span><img src='../../assets/images/employer/leixin.png'></span><span>设计深度：</span>
             </div>
             <div class="box-right">
               <span>方案</span>
@@ -52,7 +53,7 @@
           </div>
           <div class="ddxq-box" style="border: none;">
             <div class="box-left">
-                <span><img src="images/leixin.png"/></span><span>工时：</span>
+                <span><img src='../../assets/images/employer/leixin.png'></span><span>工时：</span>
             </div>
             <div class="box-right">
               <span>20小时</span>
@@ -86,7 +87,7 @@
               <div class="qt-nichen">
                 <span>设计师小A</span>
               </div>
-              <div class="chat"></div>
+              <div class="chat"><img src='../../assets/images/employer/miaomiao.png'></div>
               <div class="qt-jiage">
                 <div class="qt-time"><span>20小时</span></div>
                 <div class="qt-jingqian"><span>￥</span><span>5000</span></div>
@@ -113,7 +114,7 @@
               <div class="qt-nichen">
                 <span>设计师小B</span>
               </div>
-              <div class="chat"></div>
+              <div class="chat"><img src='../../assets/images/employer/miaomiao.png'></div>
               <div class="qt-jiage">
                 <div class="qt-time"><span>20小时</span></div>
                 <div class="qt-jingqian"><span>￥</span><span>5000</span></div>
@@ -133,6 +134,7 @@
     <!--底部-->
     <div class="od-botton">
       <div class="mmliaotian">
+        <span><img src='../../assets/images/employer/miaomiao.png'></span>
         <span>喵喵聊天</span>
       </div>
       <div class="lijiqiangdan">立即抢单</div>
@@ -155,6 +157,9 @@
         }
       }
     },
+    mounted: function () {
+      this.zhishu();
+    },
     methods: {
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
@@ -162,6 +167,36 @@
       childBubble: function (flag) {
         // 子组件与父组件通信
         // console.log('flag:' + flag)
+      },
+//      订单详情字数限制
+      zhishu () {
+        let neirong = $(".neirong").text();
+          $(".neirong").each(function() {
+            var maxwidth = 80;
+            if($(this).text().length > maxwidth) {
+              $(this).text($(this).text().substring(0, maxwidth));
+              $(this).html($(this).html() + '...');
+            }
+          });
+        //点击查看更多
+        let flag = true
+        $('.ddxq-bottom .chakangengduo').click(function() {
+          if(flag == true) {
+            $(this).html('点击查看更多')
+            $(".neirong").each(function() {
+             let maxwidth = 80;
+              if($(this).text().length > maxwidth) {
+                $(this).text($(this).text().substring(0, maxwidth));
+                $(this).html($(this).html() + '...');
+              }
+            });
+            flag = false;
+          } else {
+            $(this).html('收起')
+            $(".neirong").html(neirong)
+            flag = true;
+          }
+        });
       }
     }
   }

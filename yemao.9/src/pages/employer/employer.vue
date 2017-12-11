@@ -1,6 +1,7 @@
 <template>
   <div class="employer">
     <div v-tap="{ methods:cgLink , pagename:'vuxtest' }" class="msg">{{ msg }}</div>
+
   </div>
 </template>
 

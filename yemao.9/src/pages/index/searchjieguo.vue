@@ -3,8 +3,8 @@
     <div class="search">
       <div class="search-input">
         <span class="searchtu"><img src="../../assets/images/index/searchbtn.png"/></span>
-        <input type="text" name="" id="search-inp" value="" class="search-inp" placeholder="搜索" />
-        <span class="searchcha">x</span>
+        <input type="text" name="" id="search-inp" value=""class="search-inp" placeholder="搜索"/>
+        <span class="searchcha">×</span>
       </div>
       <span @click="goback">取消</span>
     </div>
@@ -24,7 +24,7 @@
               <div class="st-neirong">
                 <div class="sn-top">
                   <div class="st-nicheng">设计师小a</div>
-                  <div class="st-pingxin"></div>
+                  <div class="st-pingxin"><img src="../../assets/images/index/xin.png"/></div>
                 </div>
                 <div class="sn-bottom">
                   <div class="sb-nianling">5年</div>
@@ -56,7 +56,7 @@
               <div class="st-neirong">
                 <div class="sn-top">
                   <div class="st-nicheng">设计师小a</div>
-                  <div class="st-pingxin"></div>
+                  <div class="st-pingxin"><img src="../../assets/images/index/xin.png"/></div>
                 </div>
                 <div class="sn-bottom">
                   <div class="sb-nianling">5年</div>
@@ -84,10 +84,10 @@
       </swiper-item>
       <swiper-item  key="1">
         <div class="tab-swiper vux-center">
-          <div class="gz-list">
+          <div class="gz-list"@click="toUrl('emporder')">
             <div class="gz-top">
               <div class="gz-touxiang">
-                <img src="../../assets/images/index/touxiang.png"/>
+                <img src="../../assets/images/bj.jpg" />
               </div>
               <div class="gz-nicheng">雇主小a</div>
               <div class="gz-jiage"><span>￥</span><span>5000</span></div>
@@ -98,9 +98,9 @@
             </div>
             <div class="gz-content">
               <div class="tupian">
-                <div class="tu"></div>
-                <div class="tu"></div>
-                <div class="tu"></div>
+                <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
+                <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
+                <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
               </div>
               <div class="wenzhi">
                 actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
@@ -108,9 +108,15 @@
             </div>
             <div class="gz-bottom">
               <div class="gb-left">
-                <div class="gb-tu"> <img src="../../assets/images/index/touxiang.png"/></div>
-                <div class="gb-tu"> <img src="../../assets/images/index/touxiang.png"/></div>
-                <div class="gb-tu"> <img src="../../assets/images/index/touxiang.png"/></div>
+                <div class="gb-tu">
+                  <img src="../../assets/images/bj.jpg" />
+                </div>
+                <div class="gb-tu">
+                  <img src="../../assets/images/bj.jpg" />
+                </div>
+                <div class="gb-tu">
+                  <img src="../../assets/images/bj.jpg" />
+                </div>
                 <div class="gb-wz">3人抢单</div>
               </div>
               <div class="gb-right">
@@ -118,12 +124,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="tab-swiper vux-center">
-          <div class="gz-list">
+          <div class="gz-list"@click="toUrl('emporder')">
             <div class="gz-top">
               <div class="gz-touxiang">
-                <img src="../../assets/images/index/touxiang.png"/>
+                <img src="../../assets/images/bj.jpg" />
               </div>
               <div class="gz-nicheng">雇主小a</div>
               <div class="gz-jiage"><span>￥</span><span>5000</span></div>
@@ -134,9 +138,9 @@
             </div>
             <div class="gz-content">
               <div class="tupian">
-                <div class="tu"></div>
-                <div class="tu"></div>
-                <div class="tu"></div>
+                <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
+                <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
+                <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
               </div>
               <div class="wenzhi">
                 actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
@@ -144,9 +148,15 @@
             </div>
             <div class="gz-bottom">
               <div class="gb-left">
-                <div class="gb-tu"> <img src="../../assets/images/index/touxiang.png"/></div>
-                <div class="gb-tu"> <img src="../../assets/images/index/touxiang.png"/></div>
-                <div class="gb-tu"> <img src="../../assets/images/index/touxiang.png"/></div>
+                <div class="gb-tu">
+                  <img src="../../assets/images/bj.jpg" />
+                </div>
+                <div class="gb-tu">
+                  <img src="../../assets/images/bj.jpg" />
+                </div>
+                <div class="gb-tu">
+                  <img src="../../assets/images/bj.jpg" />
+                </div>
                 <div class="gb-wz">3人抢单</div>
               </div>
               <div class="gb-right">
@@ -175,6 +185,9 @@
         index: 0,
       }
 
+    },
+    mounted: function () {
+      this.qingchu();
     },
     methods: {
       goback() {
@@ -206,6 +219,12 @@
       },
       onCancel() {
         console.log('on cancel')
+      },
+      //清空搜索框里的值
+      qingchu (){
+        $(".searchcha").click(function(){
+          $("#search-inp").val('');
+        });
       }
     },
 
@@ -218,11 +237,11 @@
    overflow: inherit !important;
   }
   .vux-slider > .vux-swiper{
-   overflow: inherit !important;
+    overflow: inherit !important;
   }
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped src="../../assets/css/index/search-jieguo.css">
-
-
+<style scoped>
+  @import "../../assets/css/public/public.css";
+  @import "../../assets/css/index/search-jieguo.css";
 </style>
