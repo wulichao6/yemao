@@ -2,6 +2,7 @@
 .index-banner {
   width: 100%;
   height: 4rem;
+  overflow: hidden;
 }
 
 .index-banner .id-header {
@@ -97,6 +98,7 @@
   font-size: .30rem;
   margin: 0 .3rem;
   overflow: hidden;
+  background: white;
 }
 .wzgd-box .notice-img {
   height: 0.9rem;

@@ -66,7 +66,6 @@
     height: .42rem;
     line-height: .42rem;
     padding: .25rem;
-    margin-top: 0.2rem;
   }
 
   /**右侧样式**/
