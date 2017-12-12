@@ -1,36 +1,4 @@
-.gu-heade {
-  position: relative;
-  width: 100%;
-  height: 0.8rem;
-  font-size: 0.4rem;
-  color: #f65aa6;
-  line-height: 0.8rem;
-  text-align: center;
-  background: white;
-  border-bottom: 1px solid #F2F2F2;
-  overflow: hidden;
-}
 
-.gu-heade img {
-  width: 50%;
-  margin-top: 0.2rem;
-}
-
-.gu-heade .header-right {
-  position: absolute;
-  right: 0.15rem;
-  top: 0;
-  height: 0.8rem;
-  width: 0.8rem;
-}
-
-.gu-heade .header-right span {
-  width: 0.5rem;
-  height: 0.5rem;
-  margin: 0.15rem 0.05rem;
-  background: #929292;
-  overflow: hidden;
-}
 .gu-mokuai {
   width: 100%;
   height: 1.6rem;
@@ -68,7 +36,7 @@
   height: 0.7rem;
   font-size: 0.32rem;
   background: white;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
   z-index: 9999;
 }
 
@@ -127,5 +95,7 @@
   text-align: center;
   border-top: 1px solid #FFFFFF;
 }
-
+.content{
+  padding-bottom: 1.2rem;
+}
 

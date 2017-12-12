@@ -2,8 +2,8 @@
   <div>
     <!--头部导航-->
     <xheader2 @upup="childBubble" :title="title" :rightClass="rightClass"></xheader2>
-    <!--<div class="od-heade">-->
-      <!--<div class="header-left"><img src="images/back.png" /></div>-->
+    <!--<div class="header">-->
+      <!--<div class="header-left"><img src="../../assets/images/index/back.png" /></div>-->
       <!--<span>订单详情</span>-->
       <!--<div class="header-right"></div>-->
     <!--</div>-->
@@ -164,13 +164,9 @@
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
-      childBubble: function (flag) {
-        // 子组件与父组件通信
-        // console.log('flag:' + flag)
-      },
 //      订单详情字数限制
       zhishu () {
-        let neirong = $(".neirong").text();
+       var neirong = $(".neirong").text();
           $(".neirong").each(function() {
             var maxwidth = 80;
             if($(this).text().length > maxwidth) {
@@ -179,7 +175,7 @@
             }
           });
         //点击查看更多
-        let flag = true
+        var flag = true
         $('.ddxq-bottom .chakangengduo').click(function() {
           if(flag == true) {
             $(this).html('点击查看更多')

@@ -1,39 +1,6 @@
 
-.od-heade {
-	position: relative;
-	width: 100%;
-	height: 0.8rem;
-	font-size: 0.4rem;
-	color: #f65aa6;
-	line-height: 0.8rem;
-	text-align: center;
-	border-bottom: 1px solid #CCCCCC;
-}
-
-.od-heade .header-left {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 0.8rem;
-	height: 0.8rem;
-	font-size: 0.32rem;
-	line-height: 0.8rem;
-}
-
-.od-heade .header-left img {
-	height: 0.75rem;
-}
-
-.od-heade .header-right {
-	position: absolute;
-	top: 0;
-	right: 0.15rem;
-}
-
-.od-heade .header-right span {
-	width: 0.8rem;
-	height: 0.8rem;
-	background: #929292;
+.od-condent{
+  padding-bottom: 1rem;
 }
 
 .od-condent .od-renshu {
@@ -97,6 +64,4 @@
 	background-color: #f74d9f;
 	color: white;
 }
-
-
 /*# sourceMappingURL=order.css.map */

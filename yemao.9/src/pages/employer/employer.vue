@@ -1,18 +1,18 @@
 <template>
   <div class="employer" style="background: #f2f2f2">
     <!--头部导航-->
-    <div class="gu-heade">
+    <div class="header">
       <span>雇主</span>
-      <div class="header-right">
+      <div class="header-right"@click="toUrl('message')">
         <img src="../../assets/images/employer/ling.png" />
       </div>
     </div>
     <!--状态模块-->
     <div class="gu-mokuai">
-      <div class="dingdan">
+      <div class="dingdan"@click="toUrl('fabudingdan')">
         发 布 项 目
       </div>
-      <div class="shouchang">
+      <div class="shouchang"@click="toUrl('myorderchuli')">
         我 的 订 单
       </div>
     </div>

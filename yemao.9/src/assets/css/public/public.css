@@ -38,6 +38,7 @@ ul {
   font-size: 0.4rem;
   line-height: 0.8rem;
   text-align: center;
+  background: white;
 }
 .header .header-left {
   position: absolute;
