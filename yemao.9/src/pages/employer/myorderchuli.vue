@@ -3,7 +3,7 @@
     <div class="header">
       <div class="header-left" @click="goback"><img src="../../assets/images/index/back.png"/></div>
       <span>我的订单</span>
-      <div class="header-right"><img src="../../assets/images/employer/jiahao.png"></div>
+      <div class="header-right"@click="toUrl('fabudingdan')"><img src="../../assets/images/employer/jiahao.png"></div>
     </div>
     <!--tab选项卡-->
     <div class="content">

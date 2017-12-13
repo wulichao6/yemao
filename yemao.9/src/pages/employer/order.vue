@@ -137,7 +137,7 @@
         <span><img src='../../assets/images/employer/miaomiao.png'></span>
         <span>喵喵聊天</span>
       </div>
-      <div class="lijiqiangdan">立即抢单</div>
+      <div class="lijiqiangdan"@click="toUrl('orderqiangdan')">立即抢单</div>
     </div>
   </div>
 </template>
