@@ -81,6 +81,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped src="../../assets/css/index/fenlei.css">
-
+<style scoped>
+  @import "../../assets/css/public/public.css";
+  @import "../../assets/css/index/fenlei.css";
 </style>

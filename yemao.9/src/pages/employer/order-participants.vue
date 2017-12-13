@@ -17,7 +17,7 @@
               <div class="qt-nichen">
                 <span>设计师小A</span>
               </div>
-              <div class="chat"></div>
+              <div class="chat"><img src='../../assets/images/employer/miaomiao.png'></div>
               <div class="qt-jiage">
                 <div class="qt-time"><span>20小时</span></div>
                 <div class="qt-jingqian"><span>￥</span><span>5000</span></div>
@@ -43,7 +43,7 @@
               <div class="qt-nichen">
                 <span>设计师小B</span>
               </div>
-              <div class="chat"></div>
+              <div class="chat"><img src='../../assets/images/employer/miaomiao.png'></div>
               <div class="qt-jiage">
                 <div class="qt-time"><span>20小时</span></div>
                 <div class="qt-jingqian"><span>￥</span><span>5000</span></div>
@@ -51,7 +51,6 @@
             </div>
             <div class="qb-content">
               已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成 再到建筑施工图都可以完成，再到建筑施工图都可以完成，再到建筑施工图都可以完成，
-
             </div>
             <div class="qb-botton">
               选择设计师
@@ -86,5 +85,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import '../../assets/css/employer/order.css';
+  @import "../../assets/css/public/public.css";
 </style>

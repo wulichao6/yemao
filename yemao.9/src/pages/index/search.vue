@@ -50,6 +50,9 @@
 
       }
     },
+    mounted: function () {
+      this.qingchu();
+    },
     methods: {
       goback(){
         this.$router.goBack();
@@ -57,11 +60,24 @@
       toUrl(name){
         this.$router.push({name:name});
       },
+      qingchu (){
+        $(".searchcha").click(function(){
+          $("#search-inp").val('');//清空搜索框里的值
+        });
+        $(".sl-right").click(function(){
+          $(".ls-list").remove();//清空所有的历史记录
+        });
+        $(".ll-right").click(function(){
+          $(this).parent().remove()//清除单个历史记录
+
+        })
+      }
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped src="../../assets/css/index/search.css">
-
+<style scoped>
+  @import "../../assets/css/index/search.css";
+  @import "../../assets/css/public/public.css";
 </style>

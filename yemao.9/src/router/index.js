@@ -22,6 +22,13 @@ import leibie from '@/pages/index/leibie'
 import message from '@/pages/index/message'
 import search from '@/pages/index/search'
 import searchjieguo from '@/pages/index/searchjieguo'
+import daichulixq from '@/pages/employer/daichulixq'
+import fabudingdan from '@/pages/employer/fabudingdan'
+import myorderchuli from '@/pages/employer/myorderchuli'
+import orderpingjia from '@/pages/employer/orderpingjia'
+import orderqiangdan from '@/pages/employer/orderqiangdan'
+import shoucangsjs from '@/pages/employer/shoucangsjs'
+import zfcg from '@/pages/employer/zfcg'
 Vue.use(Router)
 
 Router.prototype.goBack = function () {
@@ -30,6 +37,35 @@ Router.prototype.goBack = function () {
 }
 
 const routeArray = [
+  // 雇主模块
+  { path: '/daichulixq',
+    name: 'daichulixq',
+    component: daichulixq
+  },
+  { path: '/fabudingdan',
+    name: 'fabudingdan',
+    component: fabudingdan
+  },
+  { path: '/myorderchuli',
+    name: 'myorderchuli',
+    component: myorderchuli
+  },
+  { path: '/orderpingjia',
+    name: 'orderpingjia',
+    component: orderpingjia
+  },
+  { path: '/orderqiangdan',
+    name: 'orderqiangdan',
+    component: orderqiangdan
+  },
+  { path: '/shoucangsjs',
+    name: 'shoucangsjs',
+    component: shoucangsjs
+  },
+  { path: '/zfcg',
+    name: 'zfcg',
+    component: zfcg
+  },
   // index模块
   { path: '/fenlei',
     name: 'fenlei',
@@ -55,7 +91,7 @@ const routeArray = [
     name: 'searchjieguo',
     component: searchjieguo
   },
-  //登录模块
+  // 登录模块
   { path: '/login',
     name: 'login',
     component: login

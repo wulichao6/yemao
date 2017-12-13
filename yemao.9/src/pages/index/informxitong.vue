@@ -2,7 +2,7 @@
   <div class="">
     <!--导航栏-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/index/back.png" /></div>
+      <div class="header-left" @click="goback"><img src="../../assets/images/index/back.png"/></div>
       <span>系统通知</span>
     </div>
     <div class="xiaoxi-content">
@@ -26,23 +26,22 @@
 
 <script>
   export default {
-    data () {
-      return {
-
-      }
+    data() {
+      return {}
     },
     methods: {
       goback() {
         this.$router.goBack();
       },
-      toUrl(name){
-        this.$router.push({name:name,query:{id:this.$route.query.id}});
+      toUrl(name) {
+        this.$router.push({name: name, query: {id: this.$route.query.id}});
       },
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped src="../../assets/css/index/inform-xitong.css">
-
+<style scoped>
+  @import "../../assets/css/index/inform-xitong.css";
+  @import "../../assets/css/public/public.css";
 </style>
