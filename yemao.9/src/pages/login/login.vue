@@ -84,6 +84,7 @@
       toUrl(name){
         this.$router.push({name:name});
       },
+      var obj = this,
       //输入框内有内容时显示清空按钮
       checkNumber(obj) {
         $(obj).bind('input propertychange', function () {
@@ -165,6 +166,7 @@
               return false;
             } else {
               $('.tishi').text("");
+              obj.toUrl('index');
             }
           })
         })

@@ -2,7 +2,7 @@
   <div>
     <div class="swipe-box">
       <div class="back" @click="goback"></div>
-      <div class="title">{{demo06_index}}/{{demo06_list.length}}</div>
+      <div class="title">{{demo06_index+1}}/{{demo06_list.length}}</div>
     </div>
     <swiper height="8rem" class="swiper-self" :list="demo06_list" :index="demo06_index" @on-index-change="demo06_onIndexChange" :show-dots="false"></swiper>
   </div>
@@ -14,22 +14,19 @@
   const baseList = [{
     url: 'javascript:',
     img: 'https://static.vux.li/demo/1.jpg',
-    title: '送你一朵fua'
   }, {
     url: 'javascript:',
     img: 'https://static.vux.li/demo/2.jpg',
-    title: '送你一辆车'
   }, {
     url: 'javascript:',
     img: 'https://static.vux.li/demo/5.jpg',
-    title: '送你一次旅行',
     fallbackImg: 'https://static.vux.li/demo/3.jpg'
   }]
   const urlList = baseList.map((item, index) => ({
     url: 'http://m.baidu.com',
     img: item.img,
     fallbackImg: item.fallbackImg,
-    title: `(可点击)${item.title}`
+
   }))
   export default {
     components: {

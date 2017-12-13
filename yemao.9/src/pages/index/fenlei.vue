@@ -6,27 +6,27 @@
     </div>
     <!--全部分类-->
     <div class="fenlei-list">
-      <div class="fl-box">
+      <div class="fl-box"@click="toUrl('leibie')">
         <span class="fl-img"><img src="../../assets/images/index/c_cehua_01_03.png"/></span>
         <div class="zhezhao">策划设计</div>
       </div>
-      <div class="fl-box">
+      <div class="fl-box"@click="toUrl('leibie')">
         <span class="fl-img"><img src="../../assets/images/index/c_guihua_02_03.png"/></span>
         <div class="zhezhao">规划设计</div>
       </div>
-      <div class="fl-box">
+      <div class="fl-box"@click="toUrl('leibie')">
         <span class="fl-img"><img src="../../assets/images/index/c_jianzhu_03_03.png"/></span>
         <div class="zhezhao">建筑设计</div>
       </div>
-      <div class="fl-box">
+      <div class="fl-box"@click="toUrl('leibie')">
         <span class="fl-img"><img src="../../assets/images/index/c_jiegou_04_03.png"/></span>
         <div class="zhezhao">结构设计</div>
       </div>
-      <div class="fl-box">
+      <div class="fl-box"@click="toUrl('leibie')">
         <span class="fl-img"><img src="../../assets/images/index/c_jipaishui_05_03.png"/></span>
         <div class="zhezhao">给排水设计</div>
       </div>
-      <div class="fl-box">
+      <div class="fl-box"@click="toUrl('leibie')">
         <span class="fl-img"><img src="../../assets/images/index/c_dianqi_06_03.png"/></span>
         <div class="zhezhao">电气设计</div>
       </div>

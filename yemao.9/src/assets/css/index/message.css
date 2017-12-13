@@ -1,32 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.clear:after {
-  content: '';
-  display: block;
-  clear: both;
-  height: 0;
-}
-
-body,
-html {
-  width: 100%;
-  height: 100%;
-  font-family: "pingfang,Microsoft YaHei";
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
 
 .header {
   position: relative;
@@ -56,28 +27,28 @@ ul {
 
 .header .daohang {
   width: 2.84rem;
-  height: 0.7rem;
+  height: 0.6rem;
   margin: auto;
   display: inline-block;
-  margin-top: 0.04rem;
-  border: 1px solid #f74d9f;
+  margin-top: 0.1rem;
+  border:0.01rem solid #f74d9f;
 }
 
 .header .daohang .tab_menu {
   width: 100%;
-  height: 0.7rem;
+  height: 0.58rem;
 }
 
 .header .daohang .tab_menu li {
   float: left;
   width: 50%;
-  height: 0.7rem;
-  line-height: 0.7rem;
+  height: 0.58rem;
+  line-height: 0.58rem;
   text-align: center;
 }
 
 .header .daohang .tab_menu .selected {
-  height: 0.68rem;
+  height: 0.58rem;
   background-color: #f74d9f;
   color: white;
   cursor: pointer;
