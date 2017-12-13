@@ -148,6 +148,7 @@
       },
       //判断输入框不能为空
       login(anniu, shouji, valp) {
+        var obj = this;
         $(anniu).click(function () {
           var username = $.trim($(shouji).val()); //获取到手机号
           var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
@@ -165,6 +166,7 @@
               return false;
             } else {
               $('.tishi').text("");
+              obj.toUrl('index')
             }
           })
         })

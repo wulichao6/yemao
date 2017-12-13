@@ -10,7 +10,7 @@
         <!--地区选择-->
         <div class="crity">
           <group>
-            <x-address raw-value :list="addressData" hide-district value-text-align="right"v-model="value3"></x-address>
+            <x-address raw-value title="" :list="addressData" hide-district value-text-align="right"v-model="value3"></x-address>
           </group>
         </div>
         <div class="id-xiaoxi"@click="toUrl('message')">
@@ -212,7 +212,7 @@
 </template>
 
 <script>
-  import { Swiper, SwiperItem, Divider,XAddress,ChinaAddressV4Data,} from 'vux'
+  import {Swiper, SwiperItem, Divider, XAddress, ChinaAddressV4Data } from 'vux'
 
   const baseList = [{
     url: 'javascript:',
@@ -251,8 +251,8 @@
         value3: ['广东省', '中山市', '--'],
       }
     },
-    mounted: function () {
-      this.scrolle();
+    created: function () {
+      this.monitorScrolle()
     },
     methods: {
       cgLink: function (param) {
@@ -267,12 +267,12 @@
       getThisHeight (ele) {
         var id1 = document.getElementById('id1')
         var id2 = document.getElementById('id2')
-        alert(id1.offsetHeight + '<>' + id2.offsetHeight)
+        // alert(id1.offsetHeight + '<>' + id2.offsetHeight)
       },
-      //下拉搜索框变长
-        scrolle(){
+      // 下拉搜索框变长
+      monitorScrolle () {
           $(window).on('scroll', function() {
-            var $scroll = $(this).scrollTop();
+            var $scroll = $(window).scrollTop();
             if($scroll >= 100) {
               $('.id-header').css(
                 "background-color", "rgba(255,255,255,1)"
@@ -291,7 +291,7 @@
               });
             }
           });
-        }
+      }
     }
   }
 </script>
