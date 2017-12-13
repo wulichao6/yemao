@@ -62,12 +62,12 @@
     height: .92rem;
     top:0 !important;
   }
-  .vux-header-right a{
+  .vux-header-right a {
     height: .42rem;
     line-height: .42rem;
     padding: .25rem;
+    margin-top: 0.2rem;
   }
-
   /**右侧样式**/
   .rightclass{border: 1px solid red;
   }
