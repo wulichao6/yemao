@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/login/Back.png"/></div>
+      <div class="header-left"@click="goback"><img src="../../assets/images/login/back.png"/></div>
     </div>
     <div class="zc-piaoti">
       <span>欢迎注册成为夜猫会员</span>
@@ -9,7 +9,7 @@
     <div class="login-shuru">
       <p class="tishi"></p>
       <div class="ls-shouji">
-        <input type="text"class="shouji mima" placeholder="密码"/>
+        <input type="password"class="shouji mima" placeholder="密码"/>
         <span class="del">×</span>
       </div>
       <div class="ls-shouji">

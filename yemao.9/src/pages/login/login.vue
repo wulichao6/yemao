@@ -2,7 +2,7 @@
   <div class="">
     <!--头部导航-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/login/Back.png"/></div>
+      <div class="header-left"@click="goback"><img src="../../assets/images/login/back.png"/></div>
       <div class="header-right zc"@click="toUrl('zhuche')">注册</div>
     </div>
     <!--log-->
@@ -14,19 +14,11 @@
     <!--登陆-->
     <div class="login-shuru">
       <p class="tishi"></p>
-      <!--<group class="ls-shouji">-->
-        <!--<x-input class="haoma" name="mobile" placeholder="请输入手机号码" keyboard="number" is-type="china-mobile"></x-input>-->
-      <!--</group>-->
       <div class="ls-shouji">
         <input type="text"class="shouji"id="phone" placeholder="手机号">
         <span class="del">×</span>
       </div>
       <div class="ls-yanzheng">
-        <!--<group class="weui-cells_form">-->
-          <!--<x-input class="weui-vcode"placeholder="验证码">-->
-            <!--<x-button slot="right" type="primary" mini>发送验证码</x-button>-->
-          <!--</x-input>-->
-        <!--</group>-->
         <input type="text"class="yanzheng"id="yanzhengma"maxlength="8"placeholder="验证码">
         <div class="dj-shuru"><span class="msgs">点击获取验证码</span></div>
       </div>

@@ -78,7 +78,7 @@
     flex: 1;
   }
   .tabs .tabbar-txt{
-    font-size: .32rem !important;
+    font-size: .28rem !important;
   }
   /**为选中**/
   .tabs .item-index{

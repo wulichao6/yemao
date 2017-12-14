@@ -1,8 +1,12 @@
+.header{
+  border:none;
+}
 .zc-piaoti {
   width: 100%;
   height: 2.6rem;
   font-size: 0.3rem;
   text-align: center;
+  margin-top: 0.8rem;
 }
 
 .zc-piaoti span {

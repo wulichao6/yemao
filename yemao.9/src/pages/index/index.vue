@@ -222,7 +222,7 @@
     img: 'https://static.vux.li/demo/2.jpg',
   }, {
     url: 'javascript:',
-    img: 'https://static.vux.li/demo/5.jpg',
+    img: 'https://static.vux.li/demo/3.jpg',
     fallbackImg: 'https://static.vux.li/demo/3.jpg'
   }]
 
@@ -355,7 +355,8 @@
   .vux-popup-picker-value{
     display:block;
     width:1rem;
-    height: 0.5rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
     overflow:hidden;
     word-break:keep-all;           /* 不换行 */
     white-space:nowrap;          /* 不换行 */
