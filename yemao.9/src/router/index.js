@@ -29,6 +29,7 @@ import orderpingjia from '@/pages/employer/orderpingjia'
 import orderqiangdan from '@/pages/employer/orderqiangdan'
 import shoucangsjs from '@/pages/employer/shoucangsjs'
 import zfcg from '@/pages/employer/zfcg'
+import liaotian from '@/pages/employer/liaotian'
 Vue.use(Router)
 
 Router.prototype.goBack = function () {
@@ -65,6 +66,10 @@ const routeArray = [
   { path: '/zfcg',
     name: 'zfcg',
     component: zfcg
+  },
+  { path: '/liaotian',
+    name: 'liaotian',
+    component: liaotian
   },
   // index模块
   { path: '/fenlei',

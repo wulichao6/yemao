@@ -13,7 +13,7 @@
       <div class="tab_box">
         <!--消息列表-->
         <div class="xiaoxi">
-          <div class="xiaoxi-list">
+          <div class="xiaoxi-list"@click="toUrl('liaotian')">
             <div class="xl-touxiang">
               <img src="../../assets/images/index/bj.jpg" />
             </div>
@@ -27,7 +27,7 @@
               </div>
             </div>
           </div>
-          <div class="xiaoxi-list">
+          <div class="xiaoxi-list"@click="toUrl('liaotian')">
             <div class="xl-touxiang">
               <img src="../../assets/images/index/bj.jpg" />
             </div>
@@ -45,15 +45,15 @@
         </div>
         <!--通知列表-->
         <div class="tongzhi hide">
-          <div class="tongzhi-list">
+          <div class="tongzhi-list"@click="toUrl('informxitong')">
             <div class="tl-touxiang">
               <img src="../../assets/images/index/tongzhi_xitong.png">
             </div>
-            <div class="tl-right"@click="toUrl('informxitong')">
+            <div class="tl-right">
               系统通知
             </div>
           </div>
-          <div class="tongzhi-list">
+          <div class="tongzhi-list"@click="toUrl('informxitong')">
             <div class="tl-touxiang">
               <img src="../../assets/images/index/tongzhi_huodong.png">
             </div>

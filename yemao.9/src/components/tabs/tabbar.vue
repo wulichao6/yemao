@@ -45,7 +45,7 @@
 
 <style scoped>
   .tabs{
-    height:1rem;
+    height:1.2rem;
     width: 100%;
     position: relative;
     display: -webkit-box;
@@ -69,8 +69,8 @@
   }
   .tabs .tabbar-item{
     padding: .2rem 0 .2rem 0;
-    background-size: .5rem .5rem !important;
-    background-position:  center top .25rem !important;
+    background-size: .45rem .45rem !important;
+    background-position:  center top .3rem !important;
     background-repeat: no-repeat !important;
     -webkit-box-flex: 1;
     -webkit-flex: 1;

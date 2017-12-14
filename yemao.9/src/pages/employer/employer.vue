@@ -24,11 +24,9 @@
       <div class="area">
         <ul>
           <li>不限</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
+          <li>时间排序</li>
+          <li>价格排序</li>
+          <li>类型排序</li>
         </ul>
       </div>
     </div>
@@ -123,6 +121,9 @@
       return {
       }
     },
+    mounted: function () {
+      this.znpx();
+    },
     methods: {
       cgLink: function (param) {
         this.$router.push({name: param.pagename})
@@ -130,6 +131,20 @@
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
+      //智能排序
+      znpx(){
+        $('.xian').click(function() {
+          var $t = $(".xian p");
+          if($t.hasClass('up')) {
+            $(".xian p").removeClass('up');
+            $('.area').css('display', 'none');
+          } else {
+            $(".xian p").removeClass('up');
+            $('.area').css('display', 'block');
+            $(".xian p").addClass('up');
+          }
+        });
+      }
     }
   }
 </script>

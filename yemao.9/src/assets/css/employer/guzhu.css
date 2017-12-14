@@ -5,6 +5,7 @@
   color: white;
   font-size: 0.36rem;
   background: white;
+  margin-top: 0.8rem;
 }
 .gu-mokuai .dingdan {
   float: left;
@@ -55,7 +56,7 @@
   height: 0.4rem;
   background-color: white;
   left: 2.5rem;
-  bottom: -0.2rem;
+  bottom: -0.15rem;
   padding-left: 0.2rem;
 }
 

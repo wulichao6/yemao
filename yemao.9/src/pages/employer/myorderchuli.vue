@@ -150,5 +150,6 @@
   @import "../../assets/css/public/public.css";
   .content{
     background: #F2F2F2;
+    margin-top: 0.8rem;
   }
 </style>

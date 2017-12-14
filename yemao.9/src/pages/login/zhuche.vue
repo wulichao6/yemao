@@ -115,12 +115,14 @@
       },
       //判断输入框不能为空
       loge(anniu) {
+        var obj=this;
         $(anniu).click(function() {
           $("input").each(function() {
             if($(this).val() == "" || $(this).val() == null || $(this).val() == undefined) {
               $('.tishi').text("输入框不能为空");
             } else {
               $('.tishi').text("");
+              obj.toUrl('zhuche2');
             }
           })
         })

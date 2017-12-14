@@ -5,7 +5,7 @@
       <span>建筑设计</span>
     </div>
     <!--雇主列表-->
-    <div style="background-color: #f2f2f2;">
+    <div class="content">
       <div class="gz-list"@click="toUrl('emporder')">
         <div class="gz-top">
           <div class="gz-touxiang">
@@ -111,4 +111,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import "../../assets/css/public/public.css";
+  .content{
+    margin-top: 0.8rem;
+    background: #f2f2f2;
+  }
 </style>
