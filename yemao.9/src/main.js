@@ -6,6 +6,7 @@ import router from './router'
 /* v-tap */
 import vueTap from 'v-tap'
 import { Datetime, Group } from 'vux'
+import $ from '../utils/jquery-3.2.1.min';
 
 Vue.config.productionTip = false
 
@@ -15,6 +16,9 @@ Vue.use(vueTap)
 // vux components
 Vue.component(Datetime.name, Datetime)
 Vue.component(Group.name, Group)
+
+window.jQuery = $
+window.$ = $
 
 /* eslint-disable no-new */
 new Vue({

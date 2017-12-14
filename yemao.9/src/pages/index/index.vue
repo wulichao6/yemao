@@ -29,13 +29,13 @@
         </div>
         <p>策划</p>
       </div>
-      <div class="list-box"@click="toUrl('leibie')">
+      <div class="list-box">
         <div class="lb-img">
           <img src="../../assets/images/index/guihua.png" />
         </div>
         <p>规划</p>
       </div>
-      <div class="list-box"@click="toUrl('leibie')">
+      <div class="list-box">
         <div class="lb-img">
           <img src="../../assets/images/index/jianzhusheji.png" />
         </div>
@@ -90,39 +90,38 @@
       <swiper loop auto height="45px" direction="vertical" :interval=1000 class="text-scroll" :show-dots="false">
         <swiper-item>
           <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告1</div>
+          <div class="notice-text">我滚了0</div>
         </swiper-item>
         <swiper-item>
           <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告2</div>
+          <div class="notice-text">我滚了1</div>
         </swiper-item>
         <swiper-item>
           <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告3</div>
+          <div class="notice-text">我滚了2</div>
         </swiper-item>
         <swiper-item>
           <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告4</div>
+          <div class="notice-text">我滚了3</div>
         </swiper-item>
         <swiper-item>
           <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告5</div>
+          <div class="notice-text">我滚了4</div>
         </swiper-item>
       </swiper>
     </div>
     <div class="gap-line"></div>
     <!--智能排序-->
     <div class="id-znpx">
-      <!--<divider><span>智能排序 </span><x-icon type="ios-arrow-down" size="12"></x-icon></divider>-->
-      <div class="xian">
-        <p>智能排序</p>
-      </div>
+      <divider><span>智能排序 </span><x-icon type="ios-arrow-down" size="12"></x-icon></divider>
       <div class="area">
         <ul>
           <li>不限</li>
-          <li>时间排序</li>
-          <li>价格排序</li>
-          <li>类型排序</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
         </ul>
       </div>
     </div>
@@ -218,12 +217,15 @@
   const baseList = [{
     url: 'javascript:',
     img: 'https://static.vux.li/demo/1.jpg',
+    title: '送你一朵fua'
   }, {
     url: 'javascript:',
     img: 'https://static.vux.li/demo/2.jpg',
+    title: '送你一辆车'
   }, {
     url: 'javascript:',
     img: 'https://static.vux.li/demo/5.jpg',
+    title: '送你一次旅行',
     fallbackImg: 'https://static.vux.li/demo/3.jpg'
   }]
 
@@ -231,6 +233,7 @@
     url: 'http://m.baidu.com',
     img: item.img,
     fallbackImg: item.fallbackImg,
+    title: `(可点击)${item.title}`
   }))
   export default {
     components: {
@@ -250,7 +253,6 @@
     },
     mounted: function () {
       this.scrolle();
-      this.znbx();
     },
     methods: {
       cgLink: function (param) {
@@ -289,21 +291,7 @@
               });
             }
           });
-        },
-      //智能排序
-       znbx(){
-         $('.xian').click(function() {
-           var $t = $(".xian p");
-           if($t.hasClass('up')) {
-             $(".xian p").removeClass('up');
-             $('.area').css('display', 'none');
-           } else {
-             $(".xian p").removeClass('up');
-             $('.area').css('display', 'block');
-             $(".xian p").addClass('up');
-           }
-         });
-       }
+        }
     }
   }
 </script>
