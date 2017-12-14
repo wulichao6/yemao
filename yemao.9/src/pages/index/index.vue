@@ -10,7 +10,7 @@
         <!--地区选择-->
         <div class="crity">
           <group>
-            <x-address raw-value title="" :list="addressData" hide-district value-text-align="right"v-model="value3"></x-address>
+            <x-address @on-hide="logHide" @on-show="logShow" raw-value title="" :list="addressData" hide-district value-text-align="right" v-model="value3"></x-address>
           </group>
         </div>
         <div class="id-xiaoxi"@click="toUrl('message')">
@@ -248,7 +248,7 @@
         demo06_list: urlList,
         demo06_index: 0,
         addressData: ChinaAddressV4Data,
-        value3: ['广东省', '中山市', '--'],
+        value3: ['--', '中山市', '--']
       }
     },
     created: function () {
@@ -291,6 +291,22 @@
               });
             }
           });
+      },
+      logHide (str) {
+        var obj = this;
+        console.log('on-hide', str)
+        if( str == true ){
+          console.log('value', obj.value3)
+          if( obj.value3[0] == '110000' || obj.value3[0] == '120000' ||
+            obj.value3[0] == '310000' || obj.value3[0] == '500000' ){
+            obj.value3[1] = '--';
+          }else{
+            obj.value3[0] = '--';
+          }
+        }
+      },
+      logShow (str) {
+        console.log('on-show',str)
       }
     }
   }
