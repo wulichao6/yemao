@@ -30,6 +30,9 @@ import orderqiangdan from '@/pages/employer/orderqiangdan'
 import shoucangsjs from '@/pages/employer/shoucangsjs'
 import zfcg from '@/pages/employer/zfcg'
 import liaotian from '@/pages/employer/liaotian'
+import daizhifu from '@/pages/employer/daizhifu'
+import daijiaofu from '@/pages/employer/daijiaofu'
+import yiwancheng from '@/pages/employer/yiwancheng'
 Vue.use(Router)
 
 Router.prototype.goBack = function () {
@@ -39,6 +42,18 @@ Router.prototype.goBack = function () {
 
 const routeArray = [
   // 雇主模块
+  { path: '/daizhifu',
+    name: 'daizhifu',
+    component: daizhifu
+  },
+  { path: '/daijiaofu',
+    name: 'daijiaofu',
+    component: daijiaofu
+  },
+  { path: '/yiwancheng',
+    name: 'yiwancheng',
+    component: yiwancheng
+  },
   { path: '/daichulixq',
     name: 'daichulixq',
     component: daichulixq

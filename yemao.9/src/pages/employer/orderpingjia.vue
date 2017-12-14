@@ -13,13 +13,12 @@
       </div>
       <!--星星评分-->
       <div class="pc-xing">
-        <div id="QuacorGrading" class="demo">
-          <input name="1" type="button" />
-          <input name="2" type="button" />
-          <input name="3" type="button" />
-          <input name="4" type="button" />
-          <input name="5" type="button" />
-          <!--<span id="QuacorGradingValue"><b><font size="5" color="#fd7d28">0</font></b>分</span>-->
+        <!--<div id="QuacorGrading" class="demo">-->
+          <!--<input name="1" type="button" />-->
+          <!--<input name="2" type="button" />-->
+          <!--<input name="3" type="button" />-->
+          <!--<input name="4" type="button" />-->
+          <!--<input name="5" type="button" />-->
 
         </div>
       </div>

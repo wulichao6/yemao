@@ -42,7 +42,7 @@
         </swiper-item>
         <swiper-item key="1">
           <div class="ddlist-sjsdai">
-            <div class="ds-top"@click="toUrl('daichulixq')">
+            <div class="ds-top"@click="toUrl('daizhifu')">
               <div class="ds-img">
                 <img src="../../assets/images/bj.jpg">
               </div>
@@ -67,7 +67,7 @@
         </swiper-item>
         <swiper-item key="2">
           <div class="ddlist-sjsdai">
-            <div class="ds-top"@click="toUrl('daichulixq')">
+            <div class="ds-top"@click="toUrl('daijiaofu')">
               <div class="ds-img">
                 <img src="../../assets/images/bj.jpg">
               </div>
@@ -91,7 +91,7 @@
         </swiper-item>
         <swiper-item key="3">
           <div class="ddlist-sjsdai">
-            <div class="ds-top"@click="toUrl('daichulixq')">
+            <div class="ds-top"@click="toUrl('yiwancheng')">
               <div class="ds-img">
                 <img src="../../assets/images/bj.jpg">
               </div>
