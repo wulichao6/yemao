@@ -13,29 +13,46 @@
       </div>
       <!--星星评分-->
       <div class="pc-xing">
-        <!--<div id="QuacorGrading" class="demo">-->
-          <!--<input name="1" type="button" />-->
-          <!--<input name="2" type="button" />-->
-          <!--<input name="3" type="button" />-->
-          <!--<input name="4" type="button" />-->
-          <!--<input name="5" type="button" />-->
-
-        </div>
+        <ul>
+          <li>
+            <div class="px-left">图纸满意度</div>
+            <div class="px-right">
+                <rater v-model="data5"  active-color="#FF9900" :margin="0"></rater>
+            </div>
+          </li>
+          <li>
+            <div class="px-left">图纸满意度</div>
+            <div class="px-right">
+              <rater v-model="data5"  active-color="#FF9900" :margin="0"></rater>
+            </div>
+          </li>
+          <li>
+            <div class="px-left">图纸满意度</div>
+            <div class="px-right">
+              <rater v-model="data5"  active-color="#FF9900" :margin="0"></rater>
+            </div>
+          </li>
+        </ul>
       </div>
       <!--留言-->
-      <div class="pc-shuru">
+    <div class="pc-shuru">
         <textarea class="area" maxlength="200" placeholder="对作品还满意吗？"></textarea>
         <p class="xianzhi"><span class="zs">100</span>/<span>100</span></p>
-      </div>
+    </div>
     </div>
   </div>
 </template>
 
 <script>
+  import { Rater,Cell} from 'vux'
   export default {
+    components: {
+      Rater,
+      Cell,
+    },
     data () {
       return {
-
+          data5:4,
       }
     },
     methods: {

@@ -33,6 +33,16 @@ import liaotian from '@/pages/employer/liaotian'
 import daizhifu from '@/pages/employer/daizhifu'
 import daijiaofu from '@/pages/employer/daijiaofu'
 import yiwancheng from '@/pages/employer/yiwancheng'
+import set from '@/pages/my/set'
+import setnicheng from '@/pages/my/set-nicheng'
+import setnum from '@/pages/my/set-num'
+import setpassword from '@/pages/my/set-password'
+import mineguanyu from '@/pages/my/mine-guanyu'
+import minehuodong from '@/pages/my/mine-huodong'
+import minejianli from '@/pages/my/mine-jianli'
+import minepinlun from '@/pages/my/mine-pinlun'
+import mineshouchang from '@/pages/my/mine-shouchang'
+import minewenda from '@/pages/my/mine-wenda'
 Vue.use(Router)
 
 Router.prototype.goBack = function () {
@@ -41,6 +51,47 @@ Router.prototype.goBack = function () {
 }
 
 const routeArray = [
+  // my模块
+  { path: '/mineguanyu',
+    name: 'mineguanyu',
+    component: mineguanyu
+  },
+  { path: '/minehuodong',
+    name: 'minehuodong',
+    component: minehuodong
+  },
+  { path: '/minejianli',
+    name: 'minejianli',
+    component: minejianli
+  },
+  { path: '/minepinlun',
+    name: 'minepinlun',
+    component: minepinlun
+  },
+  { path: '/mineshouchang',
+    name: 'mineshouchang',
+    component: mineshouchang
+  },
+  { path: '/minewenda',
+    name: 'minewenda',
+    component: minewenda
+  },
+  { path: '/setpassword',
+    name: 'setpassword',
+    component: setpassword
+  },
+  { path: '/setnum',
+    name: 'setnum',
+    component: setnum
+  },
+  { path: '/setnicheng',
+    name: 'setnicheng',
+    component: setnicheng
+  },
+  { path: '/set',
+    name: 'set',
+    component: set
+  },
   // 雇主模块
   { path: '/daizhifu',
     name: 'daizhifu',

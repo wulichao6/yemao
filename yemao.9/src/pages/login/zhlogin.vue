@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/login/Back.png"/></div>
+      <div class="header-left"@click="goback"><img src="../../assets/images/login/back.png"/></div>
       <div class="header-right"@click="toUrl('zhuche')">注册</div>
     </div>
     <div class="log">

@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/login/Back.png"/></div>
+      <div class="header-left"@click="goback"><img src="../../assets/images/login/back.png"/></div>
     </div>
     <div class="zc-piaoti">
       <span>欢迎注册成为夜猫会员</span>
@@ -118,7 +118,7 @@
         var obj=this;
         $(anniu).click(function() {
           $("input").each(function() {
-            if($(this).val() == "" || $(this).val() == null || $(this).val() == undefined) {
+            if($("input").val() == "" || $("input").val() == null || $("input").val() == undefined) {
               $('.tishi').text("输入框不能为空");
             } else {
               $('.tishi').text("");
@@ -130,9 +130,9 @@
       //判断昵称格式是否正确
       nichen(valp) {
         $(valp).blur(function() {
-          var myreg = /^[\u4E00-\u9FA5]{1,6}$/;
+          var myreg = /^[a-zA-Z0-9_-]{4,10}$/;
           if(!myreg.test($(valp).val())) {
-            $('.tishi').text('昵称为1-6位的汉字！');
+            $('.tishi').text('昵称为4到10位（字母，数字，下划线，减号）！');
           } else {
             $('.tishi').text("");
           }
