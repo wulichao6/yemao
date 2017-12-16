@@ -2,7 +2,7 @@
   <div >
     <!--头部导航-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <span>人才详情</span>
       <div class="header-right">编辑</div>
     </div>
@@ -10,7 +10,7 @@
       <!--基本信息-->
       <div class="jbxx">
         <div class="touxiang">
-          <img src="../../assets/images/bj.jpg" />
+          <img src="../../../static/images/bj.jpg" />
         </div>
         <p>基本信息</p>
         <p class="xingmin"><span>史珂</span>/<span>女</span>/<span>24岁</span>/<span>朝阳区</span></p>
@@ -138,16 +138,16 @@
         <div class="gzzp-content">
           <ul>
             <li>
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </li>
             <li>
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </li>
             <li>
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </li>
             <li>
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </li>
           </ul>
         </div>

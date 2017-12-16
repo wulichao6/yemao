@@ -2,7 +2,7 @@
   <div >
     <!--头部导航-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <span>收藏专辑</span>
     </div>
     <div class="content">
@@ -14,37 +14,37 @@
         <ul class="renyuan">
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
             <p class="nicheng">昵称</p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
             <p class="nicheng">昵称</p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
             <p class="nicheng">昵称</p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
             <p class="nicheng">昵称</p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
             <p class="nicheng">昵称</p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
             <p class="nicheng">昵称</p>
           </li>
@@ -57,16 +57,16 @@
         </div>
         <ul class="renyuan">
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
         </ul>
       </div>
@@ -77,16 +77,16 @@
         </div>
         <ul class="renyuan">
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
         </ul>
       </div>
@@ -97,16 +97,16 @@
         </div>
         <ul class="renyuan">
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
           <li>
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </li>
         </ul>
       </div>
@@ -118,32 +118,32 @@
         <ul class="renyuan">
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
           </li>
           <li>
             <p class="touxiang">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </p>
           </li>
         </ul>

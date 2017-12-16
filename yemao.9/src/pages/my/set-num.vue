@@ -2,7 +2,7 @@
   <div >
     <!--头部导航-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <span>更换手机号</span>
     </div>
     <div class="setn-content">

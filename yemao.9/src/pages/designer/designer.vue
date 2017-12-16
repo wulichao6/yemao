@@ -4,7 +4,7 @@
     <div class="header">
       <span>设计师</span>
       <div class="header-right">
-        <span><img src="../../assets/images/designer/ling.png" /></span>
+        <span><img src="../../../static/images/designer/ling.png" /></span>
       </div>
     </div>
     <!--模块-->
@@ -12,25 +12,25 @@
        <ul>
          <li>
            <p>
-             <img src="../../assets/images/designer/jianzhusheji.png" />
+             <img src="../../../static/images/designer/jianzhusheji.png" />
            </p>
            <p>个人中心</p>
           </li>
         <li>
           <p>
-            <img src="../../assets/images/designer/jianzhusheji.png" />
+            <img src="../../../static/images/designer/jianzhusheji.png" />
           </p>
           <p>钱包</p>
         </li>
         <li>
           <p>
-            <img src="../../assets/images/designer/jianzhusheji.png" />
+            <img src="../../../static/images/designer/jianzhusheji.png" />
           </p>
           <p>认证中心</p>
         </li>
         <li>
           <p>
-            <img src="../../assets/images/designer/jianzhusheji.png" />
+            <img src="../../../static/images/designer/jianzhusheji.png" />
           </p>
           <p>订单</p>
         </li>
@@ -57,7 +57,7 @@
       <div class="sjs-list">
         <div class="sjs-top">
           <div class="st-touxiang">
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </div>
           <div class="st-neirong">
             <div class="sn-top">
@@ -89,7 +89,7 @@
       <div class="sjs-list">
         <div class="sjs-top">
           <div class="st-touxiang">
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </div>
           <div class="st-neirong">
             <div class="sn-top">
@@ -121,7 +121,7 @@
       <div class="sjs-list">
         <div class="sjs-top">
           <div class="st-touxiang">
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </div>
           <div class="st-neirong">
             <div class="sn-top">

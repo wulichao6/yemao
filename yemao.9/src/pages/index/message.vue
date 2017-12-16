@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/index/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/index/back.png" /></div>
       <div class="daohang">
         <ul class="tab_menu">
           <li class="selected">消息</li>
@@ -15,7 +15,7 @@
         <div class="xiaoxi">
           <div class="xiaoxi-list"@click="toUrl('liaotian')">
             <div class="xl-touxiang">
-              <img src="../../assets/images/index/bj.jpg" />
+              <img src="../../../static/images/index/bj.jpg" />
             </div>
             <div class="xiao-right">
               <div class="xr-top">
@@ -29,7 +29,7 @@
           </div>
           <div class="xiaoxi-list"@click="toUrl('liaotian')">
             <div class="xl-touxiang">
-              <img src="../../assets/images/index/bj.jpg" />
+              <img src="../../../static/images/index/bj.jpg" />
             </div>
             <div class="xiao-right">
               <div class="xr-top">
@@ -47,7 +47,7 @@
         <div class="tongzhi hide">
           <div class="tongzhi-list"@click="toUrl('informxitong')">
             <div class="tl-touxiang">
-              <img src="../../assets/images/index/tongzhi_xitong.png">
+              <img src="../../../static/images/index/tongzhi_xitong.png">
             </div>
             <div class="tl-right">
               系统通知
@@ -55,7 +55,7 @@
           </div>
           <div class="tongzhi-list"@click="toUrl('informxitong')">
             <div class="tl-touxiang">
-              <img src="../../assets/images/index/tongzhi_huodong.png">
+              <img src="../../../static/images/index/tongzhi_huodong.png">
             </div>
             <div class="tl-right">
               活动通知

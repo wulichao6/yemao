@@ -2,16 +2,16 @@
   <div >
     <!--头部导航-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <span>参与的活动</span>
     </div>
     <!--活动列表-->
     <div class="content">
       <div class="hd-list">
-        <img src="../../assets/images/bj.jpg">
+        <img src="../../../static/images/bj.jpg">
       </div>
       <div class="hd-list">
-        <img src="../../assets/images/bj.jpg">
+        <img src="../../../static/images/bj.jpg">
       </div>
     </div>
   </div>

@@ -1,14 +1,14 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left" @click="goback"><img src="../../assets/images/index/back.png"/></div>
+      <div class="header-left" @click="goback"><img src="../../../static/images/index/back.png"/></div>
       <span>订单评价</span>
       <div class="header-right">完成</div>
     </div>
     <!--评价内容-->
     <div class="pj-content">
       <div class="pc-top">
-        <div class="pt-tu"><img src="../../assets/images/bj.jpg"></div>
+        <div class="pt-tu"><img src="../../../static/images/bj.jpg"></div>
         <div class="pt-nichen"><span>昵称</span></div>
       </div>
       <!--星星评分-->

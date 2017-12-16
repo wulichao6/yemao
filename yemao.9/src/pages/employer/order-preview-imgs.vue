@@ -69,7 +69,7 @@
     height: 2rem;
     width: .8rem;
     padding-left: .2rem;
-    background: url('/src/assets/images/goback.png') center center no-repeat;
+    background: url('/static/images/goback.png') center center no-repeat;
     background-size: .8rem .8rem;
   }
 </style>

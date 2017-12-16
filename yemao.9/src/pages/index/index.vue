@@ -14,10 +14,10 @@
           </group>
         </div>
         <div class="id-xiaoxi"@click="toUrl('message')">
-          <img src="../../assets/images/index/ling.png" />
+          <img src="../../../static/images/index/ling.png" />
         </div>
         <div class="id-sousuo"@click="toUrl('search')">
-          <img src="../../assets/images/index/search.png" />
+          <img src="../../../static/images/index/search.png" />
         </div>
       </div>
     </div>
@@ -25,61 +25,61 @@
     <div class="id-list">
       <div class="list-box"@click="toUrl('leibie')">
         <div class="lb-img">
-          <img src="../../assets/images/index/chehua.png" />
+          <img src="../../../static/images/index/chehua.png" />
         </div>
         <p>策划</p>
       </div>
       <div class="list-box"@click="toUrl('leibie')">
         <div class="lb-img">
-          <img src="../../assets/images/index/guihua.png" />
+          <img src="../../../static/images/index/guihua.png" />
         </div>
         <p>规划</p>
       </div>
       <div class="list-box"@click="toUrl('leibie')">
         <div class="lb-img">
-          <img src="../../assets/images/index/jianzhusheji.png" />
+          <img src="../../../static/images/index/jianzhusheji.png" />
         </div>
         <p>建筑设计</p>
       </div>
       <div class="list-box"@click="toUrl('leibie')">
         <div class="lb-img">
-          <img src="../../assets/images/index/jiegou.png" />
+          <img src="../../../static/images/index/jiegou.png" />
         </div>
         <p>结构</p>
       </div>
       <div class="list-box">
         <div class="lb-img">
-          <img src="../../assets/images/index/jipaishui.png" />
+          <img src="../../../static/images/index/jipaishui.png" />
         </div>
         <p>给排水</p>
       </div>
       <div class="list-box">
         <div class="lb-img">
-          <img src="../../assets/images/index/dianqi.png" />
+          <img src="../../../static/images/index/dianqi.png" />
         </div>
         <p>电气</p>
       </div>
       <div class="list-box">
         <div class="lb-img">
-          <img src="../../assets/images/index/nuantong.png" />
+          <img src="../../../static/images/index/nuantong.png" />
         </div>
         <p>暖通</p>
       </div>
       <div class="list-box">
         <div class="lb-img">
-          <img src="../../assets/images/index/jingguan.png" />
+          <img src="../../../static/images/index/jingguan.png" />
         </div>
         <p>景观</p>
       </div>
       <div class="list-box">
         <div class="lb-img">
-          <img src="../../assets/images/index/shinei.png" />
+          <img src="../../../static/images/index/shinei.png" />
         </div>
         <p>室内设计</p>
       </div>
       <div class="list-box"@click="toUrl('fenlei')">
         <div class="lb-img">
-          <img src="../../assets/images/index/qunab.png" />
+          <img src="../../../static/images/index/qunab.png" />
         </div>
         <p>全部</p>
       </div>
@@ -89,23 +89,23 @@
     <div class="wzgd-box">
       <swiper loop auto height="45px" direction="vertical" :interval=1000 class="text-scroll" :show-dots="false">
         <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
+          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
           <div class="notice-text">文字滚动广告0</div>
         </swiper-item>
         <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
+          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
           <div class="notice-text">文字滚动广告1</div>
         </swiper-item>
         <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
+          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
           <div class="notice-text">文字滚动广告2</div>
         </swiper-item>
         <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
+          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
           <div class="notice-text">文字滚动广告3</div>
         </swiper-item>
         <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../assets/images/bj.jpg" /></div>
+          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
           <div class="notice-text">文字滚动广告4</div>
         </swiper-item>
       </swiper>
@@ -130,20 +130,20 @@
       <div class="gz-list"@click="toUrl('emporder')">
         <div class="gz-top">
           <div class="gz-touxiang">
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </div>
           <div class="gz-nicheng">雇主小a</div>
           <div class="gz-jiage"><span>￥</span><span>5000</span></div>
         </div>
         <div class="gz-timeleixin">
-          <div class="gz-time"><span><img src="../../assets/images/index/time.png"/></span><span>七天后过期</span></div>
+          <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span><span>七天后过期</span></div>
           <div class="gz-leixin"><span>家装设计</span></div>
         </div>
         <div class="gz-content">
           <div class="tupian">
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
           </div>
           <div class="wenzhi">
             actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
@@ -152,13 +152,13 @@
         <div class="gz-bottom">
           <div class="gb-left">
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-wz">3人抢单</div>
           </div>
@@ -170,20 +170,20 @@
       <div class="gz-list"@click="toUrl('emporder')">
         <div class="gz-top">
           <div class="gz-touxiang">
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </div>
           <div class="gz-nicheng">雇主小a</div>
           <div class="gz-jiage"><span>￥</span><span>5000</span></div>
         </div>
         <div class="gz-timeleixin">
-          <div class="gz-time"><span><img src="../../assets/images/index/time.png"/></span><span>七天后过期</span></div>
+          <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span><span>七天后过期</span></div>
           <div class="gz-leixin"><span>家装设计</span></div>
         </div>
         <div class="gz-content">
           <div class="tupian">
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
           </div>
           <div class="wenzhi">
             actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
@@ -192,13 +192,13 @@
         <div class="gz-bottom">
           <div class="gb-left">
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-wz">3人抢单</div>
           </div>

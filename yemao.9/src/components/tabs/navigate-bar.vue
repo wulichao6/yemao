@@ -9,7 +9,7 @@
 </template>
 
 <script type="text/babel">
-  import common from '../../../utils/common.js'
+  import common from '../../../static/common.js'
   export default {
     name: 'navigate-bar',
     data () {
@@ -33,46 +33,45 @@
   .clo-theme{color: deeppink !important;}
   .tabs{}
   .tabs .item-index{
-    background: url('../../assets/main/index.png') center top no-repeat;
+    background: url('../../../static/images/index.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
   .tabs .item-employer{
-    background: url('../../assets/main/employer.png') center top no-repeat;
+    background: url('../../../static/images/employer.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
   .tabs .item-meow{
-    background: url('../../assets/logo.png') center top no-repeat;
+    background: url('../../../static/images/logo.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
   .tabs .item-designer{
-    background: url('../../assets/main/designer.png') center top no-repeat;
+    background: url('../../../static/images/designer.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
   .tabs .item-my{
-    background: url('../../assets/logo.png') center top no-repeat;
+    background: url('../../../static/images/logo.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
-
   /*.yd-tabbar-item.router-link-exact-active.router-link-active{*/
     /*color: red !important;}*/
   .tabs .clo-theme.item-index{
-    background: url('../../assets/main/index-hover.png') center top no-repeat;
+    background: url('../../../static/images/index-hover.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
   .tabs .clo-theme.item-employer{
-    background: url('../../assets/main/employer-hover.png') center top no-repeat;
+    background: url('../../../static/images/employer-hover.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
   .tabs .clo-theme.item-meow{
-    background: url('../../assets/logo.png') center top no-repeat;
+    background: url('../../../static/images/logo.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
   .tabs .clo-theme.item-designer{
-    background: url('../../assets/main/designer-hover.png') center top no-repeat;
+    background: url('../../../static/images/designer-hover.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
   .tabs .clo-theme.item-my{
-    background: url('../../assets/logo.png') center top no-repeat;
+    background: url('../../../static/images/logo.png') center top no-repeat;
     background-size: .54rem .54rem;
   }
 </style>

@@ -4,7 +4,7 @@
     <div class="header">
       <span>雇主</span>
       <div class="header-right"@click="toUrl('message')">
-        <img src="../../assets/images/employer/ling.png" />
+        <img src="../../../static/images/employer/ling.png" />
       </div>
     </div>
     <!--状态模块-->
@@ -34,20 +34,20 @@
       <div class="gz-list"@click="toUrl('emporder')">
         <div class="gz-top">
           <div class="gz-touxiang">
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </div>
           <div class="gz-nicheng">雇主小a</div>
           <div class="gz-jiage"><span>￥</span><span>5000</span></div>
         </div>
         <div class="gz-timeleixin">
-          <div class="gz-time"><span><img src="../../assets/images/index/time.png"/></span><span>七天后过期</span></div>
+          <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span><span>七天后过期</span></div>
           <div class="gz-leixin"><span>家装设计</span></div>
         </div>
         <div class="gz-content">
           <div class="tupian">
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
           </div>
           <div class="wenzhi">
             actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
@@ -56,13 +56,13 @@
         <div class="gz-bottom">
           <div class="gb-left">
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-wz">3人抢单</div>
           </div>
@@ -74,20 +74,20 @@
       <div class="gz-list"@click="toUrl('emporder')">
         <div class="gz-top">
           <div class="gz-touxiang">
-            <img src="../../assets/images/bj.jpg" />
+            <img src="../../../static/images/bj.jpg" />
           </div>
           <div class="gz-nicheng">雇主小a</div>
           <div class="gz-jiage"><span>￥</span><span>5000</span></div>
         </div>
         <div class="gz-timeleixin">
-          <div class="gz-time"><span><img src="../../assets/images/index/time.png"/></span><span>七天后过期</span></div>
+          <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span><span>七天后过期</span></div>
           <div class="gz-leixin"><span>家装设计</span></div>
         </div>
         <div class="gz-content">
           <div class="tupian">
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../assets/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
+            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
           </div>
           <div class="wenzhi">
             actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
@@ -96,13 +96,13 @@
         <div class="gz-bottom">
           <div class="gb-left">
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-tu">
-              <img src="../../assets/images/bj.jpg" />
+              <img src="../../../static/images/bj.jpg" />
             </div>
             <div class="gb-wz">3人抢单</div>
           </div>
@@ -154,11 +154,11 @@
   @import "../../assets/css/public/public.css";
   @import '../../assets/css/employer/guzhu.css';
   .gu-mokuai .dingdan {
-    background: url('../../assets/images/employer/fabubj.png');
+    background: url('../../../static/images/fabubj.png');
     background-size: 100% 100%;
   }
   .gu-mokuai .shouchang {
-    background: url('../../assets/images/employer/dingdanbj.png');
+    background: url('../../../static/images/dingdanbj.png');
     background-size: 100% 100%;
   }
 </style>

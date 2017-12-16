@@ -268,7 +268,7 @@ const routeArray = [
 ]
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: routeArray,
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }

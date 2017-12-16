@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left" @click="goback"><img src="../../assets/images/index/back.png"/></div>
+      <div class="header-left" @click="goback"><img src="../../../static/images/index/back.png"/></div>
       <span>昵称</span>
     </div>
     <!--  信息表-->

@@ -13,7 +13,7 @@
       <div class="ddxq">
         <div class="ddxq-top">
           <div class="ddxq-img"@click="toUrl('emporderimgs')">
-            <img src='../../assets/images/bj.jpg'>
+            <img src='../../../static/images/bj.jpg'>
             <div class="num">5</div>
           </div>
           <div class="ddxq-jianjie">
@@ -29,7 +29,7 @@
         <div class="ddxq-list">
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src='../../assets/images/employer/leixin.png'></span><span>预计完成：</span>
+              <span><img src='../../../static/images/employer/leixin.png'></span><span>预计完成：</span>
             </div>
             <div class="box-right">
               <span>2017-05-24</span>
@@ -37,7 +37,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src='../../assets/images/employer/leixin.png'></span><span>交易状态：</span>
+              <span><img src='../../../static/images/employer/leixin.png'></span><span>交易状态：</span>
             </div>
             <div class="box-right">
               <span>建筑设计</span>
@@ -45,7 +45,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src='../../assets/images/employer/leixin.png'></span><span>设计深度：</span>
+              <span><img src='../../../static/images/employer/leixin.png'></span><span>设计深度：</span>
             </div>
             <div class="box-right">
               <span>方案</span>
@@ -53,7 +53,7 @@
           </div>
           <div class="ddxq-box" style="border: none;">
             <div class="box-left">
-                <span><img src='../../assets/images/employer/leixin.png'></span><span>工时：</span>
+                <span><img src='../../../static/images/employer/leixin.png'></span><span>工时：</span>
             </div>
             <div class="box-right">
               <span>20小时</span>
@@ -82,12 +82,12 @@
           <div class="qdsjs-box">
             <div class="qb-top">
               <div class="qt-touxiang">
-                <img src='../../assets/images/bj.jpg'>
+                <img src='../../../static/images/bj.jpg'>
               </div>
               <div class="qt-nichen">
                 <span>设计师小A</span>
               </div>
-              <div class="chat"><img src='../../assets/images/employer/miaomiao.png'></div>
+              <div class="chat"><img src='../../../static/images/employer/miaomiao.png'></div>
               <div class="qt-jiage">
                 <div class="qt-time"><span>20小时</span></div>
                 <div class="qt-jingqian"><span>￥</span><span>5000</span></div>
@@ -109,12 +109,12 @@
           <div class="qdsjs-box">
             <div class="qb-top">
               <div class="qt-touxiang">
-                <img src='../../assets/images/bj.jpg'>
+                <img src='../../../static/images/bj.jpg'>
               </div>
               <div class="qt-nichen">
                 <span>设计师小B</span>
               </div>
-              <div class="chat"><img src='../../assets/images/employer/miaomiao.png'></div>
+              <div class="chat"><img src='../../../static/images/employer/miaomiao.png'></div>
               <div class="qt-jiage">
                 <div class="qt-time"><span>20小时</span></div>
                 <div class="qt-jingqian"><span>￥</span><span>5000</span></div>
@@ -134,7 +134,7 @@
     <!--底部-->
     <div class="od-botton">
       <div class="mmliaotian">
-        <span><img src='../../assets/images/employer/miaomiao.png'></span>
+        <span><img src='../../../static/images/employer/miaomiao.png'></span>
         <span>喵喵聊天</span>
       </div>
       <div class="lijiqiangdan"@click="toUrl('orderqiangdan')">立即抢单</div>
@@ -153,7 +153,7 @@
         title: '订单详情',
         rightClass: 'collect',
         cover: {
-          backgroundImage: 'url(' + require('../../assets/images/bj.jpg') + ')'
+          backgroundImage: 'url(' + require('../../../static/images/bj.jpg') + ')'
         }
       }
     },

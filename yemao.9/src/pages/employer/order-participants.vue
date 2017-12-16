@@ -12,12 +12,12 @@
           <div class="qdsjs-box">
             <div class="qb-top">
               <div class="qt-touxiang">
-                <img src='../../assets/images/bj.jpg'>
+                <img src='../../../static/images/bj.jpg'>
               </div>
               <div class="qt-nichen">
                 <span>设计师小A</span>
               </div>
-              <div class="chat"><img src='../../assets/images/employer/miaomiao.png'></div>
+              <div class="chat"><img src='../../../static/images/employer/miaomiao.png'></div>
               <div class="qt-jiage">
                 <div class="qt-time"><span>20小时</span></div>
                 <div class="qt-jingqian"><span>￥</span><span>5000</span></div>
@@ -38,12 +38,12 @@
           <div class="qdsjs-box">
             <div class="qb-top">
               <div class="qt-touxiang">
-                <img src='../../assets/images/bj.jpg'>
+                <img src='../../../static/images/bj.jpg'>
               </div>
               <div class="qt-nichen">
                 <span>设计师小B</span>
               </div>
-              <div class="chat"><img src='../../assets/images/employer/miaomiao.png'></div>
+              <div class="chat"><img src='../../../static/images/employer/miaomiao.png'></div>
               <div class="qt-jiage">
                 <div class="qt-time"><span>20小时</span></div>
                 <div class="qt-jingqian"><span>￥</span><span>5000</span></div>
@@ -71,7 +71,7 @@
       return {
         title: '选择设计师',
         cover: {
-          backgroundImage: 'url(' + require('../../assets/images/bj.jpg') + ')'
+          backgroundImage: 'url(' + require('../../../static/images/bj.jpg') + ')'
         }
       }
     },

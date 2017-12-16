@@ -1,9 +1,9 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left" @click="goback"><img src="../../assets/images/index/back.png"/></div>
+      <div class="header-left" @click="goback"><img src="../../../static/images/index/back.png"/></div>
       <span>我的订单</span>
-      <div class="header-right"@click="toUrl('fabudingdan')"><img src="../../assets/images/employer/jiahao.png"></div>
+      <div class="header-right"@click="toUrl('fabudingdan')"><img src="../../../static/images/employer/jiahao.png"></div>
     </div>
     <!--tab选项卡-->
     <div class="content">
@@ -18,7 +18,7 @@
           <div class="ddlist-sjsdai">
             <div class="ds-top"@click="toUrl('daichulixq')">
               <div class="ds-img">
-                <img src="../../assets/images/bj.jpg">
+                <img src="../../../static/images/bj.jpg">
               </div>
               <div class="ds-jianjie">
                 <div class="jianjie-top">
@@ -44,7 +44,7 @@
           <div class="ddlist-sjsdai">
             <div class="ds-top"@click="toUrl('daizhifu')">
               <div class="ds-img">
-                <img src="../../assets/images/bj.jpg">
+                <img src="../../../static/images/bj.jpg">
               </div>
               <div class="ds-jianjie">
                 <div class="jianjie-top">
@@ -69,7 +69,7 @@
           <div class="ddlist-sjsdai">
             <div class="ds-top"@click="toUrl('daijiaofu')">
               <div class="ds-img">
-                <img src="../../assets/images/bj.jpg">
+                <img src="../../../static/images/bj.jpg">
               </div>
               <div class="ds-jianjie">
                 <div class="jianjie-top">
@@ -93,7 +93,7 @@
           <div class="ddlist-sjsdai">
             <div class="ds-top"@click="toUrl('yiwancheng')">
               <div class="ds-img">
-                <img src="../../assets/images/bj.jpg">
+                <img src="../../../static/images/bj.jpg">
               </div>
               <div class="ds-jianjie">
                 <div class="jianjie-top">

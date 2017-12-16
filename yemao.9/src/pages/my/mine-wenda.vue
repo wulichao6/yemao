@@ -2,7 +2,7 @@
   <div >
     <!--导航栏-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <div class="daohang">
         <ul class="tab_menu">
           <li class="selected">提问</li>

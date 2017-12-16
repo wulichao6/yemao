@@ -72,11 +72,11 @@
   .rightclass{border: 1px solid red;
   }
   .collect{
-    background: url('/src/assets/images/collect.png') center no-repeat;
+    background: url('/static/images/collect.png') center no-repeat;
     background-size: .5rem .5rem;
   }
   .collect.hover{
-    background: url('/src/assets/images/collect-hover.png') center no-repeat;
+    background: url('/static/images/collect-hover.png') center no-repeat;
     background-size: .5rem .5rem;
   }
 </style>

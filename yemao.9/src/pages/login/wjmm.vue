@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/login/back.png"/></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/login/back.png"/></div>
       <span>忘记密码</span>
     </div>
     <div class="zc-piaoti">

@@ -2,7 +2,7 @@
   <div class="">
     <div class="search">
       <div class="search-input">
-        <span class="searchtu"><img src="../../assets/images/index/searchbtn.png"/></span>
+        <span class="searchtu"><img src="../../../static/images/index/searchbtn.png"/></span>
         <input type="text" name="" id="search-inp" value=""class="search-inp" placeholder="搜索"/>
         <span class="searchcha">×</span>
       </div>

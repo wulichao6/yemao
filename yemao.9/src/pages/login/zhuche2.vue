@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/login/back.png"/></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/login/back.png"/></div>
     </div>
     <div class="zc-piaoti">
       <span>欢迎注册成为夜猫会员</span>

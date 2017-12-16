@@ -6,7 +6,7 @@
     </div>
     <div class="zfcg-content">
       <div class="zfcg-top">
-        <div class="zt-left"><img src="../../assets/images/employer/zfcg.png"/></div>
+        <div class="zt-left"><img src="../../../static/images/employer/zfcg.png"/></div>
         <div class="zt-right">
           <div class="zr-box">
             <p class="first-p"@click="goback">支付成功</p>

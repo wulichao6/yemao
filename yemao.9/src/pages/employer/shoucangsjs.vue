@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left" @click="goback"><img src="../../assets/images/index/back.png"/></div>
+      <div class="header-left" @click="goback"><img src="../../../static/images/index/back.png"/></div>
       <span>收藏设计师</span>
     </div>
     <!--收藏设计师-->
@@ -9,7 +9,7 @@
       <div class="szsjs-list">
         <div class="szsjs-top">
           <div class="szsjs-touxiang">
-            <img src="../../assets/images/bj.jpg">
+            <img src="../../../static/images/bj.jpg">
           </div>
           <div class="szsjs-neirong">
             <div class="sn-top">
@@ -32,7 +32,7 @@
       <div class="szsjs-list">
         <div class="szsjs-top">
           <div class="szsjs-touxiang">
-            <img src="../../assets/images/bj.jpg">
+            <img src="../../../static/images/bj.jpg">
           </div>
           <div class="szsjs-neirong">
             <div class="sn-top">

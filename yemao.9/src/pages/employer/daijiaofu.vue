@@ -1,18 +1,18 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/index/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/index/back.png" /></div>
       <span>订单详情</span>
     </div>
     <!--主体内容-->
     <div class="dcl-content">
       <div class="dcl-top">
-        <img src="../../assets/images/employer/dcl.png" />
+        <img src="../../../static/images/employer/dcl.png" />
       </div>
       <div class="ddxq">
         <div class="ddxq-top">
           <div class="ddxq-img"@click="toUrl('emporderimgs')">
-            <img src='../../assets/images/bj.jpg'>
+            <img src='../../../static/images/bj.jpg'>
             <div class="num">5</div>
           </div>
           <div class="ddxq-jianjie">
@@ -21,14 +21,14 @@
             </div>
             <div class="jianjie-bottom">
               <div class="db-yushuan"><span>预算</span> <span class="yushuan">￥</span><span class="yushuan">5000</span></div>
-              <div class="db-miaomiao"><span><img src='../../assets/images/employer/miaomiao.png'></span><span>喵喵</span></div>
+              <div class="db-miaomiao"><span><img src='../../../static/images/employer/miaomiao.png'></span><span>喵喵</span></div>
             </div>
           </div>
         </div>
         <div class="ddxq-list">
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../assets/images/employer/leixin.png"/></span><span>订单类型：</span>
+              <span><img src="../../../static/images/employer/leixin.png"/></span><span>订单类型：</span>
             </div>
             <div class="box-right">
               <span>建筑设计</span>
@@ -36,7 +36,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../assets/images/employer/leixin.png"/></span><span>设计面积：</span>
+              <span><img src="../../../static/images/employer/leixin.png"/></span><span>设计面积：</span>
             </div>
             <div class="box-right">
               <span>500m²</span>
@@ -44,7 +44,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../assets/images/employer/leixin.png"/></span><span>预计完成：</span>
+              <span><img src="../../../static/images/employer/leixin.png"/></span><span>预计完成：</span>
             </div>
             <div class="box-right">
               <span>2017-05-24</span>
@@ -52,7 +52,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../assets/images/employer/leixin.png"/></span><span>交易状态：</span>
+              <span><img src="../../../static/images/employer/leixin.png"/></span><span>交易状态：</span>
             </div>
             <div class="box-right">
               <span>建筑设计</span>
@@ -60,7 +60,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../assets/images/employer/leixin.png"/></span><span>设计深度：</span>
+              <span><img src="../../../static/images/employer/leixin.png"/></span><span>设计深度：</span>
             </div>
             <div class="box-right">
               <span>方案</span>
@@ -68,7 +68,7 @@
           </div>
           <div class="ddxq-box" style="border: none;">
             <div class="box-left">
-              <span><img src="../../assets/images/employer/leixin.png"/></span><span>工时：</span>
+              <span><img src="../../../static/images/employer/leixin.png"/></span><span>工时：</span>
             </div>
             <div class="box-right">
               <span>20小时</span>

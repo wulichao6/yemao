@@ -2,7 +2,7 @@
   <div class="">
     <!--导航栏-->
     <div class="header">
-      <div class="header-left" @click="goback"><img src="../../assets/images/index/back.png"/></div>
+      <div class="header-left" @click="goback"><img src="../../../static/images/index/back.png"/></div>
       <span>系统通知</span>
     </div>
     <div class="xiaoxi-content">
@@ -15,7 +15,7 @@
           <div class="ckxq">
             <span>查看详情</span>
             <div class="ck-right">
-              <img src="../../assets/images/index/jiangou.png">
+              <img src="../../../static/images/index/jiangou.png">
             </div>
           </div>
         </div>

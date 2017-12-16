@@ -1,12 +1,12 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/login/back.png"/></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/login/back.png"/></div>
       <div class="header-right"@click="toUrl('zhuche')">注册</div>
     </div>
     <div class="log">
       <div class="log-img">
-        <img src="../../assets/images/login/log.png"/>
+        <img src="../../../static/images/login/log.png"/>
       </div>
     </div>
     <div class="login-shuru">

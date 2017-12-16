@@ -82,19 +82,19 @@
   }
   /**为选中**/
   .tabs .item-index{
-    background: url('../../assets/main/index.png') ;
+    background: url('../../../static/images/index.png') ;
   }
   .tabs .item-employer{
-    background: url('../../assets/main/employer.png') ;
+    background: url('../../../static/images/employer.png') ;
   }
   .tabs .item-meow{
-    background: url('../../assets/logo.png') ;
+    background: url('../../../static/images/logo.png') ;
   }
   .tabs .item-designer{
-    background: url('../../assets/main/designer.png') ;
+    background: url('../../../static/images/designer.png') ;
   }
   .tabs .item-my{
-    background: url('../../assets/main/my.png') ;
+    background: url('../../../static/images/my.png') ;
   }
 
   /**选中**/
@@ -104,19 +104,19 @@
     animation: heartAnim 0.3s linear 1;
   }
   .tabs .tabbar-active.item-index{
-    background: url('../../assets/main/index-hover.png') ;
+    background: url('../../../static/images/index-hover.png') ;
   }
   .tabs .tabbar-active.item-employer{
-    background: url('../../assets/main/employer-hover.png') ;
+    background: url('../../../static/images/employer-hover.png') ;
   }
   .tabs .tabbar-active.item-meow{
-    background: url('../../assets/logo.png') ;
+    background: url('../../../static/images/logo.png') ;
   }
   .tabs .tabbar-active.item-designer{
-    background: url('../../assets/main/designer-hover.png') ;
+    background: url('../../../static/images/designer-hover.png') ;
   }
   .tabs .tabbar-active.item-my{
-    background: url('../../assets/main/my-hover.png') ;
+    background: url('../../../static/images/my-hover.png') ;
   }
 
   @-webkit-keyframes heartAnim {

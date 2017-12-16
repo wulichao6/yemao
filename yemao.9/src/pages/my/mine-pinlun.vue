@@ -2,14 +2,14 @@
   <div >
     <!--头部导航-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../assets/images/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <span>我的评论</span>
     </div>
     <!--评论列表-->
     <div class="content">
       <div class="pinglun-list">
         <div class="pl-left">
-          <img src="../../assets/images/bj.jpg" />
+          <img src="../../../static/images/bj.jpg" />
         </div>
         <div class="pl-content">
           <p>昵称</p>
@@ -17,12 +17,12 @@
           <p class="time">2017-09-08 08：23</p>
         </div>
         <div class="pl-right">
-          <img src="../../assets/images/bj.jpg" />
+          <img src="../../../static/images/bj.jpg" />
         </div>
       </div>
       <div class="pinglun-list">
         <div class="pl-left">
-          <img src="../../assets/images/bj.jpg" />
+          <img src="../../../static/images/bj.jpg" />
         </div>
         <div class="pl-content">
           <p>昵称</p>
@@ -30,7 +30,7 @@
           <p class="time">2017-09-08 08：23</p>
         </div>
         <div class="pl-right">
-          <img src="../../assets/images/bj.jpg" />
+          <img src="../../../static/images/bj.jpg" />
         </div>
       </div>
     </div>
