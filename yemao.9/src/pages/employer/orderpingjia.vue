@@ -21,13 +21,13 @@
             </div>
           </li>
           <li>
-            <div class="px-left">图纸满意度</div>
+            <div class="px-left">设计师态度</div>
             <div class="px-right">
               <rater v-model="data5"  active-color="#FF9900" :margin="0"></rater>
             </div>
           </li>
           <li>
-            <div class="px-left">图纸满意度</div>
+            <div class="px-left">时间进度</div>
             <div class="px-right">
               <rater v-model="data5"  active-color="#FF9900" :margin="0"></rater>
             </div>
