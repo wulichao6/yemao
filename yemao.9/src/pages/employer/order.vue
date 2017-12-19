@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--头部导航-->
-    <xheader2 @upup="childBubble" :title="title" :rightClass="rightClass"></xheader2>
+    <xheader2 :title="title" :rightClass="rightClass"></xheader2>
     <!--<div class="header">-->
       <!--<div class="header-left"><img src="../../assets/images/index/back.png" /></div>-->
       <!--<span>订单详情</span>-->
@@ -37,7 +37,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src='../../../static/images/employer/leixin.png'></span><span>交易状态：</span>
+              <span><img src='../../../static/images/employer/04.png'></span><span>交易状态：</span>
             </div>
             <div class="box-right">
               <span>建筑设计</span>
@@ -45,18 +45,26 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src='../../../static/images/employer/leixin.png'></span><span>设计深度：</span>
+              <span><img src='../../../static/images/employer/02.png'></span><span>设计深度：</span>
             </div>
             <div class="box-right">
               <span>方案</span>
             </div>
           </div>
-          <div class="ddxq-box" style="border: none;">
+          <div class="ddxq-box">
             <div class="box-left">
-                <span><img src='../../../static/images/employer/leixin.png'></span><span>工时：</span>
+                <span><img src='../../../static/images/employer/03.png'></span><span>工时：</span>
             </div>
             <div class="box-right">
               <span>20小时</span>
+            </div>
+          </div>
+          <div class="ddxq-box" style="border: none;">
+            <div class="box-left">
+              <span><img src="../../../static/images/employer/06.png"/></span><span>地区：</span>
+            </div>
+            <div class="box-right">
+              <span>上海</span>
             </div>
           </div>
         </div>
@@ -139,6 +147,12 @@
       </div>
       <div class="lijiqiangdan"@click="toUrl('orderqiangdan')">立即抢单</div>
     </div>
+    <!--弹窗-->
+    <div class="tishikuang">
+      <div class="tisi">
+        收藏成功
+      </div>
+    </div>
   </div>
 </template>
 
@@ -200,6 +214,27 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import "../../assets/css/public/public.css";
   @import '../../assets/css/employer/order.css';
+  .od-condent .od-renshu .tu {
+    background: url('../../../static/images/timer.png') left center no-repeat;
+    background-size: .5rem .5rem;
+  }
+  .od-condent .od-renshu .gengduo {
+    background: url('../../../static/images/more.png') center center no-repeat;
+    background-size: .5rem .5rem;
+  }
+  .tishikuang .tisi {
+    position: fixed;
+    width: 2rem;
+    height: 1.2rem;
+    border-radius: 0.1rem;
+    background: #8d8d8d;
+    text-align: center;
+    line-height: 1.2rem;
+    color: white;
+    left:2.75rem;
+    top: 30%;
+    font-size: 0.32rem;
+    display: none;
+  }
 </style>

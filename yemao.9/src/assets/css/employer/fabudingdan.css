@@ -28,7 +28,7 @@
 }
 
 .fb-content .xmlx .xmlx-right .xmlx-kuang {
-  width: 3rem;
+  width: 2.9rem;
   height: 0.8rem;
   border: none;
   display: block;
@@ -86,7 +86,7 @@
 }
 
 .fb-content .ys-time {
-  widows: 100%;
+  width: 100%;
   background: white;
   margin-bottom: 0.1rem;
 }
@@ -130,11 +130,12 @@
 .fb-content .ys-time .qdtime .qdtime-right {
   float: right;
   height: 0.8rem;
+  line-height: 0.8rem;
   margin-right: 0.3rem;
 }
 
 .fb-content .bt-mj-gs {
-  widows: 100%;
+  width: 100%;
   background: white;
   margin-bottom: 0.1rem;
 }
@@ -196,7 +197,7 @@
   border-radius: 0.1rem;
 }
 
-.fb-content .bt-mj-gs .sjsd .sjsd-bottom .fanan ul li {
+.fb-content .bt-mj-gs .sjsd .sjsd-bottom .fanan .fa {
   float: left;
   width: 33.33%;
   height: 0.56rem;
@@ -205,7 +206,7 @@
   border-right: 1px solid #F2F2F2;
 }
 
-.fb-content .bt-mj-gs .sjsd .sjsd-bottom .fanan ul li:last-child {
+.fb-content .bt-mj-gs .sjsd .sjsd-bottom .fanan .fa:last-child {
   border: none;
 }
 
@@ -253,9 +254,11 @@
 .fb-content .sctp .st-bottom {
   width: 2rem;
   height: 2rem;
-  border: 1px dashed #F2F2F2;
+  border: 2px dashed #F2F2F2;
   margin-left: 0.3rem;
 }
-
+.fb-content .sctp .st-bottom img{
+  width: 100%;
+}
 
 /*# sourceMappingURL=fabudingdan.css.map */

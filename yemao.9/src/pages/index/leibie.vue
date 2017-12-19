@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../../static/images/index/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <span>建筑设计</span>
     </div>
     <!--雇主列表-->
@@ -110,7 +110,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import "../../assets/css/public/public.css";
   .content{
     margin-top: 0.8rem;
     background: #f2f2f2;

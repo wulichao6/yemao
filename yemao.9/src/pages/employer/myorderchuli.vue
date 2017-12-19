@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left" @click="goback"><img src="../../../static/images/index/back.png"/></div>
+      <div class="header-left" @click="goback"><img src="../../../static/images/back.png"/></div>
       <span>我的订单</span>
       <div class="header-right"@click="toUrl('fabudingdan')"><img src="../../../static/images/employer/jiahao.png"></div>
     </div>
@@ -15,30 +15,54 @@
       </tab>
       <swiper v-model="index" :show-dots="false">
         <swiper-item key="0">
-          <div class="ddlist-sjsdai">
-            <div class="ds-top"@click="toUrl('daichulixq')">
-              <div class="ds-img">
-                <img src="../../../static/images/bj.jpg">
-              </div>
-              <div class="ds-jianjie">
-                <div class="jianjie-top">
-                  已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成
+            <div class="ddlist-sjsdai">
+              <div class="ds-top"@click="toUrl('daichulixq')">
+                <div class="ds-img">
+                  <img src="../../../static/images/bj.jpg">
                 </div>
-                <div class="jianjie-bottom">
-                  <div class="db-leixin"><span>建筑设计</span> <span class="yuan">￥</span><span class="yuan">50000</span>
+                <div class="ds-jianjie">
+                  <div class="jianjie-top">
+                    已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成
                   </div>
-                  <div class="db-djs">7天后截止报名</div>
+                  <div class="jianjie-bottom">
+                    <div class="db-leixin"><span>建筑设计</span> <span class="yuan">￥</span><span class="yuan">50000</span>
+                    </div>
+                    <div class="db-djs">7天后截止报名</div>
+                  </div>
+                </div>
+              </div>
+              <div class="ds-bottom">
+                <div class="db-right">
+                  <div class="db-qxdd">取消订单</div>
+                  <div class="db-sxdd">刷新订单</div>
+                  <div class="db-qrdd">确认订单</div>
                 </div>
               </div>
             </div>
-            <div class="ds-bottom">
-              <div class="db-right">
-                <div class="db-qxdd">取消订单</div>
-                <div class="db-sxdd">刷新订单</div>
-                <div class="db-qrdd">确认订单</div>
+            <div class="ddlist-sjsdai">
+              <div class="ds-top"@click="toUrl('daichulixq')">
+                <div class="ds-img">
+                  <img src="../../../static/images/bj.jpg">
+                </div>
+                <div class="ds-jianjie">
+                  <div class="jianjie-top">
+                    已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成
+                  </div>
+                  <div class="jianjie-bottom">
+                    <div class="db-leixin"><span>建筑设计</span> <span class="yuan">￥</span><span class="yuan">50000</span>
+                    </div>
+                    <div class="db-djs">7天后截止报名</div>
+                  </div>
+                </div>
+              </div>
+              <div class="ds-bottom">
+                <div class="db-right">
+                  <div class="db-qxdd">取消订单</div>
+                  <div class="db-sxdd">刷新订单</div>
+                  <div class="db-qrdd">确认订单</div>
+                </div>
               </div>
             </div>
-          </div>
         </swiper-item>
         <swiper-item key="1">
           <div class="ddlist-sjsdai">
@@ -63,7 +87,28 @@
               </div>
             </div>
           </div>
-
+          <div class="ddlist-sjsdai">
+            <div class="ds-top"@click="toUrl('daizhifu')">
+              <div class="ds-img">
+                <img src="../../../static/images/bj.jpg">
+              </div>
+              <div class="ds-jianjie">
+                <div class="jianjie-top">
+                  已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成
+                </div>
+                <div class="jianjie-bottom">
+                  <div class="db-leixin"><span>建筑设计</span> <span class="yuan">￥</span><span class="yuan">50000</span></div>
+                  <div class="db-djs">7天后截止报名</div>
+                </div>
+              </div>
+            </div>
+            <div class="ds-bottom">
+              <div class="db-right">
+                <div class="db-qxdd">取消订单</div>
+                <div class="db-qrdd"@click="toUrl('zfcg')">支付</div>
+              </div>
+            </div>
+          </div>
         </swiper-item>
         <swiper-item key="2">
           <div class="ddlist-sjsdai">
@@ -83,7 +128,29 @@
             </div>
             <div class="ds-bottom">
               <div class="db-right">
-                <div class="db-sxdd">一键会审</div>
+                <div class="db-sxdd"@click="toUrl('yijianhuisheng')">一键会审</div>
+                <div class="db-qrdd">确认订单</div>
+              </div>
+            </div>
+          </div>
+          <div class="ddlist-sjsdai">
+            <div class="ds-top"@click="toUrl('daijiaofu')">
+              <div class="ds-img">
+                <img src="../../../static/images/bj.jpg">
+              </div>
+              <div class="ds-jianjie">
+                <div class="jianjie-top">
+                  已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成
+                </div>
+                <div class="jianjie-bottom">
+                  <div class="db-leixin"><span>建筑设计</span> <span class="yuan">￥</span><span class="yuan">50000</span></div>
+                  <div class="db-djs">7天后截止报名</div>
+                </div>
+              </div>
+            </div>
+            <div class="ds-bottom">
+              <div class="db-right">
+                <div class="db-sxdd"@click="toUrl('yijianhuisheng')">一键会审</div>
                 <div class="db-qrdd">确认订单</div>
               </div>
             </div>
@@ -112,7 +179,28 @@
               </div>
             </div>
           </div>
-
+          <div class="ddlist-sjsdai">
+            <div class="ds-top"@click="toUrl('yiwancheng')">
+              <div class="ds-img">
+                <img src="../../../static/images/bj.jpg">
+              </div>
+              <div class="ds-jianjie">
+                <div class="jianjie-top">
+                  已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成
+                </div>
+                <div class="jianjie-bottom">
+                  <div class="db-leixin"><span>建筑设计</span> <span class="yuan">￥</span><span class="yuan">50000</span></div>
+                  <div class="db-djs">交易关闭</div>
+                </div>
+              </div>
+            </div>
+            <div class="ds-bottom">
+              <div class="db-right">
+                <div class="db-qxdd">取消订单</div>
+                <div class="db-qrdd"@click="toUrl('orderpingjia')">评价设计师</div>
+              </div>
+            </div>
+          </div>
         </swiper-item>
       </swiper>
     </div>
@@ -144,10 +232,8 @@
     }
   }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import "../../assets/css/public/public.css";
   .content{
     background: #F2F2F2;
     margin-top: 0.8rem;

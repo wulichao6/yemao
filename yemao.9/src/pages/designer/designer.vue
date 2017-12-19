@@ -5,6 +5,7 @@
       <span>设计师</span>
       <div class="header-right">
         <span><img src="../../../static/images/designer/ling.png" /></span>
+        <div class="hongdian"></div>
       </div>
     </div>
     <!--模块-->
@@ -173,6 +174,14 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import "../../assets/css/public/public.css";
   @import '../../assets/css/designer/designer.css';
+  .header .header-right .hongdian{
+    width: 0.1rem;
+    height: 0.1rem;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0.1rem;
+  }
 </style>

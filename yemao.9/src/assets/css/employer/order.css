@@ -12,7 +12,6 @@
 	float: left;
 	width: 0.6rem;
 	height: 0.8rem;
-  background: url('/static/images/timer.png') left center no-repeat;
   background-size: .5rem .5rem;
 }
 
@@ -26,7 +25,6 @@
 	float: right;
 	width: 0.8rem;
 	height: 0.8rem;
-  background: url('/static/images/more.png') center center no-repeat;
   background-size: .5rem .5rem;
 }
 

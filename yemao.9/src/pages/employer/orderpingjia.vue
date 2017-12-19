@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left" @click="goback"><img src="../../../static/images/index/back.png"/></div>
+      <div class="header-left" @click="goback"><img src="../../../static/images/back.png"/></div>
       <span>订单评价</span>
       <div class="header-right">完成</div>
     </div>
@@ -68,6 +68,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import "../../assets/css/public/public.css";
   @import "../../assets/css/employer/order-pingjia.css";
 </style>

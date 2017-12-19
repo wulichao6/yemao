@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../../static/images/index/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <div class="daohang">
         <ul class="tab_menu">
           <li class="selected">消息</li>
@@ -106,6 +106,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import "../../assets/css/public/public.css";
   @import '../../assets/css/index/message.css';
 </style>

@@ -33,6 +33,7 @@ import liaotian from '@/pages/employer/liaotian'
 import daizhifu from '@/pages/employer/daizhifu'
 import daijiaofu from '@/pages/employer/daijiaofu'
 import yiwancheng from '@/pages/employer/yiwancheng'
+import yijianhuisheng from '@/pages/employer/yijianhuisheng'
 import set from '@/pages/my/set'
 import setnicheng from '@/pages/my/set-nicheng'
 import setnum from '@/pages/my/set-num'
@@ -93,6 +94,10 @@ const routeArray = [
     component: set
   },
   // 雇主模块
+  { path: '/yijianhuisheng',
+    name: 'yijianhuisheng',
+    component: yijianhuisheng
+  },
   { path: '/daizhifu',
     name: 'daizhifu',
     component: daizhifu

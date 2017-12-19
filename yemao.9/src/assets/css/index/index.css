@@ -18,11 +18,13 @@
   position: relative;
   float: left;
   width: 1rem;
-  height: 0.6rem;
-  line-height: 0.6rem;
-  margin-top: 0.2rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  margin-left: 0.1rem;
+  margin-top: 0.1rem;
+  color: #333333 !important;
   font-size:0.28rem !important;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 .index-banner .id-header .crity .select-value {
@@ -54,12 +56,22 @@
 }
 
 .index-banner .id-header .id-xiaoxi {
+  position: relative;
   float: right;
   width: 0.4rem;
   height: 0.4rem;
   margin: 0.1rem;
   margin-right: 0.2rem;
   margin-top: 0.3rem;
+}
+.index-banner .id-header .id-xiaoxi .hongdian{
+  width: 0.1rem;
+  height: 0.1rem;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: -0.1rem;
 }
 
 .index-banner .id-header .id-xiaoxi img {
@@ -208,7 +220,7 @@
   width: 100%;
   top: 0.7rem;
   left: 0;
-  background: #F0F0F0;
+  background: #fefefe;
   z-index: 999;
   display: none;
 }
@@ -218,7 +230,8 @@
   height: 0.8rem;
   line-height: 0.8rem;
   text-align: center;
-  border-top: 1px solid #FFFFFF;
+  color: #8d8d8d;
+  border-top: 1px solid #f2f2f2;
 }
 .content{
   background-color: #f2f2f2;

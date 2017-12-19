@@ -1,13 +1,13 @@
 <template>
   <div class="">
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../../static/images/index/back.png" /></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <span>订单详情</span>
     </div>
     <!--主体内容-->
     <div class="dcl-content">
       <div class="dcl-top">
-        <img src="../../../static/images/employer/dcl.png" />
+        <img src="../../../static/images/employer/djf.png" />
       </div>
       <div class="ddxq">
         <div class="ddxq-top">
@@ -28,7 +28,7 @@
         <div class="ddxq-list">
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../../static/images/employer/leixin.png"/></span><span>订单类型：</span>
+              <span><img src="../../../static/images/employer/07.png"/></span><span>订单类型：</span>
             </div>
             <div class="box-right">
               <span>建筑设计</span>
@@ -36,7 +36,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../../static/images/employer/leixin.png"/></span><span>设计面积：</span>
+              <span><img src="../../../static/images/employer/05.png"/></span><span>设计面积：</span>
             </div>
             <div class="box-right">
               <span>500m²</span>
@@ -52,7 +52,7 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../../static/images/employer/leixin.png"/></span><span>交易状态：</span>
+              <span><img src="../../../static/images/employer/04.png"/></span><span>交易状态：</span>
             </div>
             <div class="box-right">
               <span>建筑设计</span>
@@ -60,18 +60,26 @@
           </div>
           <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../../static/images/employer/leixin.png"/></span><span>设计深度：</span>
+              <span><img src="../../../static/images/employer/02.png"/></span><span>设计深度：</span>
             </div>
             <div class="box-right">
               <span>方案</span>
             </div>
           </div>
-          <div class="ddxq-box" style="border: none;">
+          <div class="ddxq-box">
             <div class="box-left">
-              <span><img src="../../../static/images/employer/leixin.png"/></span><span>工时：</span>
+              <span><img src="../../../static/images/employer/03.png"/></span><span>工时：</span>
             </div>
             <div class="box-right">
               <span>20小时</span>
+            </div>
+          </div>
+          <div class="ddxq-box" style="border: none;">
+            <div class="box-left">
+              <span><img src="../../../static/images/employer/06.png"/></span><span>地区：</span>
+            </div>
+            <div class="box-right">
+              <span>上海</span>
             </div>
           </div>
         </div>
@@ -147,6 +155,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import "../../assets/css/public/public.css";
   @import '../../assets/css/employer/daichulixq.css';
 </style>

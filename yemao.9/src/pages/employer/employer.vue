@@ -3,8 +3,9 @@
     <!--头部导航-->
     <div class="header">
       <span>雇主</span>
-      <div class="header-right"@click="toUrl('message')">
+      <div class="header-right "@click="toUrl('message')">
         <img src="../../../static/images/employer/ling.png" />
+        <div class="hongdian"></div>
       </div>
     </div>
     <!--状态模块-->
@@ -23,10 +24,10 @@
       </div>
       <div class="area">
         <ul>
-          <li>不限</li>
-          <li>时间排序</li>
-          <li>价格排序</li>
-          <li>类型排序</li>
+          <li>智能排序</li>
+          <li>离我最近</li>
+          <li>评价最高</li>
+          <li>最新发态</li>
         </ul>
       </div>
     </div>
@@ -144,6 +145,24 @@
             $(".xian p").addClass('up');
           }
         });
+        $(".area ul li").on('click',function(){
+
+          var $div = $(this);
+
+          var $others = $div.siblings();
+
+          if($div.hasClass('bg')){
+
+            $div.removeClass('bg').addClass('bg_click')
+
+          }else {
+
+            $div.removeClass('bg_click').addClass('bg')
+
+          }
+          $others.addClass('bg').removeClass('bg_click')
+
+        });
       }
     }
   }
@@ -151,7 +170,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import "../../assets/css/public/public.css";
   @import '../../assets/css/employer/guzhu.css';
   .gu-mokuai .dingdan {
     background: url('../../../static/images/fabubj.png');
@@ -160,5 +178,20 @@
   .gu-mokuai .shouchang {
     background: url('../../../static/images/dingdanbj.png');
     background-size: 100% 100%;
+  }
+  .header .header-right .hongdian{
+    width: 0.1rem;
+    height: 0.1rem;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0.1rem;
+  }
+  .bg{
+    background:#fefefe;
+  }
+  .bg_click {
+    background:#f3f3f3;
   }
 </style>

@@ -2,13 +2,13 @@
   <div class="">
     <!--头部导航-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../../static/images/login/back.png"/></div>
+      <div class="header-left"@click="goback"><img src="../../../static/images/back.png"/></div>
       <div class="header-right zc"@click="toUrl('zhuche')">注册</div>
     </div>
     <!--log-->
     <div class="log clear">
       <div class="log-img">
-        <img src="../../../static/images/login/log.png"/>
+        <img src="../../../static/images/log.png"/>
       </div>
     </div>
     <!--登陆-->
@@ -168,38 +168,6 @@
 </script>
 
 <style>
-  /*!*修改vux*!*/
-  /*.login-shuru .weui-cells,.login-shuru .vux-no-group-title{*/
-    /*margin-top:0px!important;*/
-    /*font-size: 0.28rem;*/
-    /*!*color:#9FB0C5;*!*/
-  /*}*/
-  /*.weui-input,.weui-cell {*/
-    /*padding:0.1rem 0.15rem!important;*/
-  /*}*/
-  /*.weui-label {*/
-    /*margin-left: 0.1rem;*/
-  /*}*/
-  /*.weui-cells_form input{*/
-     /*height:0.1rem;*/
-  /*}*/
-  /*[class*=" weui-icon-"] {*/
-    /*vertical-align:0 !important;*/
-  /*}*/
-  /*.weui-icon-clear {*/
-    /*color: #B2B2B2;*/
-    /*font-size: 14px;*/
-  /*}*/
-  /*.weui-icon-clear:before {*/
-    /*margin-bottom: 0.01rem !important;*/
-  /*}*/
-  /*.weui-btn_primary {*/
-    /*background-color:white !important;*/
-    /*color: #f63e96 !important;*/
-  /*}*/
-  /*.weui-btn:after{*/
-    /*border: none !important;*/
-  /*}*/
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

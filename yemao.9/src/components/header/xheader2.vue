@@ -28,9 +28,11 @@
         if (this.myRrightClass === this.rightClass) {
           this.myRrightClass = this.rightClass + ' hover'
           this.$emit('upup', '0')// 主动触发upup方法，'hehe'为向父组件传递的数据
+          $ ('.tisi').html(' 收藏成功').show ().delay (1000).fadeOut ();
         } else {
           this.myRrightClass = this.rightClass
           this.$emit('upup', '1')// 主动触发upup方法，'hehe'为向父组件传递的数据
+          $ ('.tisi').html('取消收藏').show ().delay (1000).fadeOut ();
         }
       }
     }
@@ -72,11 +74,11 @@
   .rightclass{border: 1px solid red;
   }
   .collect{
-    background: url('/static/images/collect.png') center no-repeat;
+    background: url('../../../static/images/collect.png') center no-repeat;
     background-size: .5rem .5rem;
   }
   .collect.hover{
-    background: url('/static/images/collect-hover.png') center no-repeat;
+    background: url('../../../static/images/collect-hover.png') center no-repeat;
     background-size: .5rem .5rem;
   }
 </style>

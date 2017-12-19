@@ -15,6 +15,7 @@
         </div>
         <div class="id-xiaoxi"@click="toUrl('message')">
           <img src="../../../static/images/index/ling.png" />
+          <div class="hongdian"></div>
         </div>
         <div class="id-sousuo"@click="toUrl('search')">
           <img src="../../../static/images/index/search.png" />
@@ -118,10 +119,10 @@
       </div>
       <div class="area">
         <ul>
-          <li>不限</li>
-          <li>时间排序</li>
-          <li>价格排序</li>
-          <li>类型排序</li>
+          <li>智能排序</li>
+          <li>离我最近</li>
+          <li>评价最高</li>
+          <li>最新发态</li>
         </ul>
       </div>
     </div>
@@ -163,7 +164,7 @@
             <div class="gb-wz">3人抢单</div>
           </div>
           <div class="gb-right">
-            <div class="gb-ljqd">立即抢单</div>
+            <div class="gb-ljqd"@click.stop="toUrl('orderqiangdan')">立即抢单</div>
           </div>
         </div>
       </div>
@@ -240,11 +241,10 @@
     },
     data () {
       return {
-        msg: 'Welcome to index',
         demo06_list: urlList,
         demo06_index: 0,
         addressData: ChinaAddressV4Data,
-        value3: ['--', '中山市', '--']
+        value3: ['中山市']
       }
     },
     mounted: function () {
@@ -302,7 +302,26 @@
             $(".xian p").addClass('up');
           }
         });
+        $(".area ul li").on('click',function(){
+
+          var $div = $(this);
+
+          var $others = $div.siblings();
+
+          if($div.hasClass('bg')){
+
+            $div.removeClass('bg').addClass('bg_click')
+
+          }else {
+
+            $div.removeClass('bg_click').addClass('bg')
+
+          }
+          $others.addClass('bg').removeClass('bg_click')
+
+        });
       },
+      // 地区
       logHide (str) {
         var obj = this;
         console.log('on-hide', str)
@@ -318,7 +337,7 @@
       },
       logShow (str) {
         console.log('on-show',str)
-      }
+      },
     }
   }
 </script>
@@ -333,7 +352,7 @@
   }
   .weui-cell_access {
     padding:0 !important;
-    height: 0.5rem;
+    height: 0.8rem;
     width: 1rem;
     display:inline-block!important;
   }
@@ -350,13 +369,13 @@
     border: none !important;
   }
   .vux-cell-value{
-    color: #000000 !important;
+    color:#333333;
   }
   .vux-popup-picker-value{
     display:block;
-    width:1rem;
-    height: 0.6rem;
-    line-height: 0.6rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
     overflow:hidden;
     word-break:keep-all;           /* 不换行 */
     white-space:nowrap;          /* 不换行 */
@@ -365,6 +384,11 @@
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import "../../assets/css/public/public.css";
   @import '../../assets/css/index/index.css';
+  .bg{
+    background:#fefefe;
+  }
+  .bg_click {
+    background:#f3f3f3;
+  }
 </style>
