@@ -42,9 +42,9 @@
   margin: 0.5rem 0;
 }
 .pj-content .pc-xing ul li{
-  width: 4.2rem;
-  height: 0.5rem;
-  line-height: 0.5rem;
+  width: 4.8rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
   font-size:0.28rem;
   margin: 0.1rem auto;
 }
@@ -54,6 +54,7 @@
   color: #AFB9C1;
 }
 .pj-content .pc-xing ul li .px-right{
+  width: 3rem;
   float: right;
   color: #AFB9C1;
 }

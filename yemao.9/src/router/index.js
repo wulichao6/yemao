@@ -34,6 +34,11 @@ import daizhifu from '@/pages/employer/daizhifu'
 import daijiaofu from '@/pages/employer/daijiaofu'
 import yiwancheng from '@/pages/employer/yiwancheng'
 import yijianhuisheng from '@/pages/employer/yijianhuisheng'
+import shejishigerenzhongxin from '@/pages/designer/shejishigerenzhongxin'
+import xiugaigerenxinxi from '@/pages/designer/xiugaigerenxinxi'
+import jianjiexiugai from '@/pages/designer/jianjiexiugai'
+import rongyushangcuan from '@/pages/designer/rongyushangcuan'
+import zuopingshangchuan from '@/pages/designer/zuopingshangchuan'
 import set from '@/pages/my/set'
 import setnicheng from '@/pages/my/set-nicheng'
 import setnum from '@/pages/my/set-num'
@@ -92,6 +97,27 @@ const routeArray = [
   { path: '/set',
     name: 'set',
     component: set
+  },
+  // 设计师模块
+  { path: '/shejishigerenzhongxin',
+    name: 'shejishigerenzhongxin',
+    component: shejishigerenzhongxin
+  },
+  { path: '/xiugaigerenxinxi',
+    name: 'xiugaigerenxinxi',
+    component: xiugaigerenxinxi
+  },
+  { path: '/jianjiexiugai',
+    name: 'jianjiexiugai',
+    component: jianjiexiugai
+  },
+  { path: '/rongyushangcuan',
+    name: 'rongyushangcuan',
+    component: rongyushangcuan
+  },
+  { path: '/zuopingshangchuan',
+    name: 'zuopingshangchuan',
+    component: zuopingshangchuan
   },
   // 雇主模块
   { path: '/yijianhuisheng',

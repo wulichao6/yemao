@@ -11,7 +11,7 @@
     <!--模块-->
     <div class="mokuai">
        <ul>
-         <li>
+         <li @click="toUrl('shejishigerenzhongxin')">
            <p>
              <img src="../../../static/images/designer/jianzhusheji.png" />
            </p>
