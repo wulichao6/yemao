@@ -1,0 +1,103 @@
+
+.fb-content {
+	width: 100%;
+	font-size: 0.28rem;
+	background: #F2F2F2;
+  margin-top: 1rem;
+}
+
+.fb-content .xmlx {
+	width: 100%;
+	height: 0.8rem;
+	background: white;
+	line-height: 0.8rem;
+	border-bottom: 1px solid #F2F2F2;
+}
+
+.fb-content .xmlx .xmlx-left {
+	float: left;
+	font-size: 0.28rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	margin-left: 0.3rem;
+}
+
+.fb-content .xmlx .xmlx-right {
+	float: right;
+	height: 0.8rem;
+	margin-right: 1.4rem;
+}
+
+.fb-content .xmlx .xmlx-right input {
+	border: none;
+	font-size: 0.28rem;
+	outline: medium;
+}
+
+.fb-content .xmbt {
+	width: 100%;
+	height: 3.4rem;
+	background: white;
+	border-bottom: 1px solid #F2F2F2;
+}
+
+.fb-content .xmbt .xmbt-top {
+	width: 100%;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	border-bottom: 1px solid #F2F2F2;
+}
+
+.fb-content .xmbt .xmbt-top .xt-left {
+	float: left;
+	margin-left: 0.3rem;
+}
+
+.fb-content .xmbt .xmbt-top .xt-right {
+	float: right;
+	height: 0.8rem;
+	margin-right: 1.4rem;
+}
+
+.fb-content .xmbt .xmbt-top .xt-right input {
+	border: none;
+	font-size: 0.28rem;
+	outline: medium;
+}
+
+.fb-content .xmbt .xmbt-bottom {
+	width: 6.9rem;
+	height: 260px;
+	margin-left: 0.3rem;
+}
+
+.fb-content .xmbt .xmbt-bottom .xt-txt {
+	width: 100%;
+	height: 2.4rem;
+	margin: 0.1rem 0;
+	font-size: 0.28rem;
+	border: none;
+	outline: medium;
+}
+
+.fb-content .sctp {
+	width: 100%;
+	height: 3.2rem;
+	background: white;
+}
+
+.fb-content .sctp .sc-top {
+	height: 0.8rem;
+	line-height: 0.8rem;
+	margin-left: 0.3rem;
+}
+
+.fb-content .sctp .st-bottom {
+	width: 2rem;
+	height: 2rem;
+	border: 1px dashed #F2F2F2;
+	margin-left: 0.3rem;
+}
+
+
+/*# sourceMappingURL=rongyushangchuan.css.map */
