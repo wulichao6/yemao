@@ -46,17 +46,17 @@
         <div class="list"@click="toUrl('minehuodong')">
           <!--<div class="tupiao"></div>-->
           <div class="xingxi">我参与的活动</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
         <div class="list tz"@click="toUrl('minejianli')">
           <!--<div class="tupiao"></div>-->
           <div class="xingxi">简历中心</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
         <div class="list"@click="toUrl('minewenda')">
           <!--<div class="tupiao"></div>-->
           <div class="xingxi">我的问答</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
       </div>
     </div>
@@ -66,22 +66,22 @@
         <div class="list">
           <!--<div class="tupiao"></div>-->
           <div class="xingxi">客服中心</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
         <div class="list">
           <!--<div class="tupiao"></div>-->
           <div class="xingxi">意见反馈</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
         <div id="qchc" class="list">
           <!--<div class="tupiao"></div>-->
           <div class="xingxi">清除缓存</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
         <div class="list"@click="toUrl('mineguanyu')">
           <!--<div class="tupiao"></div>-->
           <div class="xingxi">关于夜猫</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
       </div>
     </div>

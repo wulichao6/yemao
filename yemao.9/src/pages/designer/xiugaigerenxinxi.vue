@@ -54,15 +54,15 @@
       <div class="liebiao">
         <div class="list"@click="toUrl('jianjiexiugai')">
           <div class="xingxi">个人简介</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
         <div class="list tz"@click="toUrl('rongyushangcuan')">
           <div class="xingxi">上传荣誉</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
         <div class="list"@click="toUrl('zuopingshangchuan')">
           <div class="xingxi">上传作品</div>
-          <div class="list-right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
       </div>
     </div>

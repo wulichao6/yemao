@@ -17,13 +17,13 @@
            </p>
            <p>个人中心</p>
           </li>
-        <li>
+        <li @click="toUrl('mymoney')">
           <p>
             <img src="../../../static/images/designer/jianzhusheji.png" />
           </p>
           <p>钱包</p>
         </li>
-        <li>
+        <li @click="toUrl('renzheng')">
           <p>
             <img src="../../../static/images/designer/jianzhusheji.png" />
           </p>

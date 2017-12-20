@@ -39,6 +39,11 @@ import xiugaigerenxinxi from '@/pages/designer/xiugaigerenxinxi'
 import jianjiexiugai from '@/pages/designer/jianjiexiugai'
 import rongyushangcuan from '@/pages/designer/rongyushangcuan'
 import zuopingshangchuan from '@/pages/designer/zuopingshangchuan'
+import mymoney from '@/pages/designer/mymoney'
+import shouzhiminxi from '@/pages/designer/shouzhiminxi'
+import tixian from '@/pages/designer/tixian'
+import renzheng from '@/pages/designer/renzheng'
+import shimingrenzheng from '@/pages/designer/shimingrenzheng'
 import set from '@/pages/my/set'
 import setnicheng from '@/pages/my/set-nicheng'
 import setnum from '@/pages/my/set-num'
@@ -99,6 +104,26 @@ const routeArray = [
     component: set
   },
   // 设计师模块
+  { path: '/mymoney',
+    name: 'mymoney',
+    component: mymoney
+  },
+  { path: '/shouzhiminxi',
+    name: 'shouzhiminxi',
+    component: shouzhiminxi
+  },
+  { path: '/tixian',
+    name: 'tixian',
+    component: tixian
+  },
+  { path: '/renzheng',
+    name: 'renzheng',
+    component: renzheng
+  },
+  { path: '/shimingrenzheng',
+    name: 'shimingrenzheng',
+    component: shimingrenzheng
+  },
   { path: '/shejishigerenzhongxin',
     name: 'shejishigerenzhongxin',
     component: shejishigerenzhongxin

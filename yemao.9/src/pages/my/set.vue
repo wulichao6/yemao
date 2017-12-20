@@ -13,11 +13,11 @@
       <div class="xggh">
         <div class="xgdl"@click="toUrl('setpassword')">
           <div class="left"><span>修改登陆密码</span></div>
-          <div class="right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="right"><img src="../../../static/images/jiangou.png"></div>
         </div>
         <div class="xgdl"@click="toUrl('setnum')">
           <div class="left"><span>更换手机号</span></div>
-          <div class="right"><img src="../../../static/images/my/jiangou.png"></div>
+          <div class="right"><img src="../../../static/images/jiangou.png"></div>
         </div>
       </div>
     </div>
