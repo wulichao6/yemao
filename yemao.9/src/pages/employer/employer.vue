@@ -24,10 +24,10 @@
       </div>
       <div class="area">
         <ul>
-          <li>智能排序</li>
-          <li>离我最近</li>
-          <li>评价最高</li>
-          <li>最新发态</li>
+          <li class="bg_click">智能排序</li>
+          <li class="bg">离我最近</li>
+          <li class="bg">评价最高</li>
+          <li class="bg">最新发态</li>
         </ul>
       </div>
     </div>
@@ -194,4 +194,5 @@
   .bg_click {
     background:#f3f3f3;
   }
+
 </style>

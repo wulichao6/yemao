@@ -34,6 +34,7 @@ import daizhifu from '@/pages/employer/daizhifu'
 import daijiaofu from '@/pages/employer/daijiaofu'
 import yiwancheng from '@/pages/employer/yiwancheng'
 import yijianhuisheng from '@/pages/employer/yijianhuisheng'
+import sjszxxq from '@/pages/designer/sjszx-xq'
 import shejishigerenzhongxin from '@/pages/designer/shejishigerenzhongxin'
 import xiugaigerenxinxi from '@/pages/designer/xiugaigerenxinxi'
 import jianjiexiugai from '@/pages/designer/jianjiexiugai'
@@ -44,6 +45,11 @@ import shouzhiminxi from '@/pages/designer/shouzhiminxi'
 import tixian from '@/pages/designer/tixian'
 import renzheng from '@/pages/designer/renzheng'
 import shimingrenzheng from '@/pages/designer/shimingrenzheng'
+import pingtairenzheng from '@/pages/designer/pingtairenzheng'
+import qianyuesjs from '@/pages/designer/qianyuesjs'
+import zhichengrenzheng from '@/pages/designer/zhichengrenzheng'
+import tijiaoshenhe from '@/pages/designer/tijiaoshenhe'
+import anliexq from '@/pages/designer/anliexq'
 import set from '@/pages/my/set'
 import setnicheng from '@/pages/my/set-nicheng'
 import setnum from '@/pages/my/set-num'
@@ -104,6 +110,26 @@ const routeArray = [
     component: set
   },
   // 设计师模块
+  { path: '/pingtairenzheng',
+    name: 'pingtairenzheng',
+    component: pingtairenzheng
+  },
+  { path: '/qianyuesjs',
+    name: 'qianyuesjs',
+    component: qianyuesjs
+  },
+  { path: '/zhichengrenzheng',
+    name: 'zhichengrenzheng',
+    component: zhichengrenzheng
+  },
+  { path: '/tijiaoshenhe',
+    name: 'tijiaoshenhe',
+    component: tijiaoshenhe
+  },
+  { path: '/anliexq',
+    name: 'anliexq',
+    component: anliexq
+  },
   { path: '/mymoney',
     name: 'mymoney',
     component: mymoney
@@ -127,6 +153,10 @@ const routeArray = [
   { path: '/shejishigerenzhongxin',
     name: 'shejishigerenzhongxin',
     component: shejishigerenzhongxin
+  },
+  { path: '/sjszxxq',
+    name: 'sjszxxq',
+    component: sjszxxq
   },
   { path: '/xiugaigerenxinxi',
     name: 'xiugaigerenxinxi',

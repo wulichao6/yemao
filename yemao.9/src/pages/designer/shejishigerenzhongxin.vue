@@ -62,7 +62,7 @@
       <div class="lunpo">
         <swiper v-model="index" :show-dots="false">
           <swiper-item key="0">
-            <div class="alzs-list">
+            <div class="alzs-list"@click="toUrl('anliexq')">
               <div class="al-top">
                 <div class="touxiang">
                   <img src="../../../static/images/bj.jpg" />

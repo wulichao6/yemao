@@ -9,17 +9,17 @@
     <div class="content">
       <div class="liebiao">
         <div class="list"@click="toUrl('shimingrenzheng')">
-          <div class="tupiao"></div>
+          <div class="tupiao sm"><img src="../../../static/images/designer/sm.png" /></div>
           <div class="xingxi">实名认证</div>
           <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
-        <div class="list tz">
-          <div class="tupiao"></div>
+        <div class="list tz"@click="toUrl('pingtairenzheng')">
+          <div class="tupiao"><img src="../../../static/images/designer/pingtai.png" /></div>
           <div class="xingxi">平台认证</div>
           <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>
-        <div class="list">
-          <div class="tupiao"></div>
+        <div class="list"@click="toUrl('qianyuesjs')">
+          <div class="tupiao"><img src="../../../static/images/designer/qianyue.png" /></div>
           <div class="xingxi">签约设计师</div>
           <div class="list-right"><img src="../../../static/images/jiangou.png"></div>
         </div>

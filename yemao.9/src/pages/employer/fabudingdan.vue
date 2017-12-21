@@ -204,6 +204,7 @@
       logShow (str) {
         console.log('on-show',str)
       },
+      //提示框
       tishikuang(){
           $ ('.tisi').show ().delay (1000).fadeOut ();
       },

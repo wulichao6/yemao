@@ -1,4 +1,9 @@
-
+.content{
+  background: #f2f2f2;
+  height: 100%;
+  width: 100%;
+  margin-top: 0.88rem;
+}
  .xc-top {
 	width: 7.5rem;
 	height: 1.3rem;
