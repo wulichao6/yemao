@@ -177,11 +177,13 @@
 	width: 0.8rem;
 	height: 0.8rem;
 	text-align: center;
-	background: #CCCCCC;
 	line-height: 0.8rem;
 	border-radius: 50%;
 }
-
+.content .xinximokuai .xiaoxi img{
+  width: 100%;
+  height: 100%;
+}
 .content .rili {
 	width: 6.9rem;
 	border: 1px solid #aaaaaa;
@@ -272,8 +274,9 @@
 }
 
 .content .lunpo .alzs-list .al-bottom .al-left p span img {
-	width: 0.3rem;
+	width: 0.4rem;
 	vertical-align: middle;
+  margin-top: -0.1rem;
 }
 
 .content .lunpo .alzs-list .al-bottom .al-right {

@@ -10,15 +10,15 @@
     <div class="content">
       <!--流程-->
       <div class="banner">
-
+         <img src="../../../static/images/designer/renzheng_01.png"/>
       </div>
       <div class="tixin">
         <div class="tx-left">
-
+          <img src="../../../static/images/designer/gantan.png"/>
         </div>
         <span>我们将保护你的隐私，请务必确保真实有效的信息</span>
         <div class="tx-right">
-
+          <img src="../../../static/images/designer/x.png"/>
         </div>
       </div>
       <div class="ys-time">
@@ -48,10 +48,10 @@
         </div>
         <div class="qdtime">
           <div class="qdtime-left">
-            <span>证书名称</span>
+            <span>学校名称</span>
           </div>
           <div class="qdtime-right">
-            <input type="text"placeholder="请输入证书名称" />
+            <input type="text"placeholder="请输入学校名称" />
           </div>
         </div>
       </div>

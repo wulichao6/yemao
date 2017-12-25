@@ -13,6 +13,31 @@
         <span class="del">×</span>
       </div>
       <div class="ls-shouji">
+        <!--<div class="xmlx-left">-->
+          <!--<span>类型</span>-->
+        <!--</div>-->
+        <div class="xmlx-right">
+          <select class="xmlx-kuang">
+            <option value="volvo">类型</option>
+            <option value="saab">策划设计</option>
+            <option value="opel">规划设计</option>
+            <option value="audi">建筑设计</option>
+            <option value="audi">结构设计</option>
+
+            <option value="saab">给排水设计</option>
+            <option value="opel">电气设计</option>
+            <option value="audi">暖通设计</option>
+            <option value="audi">景观设计</option>
+
+            <option value="saab">室内设计</option>
+            <option value="opel">软装设计</option>
+            <option value="audi">项目经理</option>
+            <option value="audi">概预算</option>
+            <option value="audi">审图</option>
+          </select>
+        </div>
+      </div>
+      <div class="ls-shouji">
         <input type="text"class="shouji sjh" placeholder="手机号"/>
         <span class="del">×</span>
       </div>

@@ -3,7 +3,7 @@
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	font-size: 0.28rem;
+	font-size: 0.24rem;
 	background: #F2F2F2;
 	padding-bottom: 0.4rem;
   margin-top: 0.88rem;
@@ -11,7 +11,6 @@
 
 .content .banner {
 	width: 100%;
-	height: 2rem;
 }
 
 .content .banner img {
@@ -37,7 +36,8 @@
 }
 
 .content .tixin .tx-left img {
-	width: 100%;
+	width:0.3rem;
+  margin-top: 0.28rem;
 }
 
 .content .tixin .tx-right {
@@ -49,7 +49,8 @@
 }
 
 .content .tixin .tx-right img {
-	width: 100%;
+  width:0.3rem;
+  margin-top: 0.28rem;
 }
 
 .content .ys-time {
@@ -103,7 +104,7 @@
 }
 
 .content .cgzt {
-	width: 5.4rem;
+	width: 5.6rem;
 	height: 0.9rem;
 	font-size: 0.32rem;
 	margin: auto;
@@ -116,8 +117,11 @@
 	background: white;
 	border-radius: 50%;
 	float: left;
+  margin-right:0.1rem;
 }
-
+.content .cgzt .tupiao img{
+  width: 100%;
+}
 .content .cgzt .wzsm {
 	float: right;
 }

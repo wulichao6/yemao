@@ -9,7 +9,7 @@
     <div class="content">
       <!--流程-->
       <div class="banner">
-
+         <img src="../../../static/images/designer/renzheng_02.png"/>
       </div>
       <div class="ys-time">
         <div class="qdtime">

@@ -52,7 +52,7 @@
     <div class="qrtx">
       <div class="txqr">
         <p>温馨提示：本次提现需<span>3.00</span>元手续费</p>
-        <div class="qrtx">
+        <div class="qrtx"@click="toUrl('tixianchenggong')">
           确认提现
         </div>
       </div>

@@ -3,7 +3,7 @@
     <!--头部导航-->
     <div class="header">
       <span>设计师</span>
-      <div class="header-right">
+      <div class="header-right" @click="toUrl('message')">
         <span><img src="../../../static/images/designer/ling.png" /></span>
         <div class="hongdian"></div>
       </div>
@@ -51,29 +51,32 @@
             <p class="rz">认证</p>
           </li>
         </ul>
-        <div class="area on">
-          <ul>
-            <li class="bg_click">人气最高</li>
-            <li class="bg">最新发布</li>
-          </ul>
+        <div class="sort-filter">
+          <div class="area on">
+            <ul>
+              <li class="bg_click">人气最高</li>
+              <li class="bg">最新发布</li>
+            </ul>
+          </div>
+          <div class="areanx on">
+            <ul>
+              <li class="bg_click">不限</li>
+              <li class="bg">一年以下</li>
+              <li class="bg">1-3年</li>
+              <li class="bg">3-5年</li>
+              <li class="bg">5年以上</li>
+            </ul>
+          </div>
+          <div class="arearz on">
+            <ul>
+              <li class="bg_click">不限</li>
+              <li class="bg">已实名</li>
+              <li class="bg">已认证</li>
+              <li class="bg">已签约</li>
+            </ul>
+          </div>
         </div>
-        <div class="areanx on">
-          <ul>
-            <li class="bg_click">不限</li>
-            <li class="bg">一年以下</li>
-            <li class="bg">1-3年</li>
-            <li class="bg">3-5年</li>
-            <li class="bg">5年以上</li>
-          </ul>
-        </div>
-        <div class="arearz on">
-          <ul>
-            <li class="bg_click">不限</li>
-            <li class="bg">已实名</li>
-            <li class="bg">已认证</li>
-            <li class="bg">已签约</li>
-          </ul>
-        </div>
+
       </div>
     </div>
     <!--设计师列表-->
@@ -201,7 +204,7 @@
         $(obj).click(function() {
           var $t = $(obj);
           var $other = $(obj).siblings();
-//          var $otherz = $(zj);
+          var $otherz = $(zj).siblings();
           if($t.hasClass('up')) {
             $(obj).removeClass('up').addClass('st');
             $(zj).removeClass('off').addClass('on');
@@ -210,7 +213,7 @@
             $(zj).removeClass('on').addClass('off');
           }
           $other.addClass('st').removeClass('up')
-//          $otherz.addClass('on').removeClass('off')
+          $otherz.addClass('on').removeClass('off')
         });
         $(zjj).on('click',function(){
 

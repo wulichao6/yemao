@@ -10,7 +10,9 @@
       <div class="jinge-top">
         <div class="biaoti">
           <div class="duoshao">钱包余额（元）</div>
-          <div class="yanjin"> </div>
+          <div class="yanjin">
+
+          </div>
         </div>
         <div class="shumu">
           0.00
@@ -45,6 +47,7 @@
       }
     },
     mounted: function () {
+      this. yanjing();
     },
     methods: {
       goback(){
@@ -53,6 +56,22 @@
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
+//      眼睛显示
+      yanjing(){
+        var falg=true;
+        var neirong = $(".shumu").text();
+        $(".yanjin").click(function(){
+          if(falg==true){
+            $(".yanjin").css('background-image','url(../../../static/images/designer/q_01.png)')
+            $(".shumu").html('******')
+            falg=false
+          }else if(falg==false){
+            $(".yanjin").css('background-image','url(../../../static/images/designer/q_02.png)')
+            $(".shumu").html(neirong)
+            falg=true
+          }
+        });
+      }
     }
   }
 </script>
@@ -60,4 +79,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import '../../assets/css/designer/my-money.css';
+  .yanjin{
+    background: url(../../../static/images/designer/q_02.png) no-repeat;
+  }
 </style>

@@ -49,7 +49,7 @@
           收藏设计师
         </div>
         <div class="xiaoxi">
-
+          <img src="../../../static/images/designer/xiangqing_liaotian.png" />
         </div>
       </div>
       <!--日历选取-->
@@ -86,15 +86,15 @@
               </div>
               <div class="al-bottom">
                 <div class="al-left">
-                  <p><span><img src="images/ling.png"></span><span>33</span></p>
-                  <p><span><img src="images/ling.png"></span><span>44</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_xihuan.png"></span><span>33</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_liulan.png"></span><span>44</span></p>
                 </div>
                 <div class="al-right">
                   2017-12-26
                 </div>
               </div>
             </div>
-            <div class="alzs-list">
+            <div class="alzs-list"@click="toUrl('anliexq')">
               <div class="al-top">
                 <div class="touxiang">
                   <img src="../../../static/images/bj.jpg" />
@@ -110,8 +110,8 @@
               </div>
               <div class="al-bottom">
                 <div class="al-left">
-                  <p><span><img src="images/ling.png"></span><span>33</span></p>
-                  <p><span><img src="images/ling.png"></span><span>44</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_xihuan.png"></span><span>33</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_liulan.png"></span><span>44</span></p>
                 </div>
                 <div class="al-right">
                   2017-12-26
@@ -120,7 +120,7 @@
             </div>
           </swiper-item>
           <swiper-item key="1">
-            <div class="alzs-list">
+            <div class="alzs-list"@click="toUrl('anliexq')">
               <div class="al-top">
                 <div class="touxiang">
                   <img src="../../../static/images/bj.jpg" />
@@ -136,15 +136,15 @@
               </div>
               <div class="al-bottom">
                 <div class="al-left">
-                  <p><span><img src="images/ling.png"></span><span>33</span></p>
-                  <p><span><img src="images/ling.png"></span><span>44</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_xihuan.png"></span><span>33</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_liulan.png"></span><span>44</span></p>
                 </div>
                 <div class="al-right">
                   2017-12-26
                 </div>
               </div>
             </div>
-            <div class="alzs-list">
+            <div class="alzs-list"@click="toUrl('anliexq')">
               <div class="al-top">
                 <div class="touxiang">
                   <img src="../../../static/images/bj.jpg" />
@@ -160,8 +160,8 @@
               </div>
               <div class="al-bottom">
                 <div class="al-left">
-                  <p><span><img src="images/ling.png"></span><span>33</span></p>
-                  <p><span><img src="images/ling.png"></span><span>44</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_xihuan.png"></span><span>33</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_liulan.png"></span><span>44</span></p>
                 </div>
                 <div class="al-right">
                   2017-12-26
@@ -170,7 +170,7 @@
             </div>
           </swiper-item>
           <swiper-item key="2">
-            <div class="alzs-list">
+            <div class="alzs-list"@click="toUrl('anliexq')">
               <div class="al-top">
                 <div class="touxiang">
                   <img src="../../../static/images/bj.jpg" />
@@ -186,15 +186,15 @@
               </div>
               <div class="al-bottom">
                 <div class="al-left">
-                  <p><span><img src="images/ling.png"></span><span>33</span></p>
-                  <p><span><img src="images/ling.png"></span><span>44</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_xihuan.png"></span><span>33</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_liulan.png"></span><span>44</span></p>
                 </div>
                 <div class="al-right">
                   2017-12-26
                 </div>
               </div>
             </div>
-            <div class="alzs-list">
+            <div class="alzs-list"@click="toUrl('anliexq')">
               <div class="al-top">
                 <div class="touxiang">
                   <img src="../../../static/images/bj.jpg" />
@@ -210,8 +210,8 @@
               </div>
               <div class="al-bottom">
                 <div class="al-left">
-                  <p><span><img src="images/ling.png"></span><span>33</span></p>
-                  <p><span><img src="images/ling.png"></span><span>44</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_xihuan.png"></span><span>33</span></p>
+                  <p><span><img src="../../../static/images/designer/anli_liulan.png"></span><span>44</span></p>
                 </div>
                 <div class="al-right">
                   2017-12-26

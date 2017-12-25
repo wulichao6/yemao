@@ -9,20 +9,11 @@
     <div class="content">
       <!--流程-->
       <div class="banner">
-
-      </div>
-      <div class="ys-time">
-        <div class="qdtime">
-          <div class="qdtime-left">
-            <span>职称证书</span>
-          </div>
-          <div class="qdtime-right">
-            <input type="text" placeholder="请输入证件名称" />
-          </div>
-        </div>
+        <img src="../../../static/images/designer/renzheng_03.png"/>
       </div>
       <div class="cgzt">
         <div class="tupiao">
+          <img src="../../../static/images/designer/dui.png"/>
         </div>
         <div class="wzsm">
           <p>上传成功</p>

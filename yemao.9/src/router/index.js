@@ -50,6 +50,8 @@ import qianyuesjs from '@/pages/designer/qianyuesjs'
 import zhichengrenzheng from '@/pages/designer/zhichengrenzheng'
 import tijiaoshenhe from '@/pages/designer/tijiaoshenhe'
 import anliexq from '@/pages/designer/anliexq'
+import tixianchenggong from '@/pages/designer/tixianchenggong'
+import yirenzheng from '@/pages/designer/yirenzheng'
 import set from '@/pages/my/set'
 import setnicheng from '@/pages/my/set-nicheng'
 import setnum from '@/pages/my/set-num'
@@ -60,6 +62,8 @@ import minejianli from '@/pages/my/mine-jianli'
 import minepinlun from '@/pages/my/mine-pinlun'
 import mineshouchang from '@/pages/my/mine-shouchang'
 import minewenda from '@/pages/my/mine-wenda'
+
+import pz from '@/pages/meow/pz'
 Vue.use(Router)
 
 Router.prototype.goBack = function () {
@@ -68,6 +72,10 @@ Router.prototype.goBack = function () {
 }
 
 const routeArray = [
+  { path: '/pz',
+    name: 'pz',
+    component: pz
+  },
   // my模块
   { path: '/mineguanyu',
     name: 'mineguanyu',
@@ -110,6 +118,14 @@ const routeArray = [
     component: set
   },
   // 设计师模块
+  { path: '/yirenzheng',
+    name: 'yirenzheng',
+    component: yirenzheng
+  },
+  { path: '/tixianchenggong',
+    name: 'tixianchenggong',
+    component: tixianchenggong
+  },
   { path: '/pingtairenzheng',
     name: 'pingtairenzheng',
     component: pingtairenzheng

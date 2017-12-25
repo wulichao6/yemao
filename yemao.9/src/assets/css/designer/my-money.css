@@ -28,7 +28,10 @@
   float: right;
   width: 0.5rem;
   height: 0.5rem;
-  background: #333333;
+  background-size: 0.5rem;
+}
+.content .jinge-top .biaoti .yanjin img{
+  width: 100%;
 }
 .content .jinge-top .biaoti .shumu {
 	float: right;
