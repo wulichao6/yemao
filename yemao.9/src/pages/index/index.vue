@@ -4,7 +4,7 @@
     <!--banner-->
     <div class="index-banner">
       <!--轮播-->
-      <swiper loop auto height="4rem" :list="demo06_list" :index="demo06_index" @on-index-change="demo06_onIndexChange"></swiper>
+      <swiper loop auto height="4rem" :list="imgList" :index="imgIndex" @on-index-change="onIndexChange"></swiper>
       <!--搜索栏-->
       <div class="id-header">
         <!--地区选择-->
@@ -89,167 +89,114 @@
     <!--文字滚动广告-->
     <div class="wzgd-box">
       <swiper loop auto height="45px" direction="vertical" :interval=1000 class="text-scroll" :show-dots="false">
-        <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告0</div>
-        </swiper-item>
-        <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告1</div>
-        </swiper-item>
-        <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告2</div>
-        </swiper-item>
-        <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告3</div>
-        </swiper-item>
-        <swiper-item>
-          <div class="notice-img"><img class="notice-img" src="../../../static/images/bj.jpg" /></div>
-          <div class="notice-text">文字滚动广告4</div>
+        <swiper-item v-for="item in noticeList">
+          <div class="notice-img"><img :src="item.user_img" /></div>
+          <div class="notice-text">{{item.title}}</div>
         </swiper-item>
       </swiper>
     </div>
     <div class="gap-line"></div>
     <!--智能排序-->
     <div class="id-znpx">
-      <div class="xian">
-        <p>智能排序</p>
+      <div class="xian" @click="znbx()">
+        <p :class="znpxMark==true ? 'up' : ''">智能排序</p>
       </div>
-      <div class="area">
+      <div class="area" v-if="znpxMark">
         <ul>
-          <li>智能排序</li>
-          <li>离我最近</li>
-          <li>评价最高</li>
-          <li>最新发态</li>
+          <li @click="sort(0)">智能排序</li>
+          <li @click="sort(1)">人气最高</li>
+          <li @click="sort(0)">最新发布</li>
         </ul>
       </div>
     </div>
     <!--雇主列表-->
     <div class="content">
-      <div class="gz-list"@click="toUrl('emporder')">
-        <div class="gz-top">
-          <div class="gz-touxiang">
-            <img src="../../../static/images/bj.jpg" />
-          </div>
-          <div class="gz-nicheng">雇主小a</div>
-          <div class="gz-jiage"><span>￥</span><span>5000</span></div>
-        </div>
-        <div class="gz-timeleixin">
-          <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span><span>七天后过期</span></div>
-          <div class="gz-leixin"><span>家装设计</span></div>
-        </div>
-        <div class="gz-content">
-          <div class="tupian">
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-          </div>
-          <div class="wenzhi">
-            actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
-          </div>
-        </div>
-        <div class="gz-bottom">
-          <div class="gb-left">
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
+      <!-- 上拉加载 -->
+      <scroller lock-x height="" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="100">
+        <div>
+          <div class="gz-list" v-for="order in orderList" @click="toUrl('emporder')">
+            <div class="gz-top">
+              <div class="gz-touxiang">
+                <img :src="order.user.img" />
+              </div>
+              <div class="gz-nicheng">{{order.user.user_name}}</div>
+              <div class="gz-jiage"><span>￥</span><span>{{order.order_price}}</span></div>
             </div>
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
+            <div class="gz-timeleixin">
+              <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span>{{order.order_deadline}}<span>七天后过期</span></div>
+              <div class="gz-leixin">{{order.order_type}}<span>家装设计</span></div>
             </div>
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
+            <div class="gz-content">
+              <div class="tupian">
+                <div class="tu" v-for="img in order.imgs">
+                  <img :src="img" />
+                </div>
+              </div>
+              <div class="wenzhi">{{order.order_intro}}</div>
             </div>
-            <div class="gb-wz">3人抢单</div>
-          </div>
-          <div class="gb-right">
-            <div class="gb-ljqd"@click.stop="toUrl('orderqiangdan')">立即抢单</div>
-          </div>
-        </div>
-      </div>
-      <div class="gz-list"@click="toUrl('emporder')">
-        <div class="gz-top">
-          <div class="gz-touxiang">
-            <img src="../../../static/images/bj.jpg" />
-          </div>
-          <div class="gz-nicheng">雇主小a</div>
-          <div class="gz-jiage"><span>￥</span><span>5000</span></div>
-        </div>
-        <div class="gz-timeleixin">
-          <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span><span>七天后过期</span></div>
-          <div class="gz-leixin"><span>家装设计</span></div>
-        </div>
-        <div class="gz-content">
-          <div class="tupian">
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-          </div>
-          <div class="wenzhi">
-            actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
-          </div>
-        </div>
-        <div class="gz-bottom">
-          <div class="gb-left">
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
+            <div class="gz-bottom">
+              <div class="gb-left">
+                <div class="gb-tu" v-for="bidder in order.bidders">
+                  <img :src="bidder.img" />
+                </div>
+
+                <div class="gb-wz"><span>{{order.bidders.length}}</span>人抢单</div>
+              </div>
+              <div class="gb-right">
+                <div class="gb-ljqd"@click.stop="toUrl('orderqiangdan')">立即抢单</div>
+              </div>
             </div>
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
-            </div>
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
-            </div>
-            <div class="gb-wz">3人抢单</div>
           </div>
-          <div class="gb-right">
-            <div class="gb-ljqd">立即抢单</div>
-          </div>
+          <load-more :show-loading="onFetching" :tip="loadtext" background-color="#fbf9fe" style="margin-top: 30px"></load-more>
         </div>
-      </div>
+      </scroller>
     </div>
   </div>
 </template>
 
 <script>
-  import { Swiper, SwiperItem, Divider,XAddress,ChinaAddressV4Data,} from 'vux'
+  import {LoadMore, Scroller, Swiper, SwiperItem, Divider,XAddress,ChinaAddressV4Data,} from 'vux'
 
-  const baseList = [{
-    url: 'javascript:',
-    img: 'https://static.vux.li/demo/1.jpg',
-  }, {
-    url: 'javascript:',
-    img: 'https://static.vux.li/demo/2.jpg',
-  }, {
-    url: 'javascript:',
-    img: 'https://static.vux.li/demo/3.jpg',
-    fallbackImg: 'https://static.vux.li/demo/3.jpg'
-  }]
-
-  const urlList = baseList.map((item, index) => ({
-    url: 'http://m.baidu.com',
-    img: item.img,
-    fallbackImg: item.fallbackImg,
-  }))
   export default {
     components: {
       Swiper,
       SwiperItem,
       Divider,
       XAddress,
+      Scroller,
+      LoadMore,
     },
     data () {
       return {
-        demo06_list: urlList,
-        demo06_index: 0,
+        imgList: [],
+        noticeList : [],
+        orderList : [],
+        imgIndex: 0,
         addressData: ChinaAddressV4Data,
-        value3: ['中山市']
+        value3: ['中山市'],
+
+        znpxMark:false,
+
+        pageNo: 0,
+        pageSize: 10,
+        onFetching:false,
+        loadtext:"上拉加载",
+        loadmore:"上拉加载",
+        loadrefresh: '正在加载...',
+        loadnomore: '没有更多数据了',
       }
     },
-    mounted: function () {
+    created: function () {
+      // console.log('startTime: ' + this.$route.query.startTime);
       this.scrolle();
-      this.znbx();
+      // this.znbx();
+      this.initData();
+      this.addData();
+    },
+    mounted: function () {
+//      this.$nextTick(() => {
+//          this.$refs.scrollerBottom.reset({top: 0})
+//      })
     },
     methods: {
       cgLink: function (param) {
@@ -258,13 +205,8 @@
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
-      demo06_onIndexChange (index) {
-        this.demo06_index = index
-      },
-      getThisHeight (ele) {
-        var id1 = document.getElementById('id1')
-        var id2 = document.getElementById('id2')
-        alert(id1.offsetHeight + '<>' + id2.offsetHeight)
+      onIndexChange (index) {
+        this.imgIndex = index
       },
       //下拉搜索框变长
       scrolle(){
@@ -291,35 +233,13 @@
       },
       //智能排序
       znbx(){
-        $('.xian').click(function() {
-          var $t = $(".xian p");
-          if($t.hasClass('up')) {
-            $(".xian p").removeClass('up');
-            $('.area').css('display', 'none');
-          } else {
-            $(".xian p").removeClass('up');
-            $('.area').css('display', 'block');
-            $(".xian p").addClass('up');
-          }
-        });
-        $(".area ul li").on('click',function(){
-
-          var $div = $(this);
-
-          var $others = $div.siblings();
-
-          if($div.hasClass('bg')){
-
-            $div.removeClass('bg').addClass('bg_click')
-
-          }else {
-
-            $div.removeClass('bg_click').addClass('bg')
-
-          }
-          $others.addClass('bg').removeClass('bg_click')
-
-        });
+        var _self = this;
+        _self.znpxMark = _self.znpxMark == true ? false : true;
+      },
+      //排序
+      sort(flag){
+        var _self = this;
+        _self.znpxMark = false;
       },
       // 地区
       logHide (str) {
@@ -337,6 +257,206 @@
       },
       logShow (str) {
         console.log('on-show',str)
+      },
+
+      //下拉加载下拉加载
+      onScrollBottom () {
+        console.log("onScrollBottom:")
+        var _self = this;
+        if (_self.onFetching) {
+          // do nothing
+        } else {
+          _self.onFetching = true
+          setTimeout(() => {
+              _self.loadMore()
+          }, 100)
+        }
+      },
+
+      initData () {
+        var _self = this;
+        var params = {
+          interfaceId:'getIndexInfo'
+        }
+        _self.$axios.post('/api/mongoApi',{
+          params:params
+        }).then((response)=>{
+          if( response.data ){
+            var data = response.data.data;
+            if( data ){
+              console.log(data);
+              //轮播图
+              _self.imgList = data.imgList || [];
+
+              //通知
+              _self.noticeList = data.noticeList || [];
+              var noticeUsers = data.noticeUsers || [];
+              _self.noticeList.forEach(function (item,index) {
+                noticeUsers.forEach(function (obj,j) {
+                  if( item.user_id == obj._id ){
+                    item.user_img = obj.img;
+                  }
+                })
+              });
+
+              //订单
+              var orderUsers = data.orderUsers || [];
+              var orderBidders = data.orderBidders || [];
+              var bidders = data.bidders || [];
+              var orderList = data.orderList || [];
+              orderList.forEach(function (item,index) {
+                //雇主
+                orderUsers.forEach(function (u,j) {
+                  if( item.order_user_id == u._id ){
+                    item.user = u;
+                  }
+                })
+                //参与人
+                item.bidders = [];
+                orderBidders.forEach(function (b,j) {
+                  if( item._id == b.order_id ){
+                    bidders.forEach(function (u,j) {
+                      if( b.user_id == u._id ){
+                        b.user_name = u.user_name;
+                        b.img = u.img;
+                      }
+                    })
+                    item.bidders.push(b);
+                  }
+                })
+              });
+              _self.orderList = orderList;
+
+              _self.$nextTick(() => {
+                  _self.$refs.scrollerBottom.reset()
+              })
+
+              if( orderList.length < _self.pageSize ){
+                _self.loadtext = _self.loadnomore;
+              }else{
+                _self.onFetching = false
+                _self.pageNo++;
+              }
+            }
+          }
+        })
+      },
+
+      loadMore () {
+        var _self = this;
+        var params = {
+          interfaceId:'getOrderList',
+          pageNo: _self.pageNo,
+          pageSize: _self.pageSize,
+        }
+
+        _self.loadtext = _self.loadrefresh;
+        _self.$axios.post('/api/mongoApi',{
+          params:params
+        }).then((response)=>{
+          if( response.data ){
+            var data = response.data.data;
+            if( data ){
+              console.log("loadMore:"+data);
+              //订单
+              var orderUsers = data.orderUsers || [];
+              var orderBidders = data.orderBidders || [];
+              var bidders = data.bidders || [];
+              var orderList = data.orderList || [];
+              orderList.forEach(function (item,index) {
+                //雇主
+                orderUsers.forEach(function (u,j) {
+                  if( item.order_user_id == u._id ){
+                    item.user = u;
+                  }
+                })
+                //参与人
+                item.bidders = [];
+                orderBidders.forEach(function (b,j) {
+                  if( item._id == b.order_id ){
+                    bidders.forEach(function (u,j) {
+                      if( b.user_id == u._id ){
+                        b.user_name = u.user_name;
+                        b.img = u.img;
+                      }
+                    })
+                    item.bidders.push(b);
+                  }
+                })
+              });
+              _self.orderList = [..._self.orderList, ...orderList];
+
+              _self.$nextTick(() => {
+                  _self.$refs.scrollerBottom.reset()
+               })
+
+              if( orderList.length < _self.pageSize ){
+                _self.loadtext = _self.loadnomore;
+              }else{
+                _self.loadtext = _self.loadmore;
+                _self.onFetching = false
+                _self.pageNo++;
+              }
+            }
+          }
+        })
+      },
+
+      addData () {
+        //interfaceId=updateData&coll=indexNoticeList&data={$set:{"user_id":"002"}}&wheredata={"id":"1003"}
+        var params = {
+          //修改
+//          interfaceId:'updateData',
+//          coll:'indexNoticeList',
+//          data:{
+//            "$set":{"create_date":"2017-12-25 17:30:12"}
+//          },
+//          wheredata:{"id":"1003"}
+          interfaceId:'insertMany',
+          coll:'orderList',
+          data:[{
+            _id:"20171225010",
+            order_intro:"描述4",
+            order_price:1500.00,
+            order_deadline:"2018-12-23 18:30:00",
+            order_type:"type001",
+            order_status:"3",
+            order_user_id:"001",
+            imgs:[
+              "https://static.vux.li/demo/4.jpg",
+              "https://static.vux.li/demo/4.jpg",
+              "https://static.vux.li/demo/4.jpg"]
+          },{
+            _id:"20171225011",
+            order_intro:"描述5",
+            order_price:1500.00,
+            order_deadline:"2018-12-26 13:30:10",
+            order_type:"type001",
+            order_status:"3",
+            order_user_id:"001",
+            imgs:[
+              "https://static.vux.li/demo/5.jpg",
+              "https://static.vux.li/demo/5.jpg",
+              "https://static.vux.li/demo/5.jpg"]
+          },{
+            _id:"20171225012",
+            order_intro:"描述6",
+            order_price:15070.00,
+            order_deadline:"2018-11-25 13:30:10",
+            order_type:"type001",
+            order_status:"3",
+            order_user_id:"001",
+            imgs:[
+              "https://static.vux.li/demo/5.jpg",
+              "https://static.vux.li/demo/5.jpg",
+              "https://static.vux.li/demo/5.jpg"]
+          }]
+        }
+//        this.$axios.post('/api/mongoApi',{
+//          params:params
+//        }).then((response)=>{
+//          console.log(response);
+//        })
       },
     }
   }
