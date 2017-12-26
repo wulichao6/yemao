@@ -404,55 +404,32 @@
       },
 
       addData () {
-        //interfaceId=updateData&coll=indexNoticeList&data={$set:{"user_id":"002"}}&wheredata={"id":"1003"}
         var params = {
           //修改
-//          interfaceId:'updateData',
-//          coll:'indexNoticeList',
-//          data:{
-//            "$set":{"create_date":"2017-12-25 17:30:12"}
-//          },
-//          wheredata:{"id":"1003"}
-          interfaceId:'insertMany',
-          coll:'orderList',
-          data:[{
-            _id:"20171225010",
-            order_intro:"描述4",
-            order_price:1500.00,
-            order_deadline:"2018-12-23 18:30:00",
-            order_type:"type001",
-            order_status:"3",
-            order_user_id:"001",
-            imgs:[
-              "https://static.vux.li/demo/4.jpg",
-              "https://static.vux.li/demo/4.jpg",
-              "https://static.vux.li/demo/4.jpg"]
-          },{
-            _id:"20171225011",
-            order_intro:"描述5",
-            order_price:1500.00,
-            order_deadline:"2018-12-26 13:30:10",
-            order_type:"type001",
-            order_status:"3",
-            order_user_id:"001",
-            imgs:[
-              "https://static.vux.li/demo/5.jpg",
-              "https://static.vux.li/demo/5.jpg",
-              "https://static.vux.li/demo/5.jpg"]
-          },{
-            _id:"20171225012",
-            order_intro:"描述6",
-            order_price:15070.00,
-            order_deadline:"2018-11-25 13:30:10",
-            order_type:"type001",
-            order_status:"3",
-            order_user_id:"001",
-            imgs:[
-              "https://static.vux.li/demo/5.jpg",
-              "https://static.vux.li/demo/5.jpg",
-              "https://static.vux.li/demo/5.jpg"]
-          }]
+          interfaceId:'updateData',
+          coll:'users',
+          data:{
+            "$set":{"phone":"1378892323"}
+          },
+          wheredata:{"_id":"006"}
+          //批量添加
+//          interfaceId:'insertMany',
+//          coll:'orderList',
+//          data:[{
+//            _id:"20171225010",
+//            order_intro:"描述4",
+//            order_price:1500.00,
+//            order_deadline:"2018-12-23 18:30:00",
+//            order_type:"type001",
+//            order_status:"3",
+//            order_user_id:"001",
+//            imgs:[
+//              "https://static.vux.li/demo/4.jpg",
+//              "https://static.vux.li/demo/4.jpg",
+//              "https://static.vux.li/demo/4.jpg"]
+//          }]
         }
+
 //        this.$axios.post('/api/mongoApi',{
 //          params:params
 //        }).then((response)=>{
