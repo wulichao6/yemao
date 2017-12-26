@@ -112,7 +112,7 @@
     <!--雇主列表-->
     <div class="content">
       <!-- 上拉加载 -->
-      <scroller lock-x height="" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="100">
+      <scroller lock-x height="" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="100" style="padding-bottom: rem;">
         <div>
           <div class="gz-list" v-for="order in orderList" @click="toUrl('emporder')">
             <div class="gz-top">
@@ -147,7 +147,7 @@
               </div>
             </div>
           </div>
-          <load-more :show-loading="onFetching" :tip="loadtext" background-color="#fbf9fe" style="margin-top: 30px"></load-more>
+          <load-more :show-loading="showLoading" :tip="loadtext" background-color="#fbf9fe" style="margin-top: 30px"></load-more>
         </div>
       </scroller>
     </div>
@@ -180,6 +180,7 @@
         pageNo: 0,
         pageSize: 10,
         onFetching:false,
+        showLoading:true,
         loadtext:"上拉加载",
         loadmore:"上拉加载",
         loadrefresh: '正在加载...',
@@ -194,9 +195,9 @@
       this.addData();
     },
     mounted: function () {
-//      this.$nextTick(() => {
-//          this.$refs.scrollerBottom.reset({top: 0})
-//      })
+      this.$nextTick(() => {
+          this.$refs.scrollerBottom.reset({top: 0})
+      })
     },
     methods: {
       cgLink: function (param) {
@@ -326,7 +327,6 @@
                 })
               });
               _self.orderList = orderList;
-
               _self.$nextTick(() => {
                   _self.$refs.scrollerBottom.reset()
               })
@@ -351,13 +351,14 @@
         }
 
         _self.loadtext = _self.loadrefresh;
+        _self.showLoading = true;
         _self.$axios.post('/api/mongoApi',{
           params:params
         }).then((response)=>{
           if( response.data ){
             var data = response.data.data;
             if( data ){
-              console.log("loadMore:"+data);
+              // console.log("loadMore:"+data);
               //订单
               var orderUsers = data.orderUsers || [];
               var orderBidders = data.orderBidders || [];
@@ -385,11 +386,11 @@
                 })
               });
               _self.orderList = [..._self.orderList, ...orderList];
-
               _self.$nextTick(() => {
                   _self.$refs.scrollerBottom.reset()
                })
 
+              _self.showLoading = false;
               if( orderList.length < _self.pageSize ){
                 _self.loadtext = _self.loadnomore;
               }else{
