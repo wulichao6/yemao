@@ -222,7 +222,7 @@
   left: 0;
   background: #fefefe;
   z-index: 999;
-  display: none;
+  /*display: none;*/
 }
 
 .id-znpx .area ul li {
@@ -235,7 +235,7 @@
 }
 .content{
   background-color: #f2f2f2;
-  padding-bottom: 1.2rem;
+  padding-bottom: 0.2rem;
 }
 /********************************/
 .gap-line{
