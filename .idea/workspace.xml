@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="484209dd-951b-4b3c-9d6f-b10fae1f04c6" name="默认的" comment="xiugai">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 =======
@@ -21,6 +22,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yemao.9/src/pages/employer/fabudingdan.vue" afterPath="$PROJECT_DIR$/yemao.9/src/pages/employer/fabudingdan.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yemao.9/src/pages/index/index.vue" afterPath="$PROJECT_DIR$/yemao.9/src/pages/index/index.vue" />
 >>>>>>> 7e7395dbedc89d1afcbbd8a2880bfebd6b262d13
+=======
+    <list default="true" id="484209dd-951b-4b3c-9d6f-b10fae1f04c6" name="默认的" comment="nothing">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yemao.9/src/pages/login/login.vue" afterPath="$PROJECT_DIR$/yemao.9/src/pages/login/login.vue" />
+>>>>>>> origin/master
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,8 +46,8 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/index/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="140">
+              <caret line="405" column="0" lean-forward="false" selection-start-line="405" selection-start-column="0" selection-end-line="437" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#scroller#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#load-more#0;n#div#0;n#scroller#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -50,11 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employer.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/employer/employer.vue">
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yemao.9/src/assets/css/login/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2341">
-              <caret line="97" column="25" lean-forward="true" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
+            <state relative-caret-position="140">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/login/login.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-138">
+              <caret line="160" column="35" lean-forward="true" selection-start-line="160" selection-start-column="35" selection-end-line="160" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -65,8 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>demo06_list</find>
-      <find>demo06_index</find>
       <find>demo06_onIndexChange</find>
       <find>addData</find>
       <find>forEach</find>
@@ -95,6 +109,8 @@
       <find>imgArr</find>
       <find>imgList</find>
       <find>scrollerBottom</find>
+      <find>login</find>
+      <find>log-btn</find>
     </findStrings>
     <replaceStrings>
       <replace>imgList</replace>
@@ -109,14 +125,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="nightcat" />
+=======
+        <entry key="$PROJECT_DIR$" value="local" />
+>>>>>>> origin/master
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/yemao.9/src/pages/my/mine-pinlun.vue" />
         <option value="$PROJECT_DIR$/yemao.9/src/assets/css/my/mine-pinlun.css" />
         <option value="$PROJECT_DIR$/yemao.9/src/pages/my/mine-shouchang.vue" />
         <option value="$PROJECT_DIR$/yemao.9/src/assets/css/my/mine-shouchang.css" />
@@ -167,9 +186,13 @@
         <option value="$PROJECT_DIR$/yemao.9/src/components/upload/image-upload.vue" />
         <option value="$PROJECT_DIR$/yemao.9/src/pages/employer/fabudingdan.vue" />
         <option value="$PROJECT_DIR$/yemao.9/src/assets/css/employer/fabudingdan.css" />
-        <option value="$PROJECT_DIR$/yemao.9/src/pages/index/index.vue" />
         <option value="$PROJECT_DIR$/yemao.9/src/pages/employer/employer.vue" />
+<<<<<<< HEAD
 >>>>>>> 7e7395dbedc89d1afcbbd8a2880bfebd6b262d13
+=======
+        <option value="$PROJECT_DIR$/yemao.9/src/pages/index/index.vue" />
+        <option value="$PROJECT_DIR$/yemao.9/src/pages/login/login.vue" />
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -238,23 +261,9 @@
               <item name="CAT" type="462c0819:PsiDirectoryNode" />
               <item name="yemao.9" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAT" type="462c0819:PsiDirectoryNode" />
-              <item name="yemao.9" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAT" type="462c0819:PsiDirectoryNode" />
-              <item name="yemao.9" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="CAT" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAT" type="462c0819:PsiDirectoryNode" />
@@ -272,6 +281,8 @@
               <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
 >>>>>>> 7e7395dbedc89d1afcbbd8a2880bfebd6b262d13
+=======
+>>>>>>> origin/master
           </expand>
           <select />
         </subPane>
@@ -299,15 +310,15 @@
 >>>>>>> 7e7395dbedc89d1afcbbd8a2880bfebd6b262d13
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\src\server" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\static" />
       <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\src\components\list" />
       <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\src\server" />
       <recent name="E:\yemao2\CAT\yemao.9\static" />
       <recent name="E:\yemao2\CAT\yemao.9\src\assets\css\my" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\src\server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -579,12 +590,23 @@
       <option name="project" value="LOCAL" />
       <updated>1514256928792</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="nothing">
+      <created>1514272628416</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1514272628416</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="127711000" />
 >>>>>>> 7e7395dbedc89d1afcbbd8a2880bfebd6b262d13
+=======
+    <option name="totallyTimeSpent" value="130902000" />
+>>>>>>> origin/master
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -599,10 +621,14 @@
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2390691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 =======
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20038168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 >>>>>>> 7e7395dbedc89d1afcbbd8a2880bfebd6b262d13
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20038168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> origin/master
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5025754" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -665,8 +691,13 @@
 =======
     <MESSAGE value="首页接口调试" />
     <MESSAGE value="接口调试" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="接口调试" />
 >>>>>>> 7e7395dbedc89d1afcbbd8a2880bfebd6b262d13
+=======
+    <MESSAGE value="nothing" />
+    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
+>>>>>>> origin/master
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -688,6 +719,7 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/yemao.9/src/assets/css/my/mine.css">
 =======
     <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/my/mine-huodong.vue">
@@ -705,6 +737,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/index/informxitong.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -1034,7 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1171,10 +1204,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/employer/employer.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="158" column="30" lean-forward="false" selection-start-line="158" selection-start-column="30" selection-end-line="158" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yemao.9/src/assets/css/login/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/index/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="140">
+          <caret line="405" column="0" lean-forward="false" selection-start-line="405" selection-start-column="0" selection-end-line="437" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#scroller#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#load-more#0;n#div#0;n#scroller#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -1182,11 +1231,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/employer/employer.vue">
+    <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/login/login.vue">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-2341">
           <caret line="97" column="25" lean-forward="true" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
 >>>>>>> 7e7395dbedc89d1afcbbd8a2880bfebd6b262d13
+=======
+        <state relative-caret-position="-138">
+          <caret line="160" column="35" lean-forward="true" selection-start-line="160" selection-start-column="35" selection-end-line="160" selection-end-column="35" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
