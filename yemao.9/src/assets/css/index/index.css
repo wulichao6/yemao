@@ -222,7 +222,7 @@
   left: 0;
   background: #fefefe;
   z-index: 999;
-  display: none;
+  /*display: none;*/
 }
 
 .id-znpx .area ul li {

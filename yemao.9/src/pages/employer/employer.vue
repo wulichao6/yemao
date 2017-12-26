@@ -19,111 +19,89 @@
     </div>
     <!--智能排序-->
     <div class="id-znpx">
-      <div class="xian">
-        <p>智能排序</p>
+      <div class="xian" @click="znbx()">
+        <p :class="znpxMark==true ? 'up' : ''">智能排序</p>
       </div>
-      <div class="area">
-        <ul>
-          <li class="bg_click">智能排序</li>
-          <li class="bg">离我最近</li>
-          <li class="bg">评价最高</li>
-          <li class="bg">最新发态</li>
+      <div class="area" v-if="znpxMark">
+          <li @click="sort(0)">智能排序</li>
+          <li @click="sort(1)">人气最高</li>
+          <li @click="sort(0)">最新发布</li>
         </ul>
       </div>
     </div>
     <div class="content">
-      <div class="gz-list"@click="toUrl('emporder')">
-        <div class="gz-top">
-          <div class="gz-touxiang">
-            <img src="../../../static/images/bj.jpg" />
-          </div>
-          <div class="gz-nicheng">雇主小a</div>
-          <div class="gz-jiage"><span>￥</span><span>5000</span></div>
-        </div>
-        <div class="gz-timeleixin">
-          <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span><span>七天后过期</span></div>
-          <div class="gz-leixin"><span>家装设计</span></div>
-        </div>
-        <div class="gz-content">
-          <div class="tupian">
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-          </div>
-          <div class="wenzhi">
-            actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
-          </div>
-        </div>
-        <div class="gz-bottom">
-          <div class="gb-left">
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
+      <!-- 上拉加载 -->
+      <scroller lock-x height="" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="100">
+        <div>
+          <div class="gz-list" v-for="order in orderList" @click="toUrl('emporder')">
+            <div class="gz-top">
+              <div class="gz-touxiang">
+                <img :src="order.user.img" />
+              </div>
+              <div class="gz-nicheng">{{order.user.user_name}}</div>
+              <div class="gz-jiage"><span>￥</span><span>{{order.order_price}}</span></div>
             </div>
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
+            <div class="gz-timeleixin">
+              <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span>{{order.order_deadline}}<span>七天后过期</span></div>
+              <div class="gz-leixin">{{order.order_type}}<span>家装设计</span></div>
             </div>
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
+            <div class="gz-content">
+              <div class="tupian">
+                <div class="tu" v-for="img in order.imgs">
+                  <img :src="img" />
+                </div>
+              </div>
+              <div class="wenzhi">{{order.order_intro}}</div>
             </div>
-            <div class="gb-wz">3人抢单</div>
-          </div>
-          <div class="gb-right">
-            <div class="gb-ljqd">立即抢单</div>
-          </div>
-        </div>
-      </div>
-      <div class="gz-list"@click="toUrl('emporder')">
-        <div class="gz-top">
-          <div class="gz-touxiang">
-            <img src="../../../static/images/bj.jpg" />
-          </div>
-          <div class="gz-nicheng">雇主小a</div>
-          <div class="gz-jiage"><span>￥</span><span>5000</span></div>
-        </div>
-        <div class="gz-timeleixin">
-          <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span><span>七天后过期</span></div>
-          <div class="gz-leixin"><span>家装设计</span></div>
-        </div>
-        <div class="gz-content">
-          <div class="tupian">
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-            <div class="tu"><img src="../../../static/images/bj.jpg" /></div>
-          </div>
-          <div class="wenzhi">
-            actocad制图问题解答，帮忙制图，报价根据工程量或人工制定。
-          </div>
-        </div>
-        <div class="gz-bottom">
-          <div class="gb-left">
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
+            <div class="gz-bottom">
+              <div class="gb-left">
+                <div class="gb-tu" v-for="bidder in order.bidders">
+                  <img :src="bidder.img" />
+                </div>
+
+                <div class="gb-wz"><span>{{order.bidders.length}}</span>人抢单</div>
+              </div>
+              <div class="gb-right">
+                <div class="gb-ljqd"@click.stop="toUrl('orderqiangdan')">立即抢单</div>
+              </div>
             </div>
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
-            </div>
-            <div class="gb-tu">
-              <img src="../../../static/images/bj.jpg" />
-            </div>
-            <div class="gb-wz">3人抢单</div>
           </div>
-          <div class="gb-right">
-            <div class="gb-ljqd">立即抢单</div>
-          </div>
+          <load-more :show-loading="showLoading" :tip="loadtext" background-color="#fbf9fe" style="margin-top: 30px"></load-more>
         </div>
-      </div>
+      </scroller>
     </div>
   </div>
 </template>
 
 <script>
+  import {LoadMore, Scroller,} from 'vux'
   export default {
+    components: {
+      Scroller,
+      LoadMore,
+    },
     data () {
       return {
+        orderList : [],
+        znpxMark:false,
+
+        pageNo: 0,
+        pageSize: 10,
+        onFetching:false,
+        showLoading:false,
+        loadtext:"上拉加载",
+        loadmore:"上拉加载",
+        loadrefresh: '正在加载...',
+        loadnomore: '没有更多数据了',
       }
     },
+    created:function () {
+      this.loadMore();
+    },
     mounted: function () {
-      this.znpx();
+//      this.$nextTick(() => {
+//          this.$refs.scrollerBottom.reset({top: 0})
+//      })
     },
     methods: {
       cgLink: function (param) {
@@ -133,37 +111,90 @@
         this.$router.push({name: pagename})
       },
       //智能排序
-      znpx(){
-        $('.xian').click(function() {
-          var $t = $(".xian p");
-          if($t.hasClass('up')) {
-            $(".xian p").removeClass('up');
-            $('.area').css('display', 'none');
-          } else {
-            $(".xian p").removeClass('up');
-            $('.area').css('display', 'block');
-            $(".xian p").addClass('up');
+      znbx(){
+        var _self = this;
+        _self.znpxMark = _self.znpxMark == true ? false : true;
+      },
+      //排序
+      sort(flag){
+        var _self = this;
+        _self.znpxMark = false;
+      },
+      //下拉加载下拉加载
+      onScrollBottom () {
+        console.log("onScrollBottom:")
+        var _self = this;
+        if (_self.onFetching) {
+          // do nothing
+        } else {
+          _self.onFetching = true
+          setTimeout(() => {
+            _self.loadMore()
+        }, 100)
+        }
+      },
+
+      loadMore () {
+        var _self = this;
+        var params = {
+          interfaceId:'getOrderList',
+          pageNo: _self.pageNo,
+          pageSize: _self.pageSize,
+        }
+
+        _self.loadtext = _self.loadrefresh;
+        _self.showLoading = true;
+        _self.$axios.post('/api/mongoApi',{
+          params:params
+        }).then((response)=>{
+          if( response.data ){
+            var data = response.data.data;
+            if( data ){
+              // console.log("loadMore:"+JSON.stringify(data));
+              //订单
+              var orderUsers = data.orderUsers || [];
+              var orderBidders = data.orderBidders || [];
+              var bidders = data.bidders || [];
+              var orderList = data.orderList || [];
+              orderList.forEach(function (item,index) {
+                //雇主
+                orderUsers.forEach(function (u,j) {
+                  if( item.order_user_id == u._id ){
+                    item.user = u;
+                  }
+                })
+                //参与人
+                item.bidders = [];
+                orderBidders.forEach(function (b,j) {
+                  if( item._id == b.order_id ){
+                    bidders.forEach(function (u,j) {
+                      if( b.user_id == u._id ){
+                        b.user_name = u.user_name;
+                        b.img = u.img;
+                      }
+                    })
+                    item.bidders.push(b);
+                  }
+                })
+              });
+              _self.orderList = [..._self.orderList, ...orderList];
+              _self.$nextTick(() => {
+                  _self.$refs.scrollerBottom.reset()
+              })
+
+              _self.showLoading = false;
+              if( orderList.length < _self.pageSize ){
+                _self.loadtext = _self.loadnomore;
+              }else{
+                _self.loadtext = _self.loadmore;
+                _self.onFetching = false
+                _self.pageNo++;
+              }
+            }
           }
-        });
-        $(".area ul li").on('click',function(){
+        })
+      },
 
-          var $div = $(this);
-
-          var $others = $div.siblings();
-
-          if($div.hasClass('bg')){
-
-            $div.removeClass('bg').addClass('bg_click')
-
-          }else {
-
-            $div.removeClass('bg_click').addClass('bg')
-
-          }
-          $others.addClass('bg').removeClass('bg_click')
-
-        });
-      }
     }
   }
 </script>
