@@ -7,7 +7,7 @@
       <div class="header-right"@click="toUrl('zhichengrenzheng')">下一步</div>
     </div>
     <!--发布订单内容-->
-    <div class="content">
+    <div class="content wrz">
       <!--流程-->
       <div class="banner">
          <img src="../../../static/images/designer/renzheng_01.png"/>
@@ -60,6 +60,12 @@
         <p>请上传学历证书</p>
       </div>
     </div>
+    <!--已认证-->
+    <div class="content yrz">
+      <div class="cgzt">
+        您已通过平台认证
+      </div>
+    </div>
   </div>
 </template>
 
@@ -71,6 +77,7 @@
       }
     },
     mounted: function () {
+      this.yc();
     },
     methods: {
       goback(){
@@ -79,6 +86,12 @@
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
+//      点击x隐藏
+      yc(){
+        $(".tx-right").click(function(){
+          $(".tixin").hide();
+        });
+      }
     }
   }
 </script>
@@ -86,4 +99,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import '../../assets/css/designer/pingtairenzheng.css';
+  .yrz{
+    display: none;
+  }
+  .wrz{
+    /*display: none;*/
+  }
 </style>

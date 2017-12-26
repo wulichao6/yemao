@@ -30,7 +30,7 @@
 .content .tixin .tx-left {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left:0.2rem;
 	width: 0.9rem;
 	height: 0.9rem;
 }
@@ -43,7 +43,7 @@
 .content .tixin .tx-right {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 0.2rem;
 	width: 0.9rem;
 	height: 0.9rem;
 }
@@ -108,6 +108,7 @@
 	height: 0.9rem;
 	font-size: 0.32rem;
 	margin: auto;
+  text-align: center;
 	margin-top: 2rem;
 }
 

@@ -48,7 +48,8 @@
       <div class="rili">
         <inline-calendar
           ref="calendar"
-          class="inline-calendar-demo">
+          class="inline-calendar-demo"
+          :disable-date-function="disableDateFunction">
         </inline-calendar>
       </div>
       <!--滑动轮播-->
@@ -231,6 +232,11 @@
     data () {
       return {
         index: 0,
+        disableDateFunction (date) {
+          if (date.formatedDate === '2017-12-28') {
+            return true
+          }
+        }
       }
     },
     methods: {

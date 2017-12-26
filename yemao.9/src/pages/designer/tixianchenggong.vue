@@ -8,6 +8,7 @@
     <div class="content">
       <div class="cgzt">
         <div class="tupiao">
+          <img src="../../../static/images/designer/txcg.png" />
         </div>
         <div class="wzsm">
           等待设计师接单
