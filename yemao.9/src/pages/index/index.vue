@@ -103,16 +103,9 @@
       </div>
       <div class="area" v-if="znpxMark">
         <ul>
-<<<<<<< HEAD
-          <li class="bg_click">智能排序</li>
-          <li class="bg">离我最近</li>
-          <li class="bg">评价最高</li>
-          <li class="bg">最新发态</li>
-=======
           <li @click="sort(0)">智能排序</li>
           <li @click="sort(1)">人气最高</li>
           <li @click="sort(0)">最新发布</li>
->>>>>>> remotes/origin/local
         </ul>
       </div>
     </div>
