@@ -58,6 +58,7 @@
       }
     },
     created: function () {
+      this.submit();
     },
     mounted:function(){
       //输入框内有内容时显示清空按钮
@@ -162,7 +163,22 @@
             }
           })
         })
-      }
+      },
+
+      submit () {
+        var params = {
+          interfaceId:'queryData',
+          coll:'users',
+          where:{
+            "phone":"13788923228"
+          }
+        }
+        this.$axios.post('/api/mongoApi',{
+          params:params
+        }).then((response)=>{
+          console.log(response);
+        })
+      },
     },
   }
 </script>
