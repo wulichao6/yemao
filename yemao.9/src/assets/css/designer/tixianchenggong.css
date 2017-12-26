@@ -7,11 +7,11 @@
 }
 
 .content .cgzt {
-	width: 3.8rem;
+	width: 3rem;
 	height: 0.9rem;
 	font-size: 0.36rem;
 	margin: auto;
-	margin-top: 2rem;
+	margin-top: 3rem;
 	text-align: center;
 }
 
@@ -51,6 +51,7 @@
 	background: -o-linear-gradient(right, #f74f9c, #fd7376);
 	background: -moz-linear-gradient(right, #f74f9c, #fd7376);
 	background: linear-gradient(to right, #f74f9c, #fd7376);
+  box-shadow: 0px 5px 10px rgba(23,209,253,0.3);
 }
 
 .content .anniu .ckdd {
@@ -61,6 +62,7 @@
 	border-radius: 0.7rem;
 	border: 1px solid #FD7376;
 	color: #FD7376;
+  box-shadow: 0px 5px 10px rgba(23,209,253,0.3);
 }
 
 

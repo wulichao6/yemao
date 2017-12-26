@@ -60,12 +60,6 @@
         <p>请上传学历证书</p>
       </div>
     </div>
-    <!--已认证弹窗-->
-    <div class="content yrz">
-      <div class="cgzt">
-        您已通过平台认证
-      </div>
-    </div>
   </div>
 </template>
 
@@ -99,10 +93,4 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import '../../assets/css/designer/pingtairenzheng.css';
-  .yrz{
-    display: none;
-  }
-  .wrz{
-    /*display: none;*/
-  }
 </style>

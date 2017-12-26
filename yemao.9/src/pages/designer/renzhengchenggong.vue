@@ -2,12 +2,18 @@
   <div >
     <!--头部导航-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
-      <span>平台认证</span>
+      <span>认证中心</span>
+      <div class="header-right"@click="goback">完成</div>
     </div>
+    <!--发布订单内容-->
     <div class="content">
       <div class="cgzt">
-        您已通过平台认证
+        <div class="tupiao">
+          <img src="../../../static/images/designer/txcg.png" />
+        </div>
+        <div class="wzsm">
+          已通过审核
+        </div>
       </div>
     </div>
   </div>
@@ -35,5 +41,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import '../../assets/css/designer/pingtairenzheng.css';
+  @import '../../assets/css/designer/tixianchenggong.css';
 </style>
