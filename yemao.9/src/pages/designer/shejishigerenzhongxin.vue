@@ -61,7 +61,7 @@
         </tab>
       </div>
       <div class="lunpo">
-        <swiper v-model="index" :show-dots="false">
+        <swiper v-model="index" :show-dots="false"class="swps">
           <swiper-item key="0">
             <div class="alzs-list"@click="toUrl('anliexq')">
               <div class="al-top">
@@ -253,4 +253,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import '../../assets/css/designer/sjsgeren.css';
+  .swps{
+    height:13rem !important;
+    overflow:auto !important;
+  }
 </style>

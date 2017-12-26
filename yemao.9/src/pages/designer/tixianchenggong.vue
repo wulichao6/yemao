@@ -11,7 +11,7 @@
           <img src="../../../static/images/designer/txcg.png" />
         </div>
         <div class="wzsm">
-          等待设计师接单
+          提现成功
         </div>
       </div>
       <div class="anniu">

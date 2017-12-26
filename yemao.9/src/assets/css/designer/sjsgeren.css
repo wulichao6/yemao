@@ -241,13 +241,13 @@
 }
 
 .content .lunpo .alzs-list .al-top .al-right .ar-top {
-	height: 0.5rem;
-	line-height: 0.5rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
 	font-size: 0.28rem;
 }
 
 .content .lunpo .alzs-list .al-top .al-right .nenrong {
-	height: 0.7rem;
+	height: 0.8rem;
 	overflow: hidden;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;

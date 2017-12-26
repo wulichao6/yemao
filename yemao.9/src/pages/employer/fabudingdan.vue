@@ -62,7 +62,7 @@
         </div>
         <div class="qdtime">
           <div class="qdtime-left">
-            <span>枪单截止日期</span>
+            <span>抢单截止日期</span>
           </div>
           <div class="qdtime-right">
               <datetime v-model="value1"></datetime>
@@ -105,8 +105,7 @@
               <!--</ul>-->
               <checker
                 type="checkbox"
-                selected-item-class="demo5-item-selected"
-              >
+                selected-item-class="demo5-item-selected">
                 <checker-item :key="0" :value="0" class="fa">
                    方案
                 </checker-item>
@@ -217,7 +216,7 @@
       tishikuang(){
           $ ('.tisi').show ().delay (1000).fadeOut ();
       },
-
+      //上传图片
       triggerFile(){
         console.log("trigger:")
          document.getElementById("img-upload").click();

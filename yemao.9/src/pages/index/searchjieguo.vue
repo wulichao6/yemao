@@ -609,10 +609,6 @@
   }
 </script>
 <style>
-  .vux-slider{
-    height:14rem !important;
-    overflow:auto !important;
-  }
   .vux-slider > .vux-swiper{
     height: 100% !important;
     overflow:auto !important;
@@ -632,7 +628,10 @@
     background: white;
     z-index: 99999;
   }
+
   .swps{
-    margin-top: 1.8rem;
+      margin-top: 1.9rem;
+      height:14rem !important;
+      overflow:auto !important;
   }
 </style>

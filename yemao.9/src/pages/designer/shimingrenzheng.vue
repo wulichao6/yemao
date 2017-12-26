@@ -36,15 +36,15 @@
 
       </div>
       <div class="shangchuan">
-        <div class="sc"></div>
+        <div class="sc"> <img src="../../../static/images/employer/j.png" /></div>
         <p>请上传手持身份证正面照</p>
       </div>
       <div class="shangchuan">
-        <div class="sc"></div>
+        <div class="sc"> <img src="../../../static/images/employer/j.png" /></div>
         <p>请上传身份证正面照</p>
       </div>
       <div class="shangchuan">
-        <div class="sc"></div>
+        <div class="sc"> <img src="../../../static/images/employer/j.png" /></div>
         <p>请上传身份证背面照</p>
       </div>
     </div>

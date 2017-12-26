@@ -26,19 +26,28 @@
       </div>
       <div class="sctp">
         <div class="sc-top">上传图片</div>
-        <div class="st-bottom">
+        <div class="st-bottom" v-if="isShow" v-tap="{ methods:triggerFile }">
           <img src="../../../static/images/employer/j.png" />
         </div>
+        <div class="img-body" v-for="img in imgList">
+          <img :src="img.src" />
+        </div>
+        <imageUpload :img-arr.sync="imgList"></imageUpload>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import imageUpload from '../../components/upload/image-upload.vue'
   export default {
+    components: {
+      imageUpload
+    },
     data () {
       return {
-
+        imgList:[],
+        isShow:true,
       }
     },
     methods: {
@@ -48,6 +57,11 @@
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
+      //上传图片
+      triggerFile(){
+        console.log("trigger:")
+        document.getElementById("img-upload").click();
+      }
     }
   }
 </script>

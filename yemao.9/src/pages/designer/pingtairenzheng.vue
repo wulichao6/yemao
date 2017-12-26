@@ -56,11 +56,11 @@
         </div>
       </div>
       <div class="shangchuan">
-        <div class="sc"></div>
+        <div class="sc"><img src="../../../static/images/employer/j.png" /></div>
         <p>请上传学历证书</p>
       </div>
     </div>
-    <!--已认证-->
+    <!--已认证弹窗-->
     <div class="content yrz">
       <div class="cgzt">
         您已通过平台认证
