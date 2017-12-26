@@ -27,7 +27,7 @@
       <div class="sctp">
         <div class="sc-top">上传图片</div>
         <div class="st-bottom">
-
+          <img src="../../../static/images/employer/j.png" />
         </div>
       </div>
     </div>

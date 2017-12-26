@@ -207,15 +207,18 @@
 
 .content .lunpo .alzs-list {
 	width: 100%;
-	height: 2rem;
+	height: 2.4rem;
 	border-bottom: 1px solid #F2F2F2;
+  background: white;
+  padding-top: 0.4rem;
 }
 
 .content .lunpo .alzs-list .al-top {
 	width: 6.1rem;
 	height: 1.2rem;
 	margin: auto;
-	margin-top: 0.4rem;
+	/*padding-top: 0.4rem;*/
+  background: white;
 }
 
 .content .lunpo .alzs-list .al-top .touxiang {

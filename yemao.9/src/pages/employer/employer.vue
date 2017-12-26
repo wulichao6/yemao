@@ -23,6 +23,7 @@
         <p :class="znpxMark==true ? 'up' : ''">智能排序</p>
       </div>
       <div class="area" v-if="znpxMark">
+        <ul>
           <li @click="sort(0)">智能排序</li>
           <li @click="sort(1)">人气最高</li>
           <li @click="sort(0)">最新发布</li>
