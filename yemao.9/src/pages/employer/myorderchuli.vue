@@ -7,14 +7,14 @@
     </div>
     <!--tab选项卡-->
     <div class="content">
-      <tab :line-width=2 active-color='#fc378c' v-model="index"class="tabs">
+      <tab :line-width=2 active-color='#fc378c' v-model="index" class="tabs">
         <tab-item class="vux-center" key="0">待处理</tab-item>
         <tab-item class="vux-center" key="1">待支付</tab-item>
         <tab-item class="vux-center" key="2">待交付</tab-item>
         <tab-item class="vux-center" key="3">已完成</tab-item>
       </tab>
       
-<swiper v-model="index" :show-dots="false" :class="'swps'" style="border:2px solid red">
+<swiper v-model="index" :show-dots="false" :class="'swps'" >
     <swiper-item key="0">
         <scroller lock-x height="" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="100">
             <div class="ddlist-sjsdai">
@@ -203,7 +203,7 @@
 
             pageNo: 0,
             pageSize: 10,
-            onFetching:true,
+            onFetching:false,
             showLoading:false,
             loadtext:"上拉加载",
             loadmore:"上拉加载",
@@ -213,33 +213,62 @@
     },
     created: function () {
       this.initData();
-      this.addData();
+    //   this.addData();
     },
     mounted: function () {
-        swiperHeighfix();
+        // this.swiperHeighfix();
     },
     methods: {
-      goback() {
-        this.$router.goBack();
-      },
-      toUrl(name) {
-        this.$router.push({name: name});
-      },
-      swiperHeighfix(){
-          console.log($(".swp").height(),$(window).height());
-      },
-        onScrollBottom () {
-        console.log("onScrollBottom:")
-        var _self = this;
-        if (_self.onFetching) {
-          // do nothing
-        } else {
-          _self.onFetching = true
-          setTimeout(() => {
-              _self.loadMore()
-          }, 100)
+        goback() {
+            this.$router.goBack();
+        },
+        toUrl(name) {
+            this.$router.push({name: name});
+        },
+        swiperHeighfix(){
+            let headHeight = $('.header').height();
+            let tabHeight = $('.tabs').height();
+            let winHeight = $(window).height()
+            let contentHeight = 0;
+            contentHeight = winHeight - headHeight - tabHeight;
+            console.log(headHeight,tabHeight,winHeight,contentHeight);
+            return contentHeight;
+        },
+        onScrollBottom () {       
+            var _self = this;
+            if (_self.onFetching) {
+                console.log('onFetching');// do nothing
+            } else {
+                console.log('nofetching');
+                _self.onFetching = true
+                setTimeout(() => {
+                    _self.loadMore()
+                }, 100)
+            }
+                console.log("onScrollBottom:")
+                console.log(this.onFetching);
+        },
+        initData () {
+            console.log('this is init data');
+            console.log(window.localStorage);
+            let _self = this;
+            let nickname = common.op_localStorage().get('nickname');
+            let id = common.op_localStorage().get('userInfo')["_id"];
+            console.log(id,nickname);
+            let params = {
+                interfaceId:'getOrderList',
+                pageNo:_self.pageNo,
+                pageSize: _self.pageSize,
+                where:{
+                    user_id:id
+                }
+            }
+            console.log(window.localStorage);
+            console.log(params);
+        },
+        loadMore () {
+            console.log('this is loadMore');
         }
-      },
     }
   }
 </script>

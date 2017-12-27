@@ -18,17 +18,28 @@
       </div>
     </div>
     <div class="log-btn" @click="register()"><span>完成</span></div>
+    <toast v-model="showPositionValue" type="text" :time="800" is-show-mask text="注册成功" :position="position" :style="{width:'2rem'}">注册成功</toast>
   </div>
+  
 </template>
 
 <script>
-  export default {
+import { Toast, Group, XSwitch, XButton } from 'vux'
+export default {
     data () {
       return {
         param:{
             password:null
-        }
+        },
+        position: 'default',
+        showPositionValue: false
       }
+    },
+    components: {
+        Toast,
+        Group,
+        XSwitch,
+        XButton
     },
     mounted: function () {
       //输入框内有内容时显示清空按钮
@@ -42,8 +53,35 @@
       this.mima('.mima')
     },
     methods: {
+        showPosition (position) {
+            this.position = position
+            this.showPositionValue = true
+        },
+        onHide () {
+            console.log('on hide')
+        },
+        onChange (val) {
+            const _this = this
+            if (val) {
+                this.$vux.toast.show({
+                text: 'Hello World',
+                onShow () {
+                    console.log('Plugin: I\'m showing')
+                },
+                onHide () {
+                    console.log('Plugin: I\'m hiding')
+                    _this.show9 = false
+                }
+                })
+            } else {
+                this.$vux.toast.hide()
+            }
+        },
       goback () {
         this.$router.goBack()
+      },
+      toUrl: function (pagename) {
+        this.$router.push({name: pagename})
       },
       //输入框内有内容时显示清空按钮
       checkNumber(obj) {
@@ -112,9 +150,9 @@
         register(){   
             let _self = this;
             let nickname = common.op_localStorage().get('nickname');
-            let mobile_phone = common.op_localStorage().get('mobile_phone');
+            let phone = common.op_localStorage().get('mobile_phone');
             let verifying_code = common.op_localStorage().get('verifying_code');
-            let data = {nickname,mobile_phone,verifying_code}
+            let data = {nickname,phone,verifying_code}
             let params= {};
             params.data = data;
             params.data.password = _self.param.password;
@@ -132,7 +170,8 @@
                         console.log(response);
                         console.log(response.data);
                 // 显示
-              console.log(this.$vux);
+                    _self.showPosition('default');
+                     setTimeout(_self.toUrl('login'),200)
 
                     }     
                 }
