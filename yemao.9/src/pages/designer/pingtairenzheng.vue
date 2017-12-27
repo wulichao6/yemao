@@ -7,7 +7,7 @@
       <div class="header-right"@click="toUrl('zhichengrenzheng')">下一步</div>
     </div>
     <!--发布订单内容-->
-    <div class="content">
+    <div class="content wrz">
       <!--流程-->
       <div class="banner">
          <img src="../../../static/images/designer/renzheng_01.png"/>
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="shangchuan">
-        <div class="sc"></div>
+        <div class="sc"><img src="../../../static/images/employer/j.png" /></div>
         <p>请上传学历证书</p>
       </div>
     </div>
@@ -71,6 +71,7 @@
       }
     },
     mounted: function () {
+      this.yc();
     },
     methods: {
       goback(){
@@ -79,6 +80,12 @@
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
+//      点击x隐藏
+      yc(){
+        $(".tx-right").click(function(){
+          $(".tixin").hide();
+        });
+      }
     }
   }
 </script>

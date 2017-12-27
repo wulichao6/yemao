@@ -7,13 +7,13 @@
     </div>
     <!--tab选项卡-->
     <div class="content">
-      <tab :line-width=2 active-color='#fc378c' v-model="index">
+      <tab :line-width=2 active-color='#fc378c' v-model="index"class="tabs">
         <tab-item class="vux-center" key="0">待处理</tab-item>
         <tab-item class="vux-center" key="1">待支付</tab-item>
         <tab-item class="vux-center" key="2">待交付</tab-item>
         <tab-item class="vux-center" key="3">已完成</tab-item>
       </tab>
-      <swiper v-model="index" :show-dots="false">
+      <swiper v-model="index" :show-dots="false" class="swps">
         <swiper-item key="0">
             <div class="ddlist-sjsdai">
               <div class="ds-top"@click="toUrl('daichulixq')">
@@ -209,7 +209,6 @@
 
 <script>
   import {Tab, TabItem, Swiper, SwiperItem} from 'vux'
-
   export default {
     components: {
       Tab,
@@ -222,6 +221,8 @@
         index: 0,
       }
     },
+    mounted: function () {
+    },
     methods: {
       goback() {
         this.$router.goBack();
@@ -232,10 +233,33 @@
     }
   }
 </script>
+<style>
+  .vux-slider > .vux-swiper{
+    height: 100% !important;
+    overflow:auto !important;
+  }
+  .vux-swiper-item{
+    height:auto !important;
+    background: #f2f2f2 !important;
+  }
+</style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .content{
     background: #F2F2F2;
     margin-top: 0.8rem;
+  }
+  .tabs{
+    width: 100%;
+    position: fixed;
+    top: 0.88rem;
+    left: 0;
+    background: white;
+    z-index: 99999;
+  }
+  .swps{
+    margin-top: 1.9rem;
+    height:14rem !important;
+    overflow:auto !important;
   }
 </style>

@@ -112,7 +112,7 @@
     <!--雇主列表-->
     <div class="content">
       <!-- 上拉加载 -->
-      <scroller lock-x height="" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="100">
+      <scroller lock-x height="" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="100" style="padding-bottom: rem;">
         <div>
           <div class="gz-list" v-for="order in orderList" @click="toUrl('emporder')">
             <div class="gz-top">
@@ -147,7 +147,7 @@
               </div>
             </div>
           </div>
-          <load-more :show-loading="onFetching" :tip="loadtext" background-color="#fbf9fe" style="margin-top: 30px"></load-more>
+          <load-more :show-loading="showLoading" :tip="loadtext" background-color="#fbf9fe" style="margin-top: 30px"></load-more>
         </div>
       </scroller>
     </div>
@@ -180,6 +180,7 @@
         pageNo: 0,
         pageSize: 10,
         onFetching:false,
+        showLoading:true,
         loadtext:"上拉加载",
         loadmore:"上拉加载",
         loadrefresh: '正在加载...',
@@ -194,9 +195,9 @@
       this.addData();
     },
     mounted: function () {
-//      this.$nextTick(() => {
-//          this.$refs.scrollerBottom.reset({top: 0})
-//      })
+      this.$nextTick(() => {
+          this.$refs.scrollerBottom.reset({top: 0})
+      })
     },
     methods: {
       cgLink: function (param) {
@@ -326,7 +327,6 @@
                 })
               });
               _self.orderList = orderList;
-
               _self.$nextTick(() => {
                   _self.$refs.scrollerBottom.reset()
               })
@@ -351,13 +351,14 @@
         }
 
         _self.loadtext = _self.loadrefresh;
+        _self.showLoading = true;
         _self.$axios.post('/api/mongoApi',{
           params:params
         }).then((response)=>{
           if( response.data ){
             var data = response.data.data;
             if( data ){
-              console.log("loadMore:"+data);
+              // console.log("loadMore:"+data);
               //订单
               var orderUsers = data.orderUsers || [];
               var orderBidders = data.orderBidders || [];
@@ -385,11 +386,11 @@
                 })
               });
               _self.orderList = [..._self.orderList, ...orderList];
-
               _self.$nextTick(() => {
                   _self.$refs.scrollerBottom.reset()
                })
 
+              _self.showLoading = false;
               if( orderList.length < _self.pageSize ){
                 _self.loadtext = _self.loadnomore;
               }else{
@@ -403,55 +404,32 @@
       },
 
       addData () {
-        //interfaceId=updateData&coll=indexNoticeList&data={$set:{"user_id":"002"}}&wheredata={"id":"1003"}
         var params = {
           //修改
-//          interfaceId:'updateData',
-//          coll:'indexNoticeList',
-//          data:{
-//            "$set":{"create_date":"2017-12-25 17:30:12"}
-//          },
-//          wheredata:{"id":"1003"}
-          interfaceId:'insertMany',
-          coll:'orderList',
-          data:[{
-            _id:"20171225010",
-            order_intro:"描述4",
-            order_price:1500.00,
-            order_deadline:"2018-12-23 18:30:00",
-            order_type:"type001",
-            order_status:"3",
-            order_user_id:"001",
-            imgs:[
-              "https://static.vux.li/demo/4.jpg",
-              "https://static.vux.li/demo/4.jpg",
-              "https://static.vux.li/demo/4.jpg"]
-          },{
-            _id:"20171225011",
-            order_intro:"描述5",
-            order_price:1500.00,
-            order_deadline:"2018-12-26 13:30:10",
-            order_type:"type001",
-            order_status:"3",
-            order_user_id:"001",
-            imgs:[
-              "https://static.vux.li/demo/5.jpg",
-              "https://static.vux.li/demo/5.jpg",
-              "https://static.vux.li/demo/5.jpg"]
-          },{
-            _id:"20171225012",
-            order_intro:"描述6",
-            order_price:15070.00,
-            order_deadline:"2018-11-25 13:30:10",
-            order_type:"type001",
-            order_status:"3",
-            order_user_id:"001",
-            imgs:[
-              "https://static.vux.li/demo/5.jpg",
-              "https://static.vux.li/demo/5.jpg",
-              "https://static.vux.li/demo/5.jpg"]
-          }]
+          interfaceId:'updateData',
+          coll:'users',
+          data:{
+            "$set":{"phone":"1378892323"}
+          },
+          wheredata:{"_id":"006"}
+          //批量添加
+//          interfaceId:'insertMany',
+//          coll:'orderList',
+//          data:[{
+//            _id:"20171225010",
+//            order_intro:"描述4",
+//            order_price:1500.00,
+//            order_deadline:"2018-12-23 18:30:00",
+//            order_type:"type001",
+//            order_status:"3",
+//            order_user_id:"001",
+//            imgs:[
+//              "https://static.vux.li/demo/4.jpg",
+//              "https://static.vux.li/demo/4.jpg",
+//              "https://static.vux.li/demo/4.jpg"]
+//          }]
         }
+
 //        this.$axios.post('/api/mongoApi',{
 //          params:params
 //        }).then((response)=>{

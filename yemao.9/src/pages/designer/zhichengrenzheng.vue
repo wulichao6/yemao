@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="shangchuan">
-        <div class="sc"></div>
+        <div class="sc"><img src="../../../static/images/employer/j.png" /></div>
         <p>请上传职称证书</p>
       </div>
     </div>

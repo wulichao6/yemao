@@ -51,7 +51,7 @@ import zhichengrenzheng from '@/pages/designer/zhichengrenzheng'
 import tijiaoshenhe from '@/pages/designer/tijiaoshenhe'
 import anliexq from '@/pages/designer/anliexq'
 import tixianchenggong from '@/pages/designer/tixianchenggong'
-import yirenzheng from '@/pages/designer/yirenzheng'
+import renzhengchenggong from '@/pages/designer/renzhengchenggong'
 import set from '@/pages/my/set'
 import setnicheng from '@/pages/my/set-nicheng'
 import setnum from '@/pages/my/set-num'
@@ -118,9 +118,9 @@ const routeArray = [
     component: set
   },
   // 设计师模块
-  { path: '/yirenzheng',
-    name: 'yirenzheng',
-    component: yirenzheng
+  { path: '/renzhengchenggong',
+    name: 'renzhengchenggong',
+    component: renzhengchenggong
   },
   { path: '/tixianchenggong',
     name: 'tixianchenggong',

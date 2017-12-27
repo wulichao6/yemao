@@ -3,7 +3,7 @@
   width: 100%;
   font-size: 0.28rem;
   background: #F2F2F2;
-  margin-top: 0.8rem;
+  margin-top: 0.88rem;
 }
 
 .fb-content .xmlx {
@@ -243,6 +243,7 @@
   width: 100%;
   height: 3.2rem;
   background: white;
+  zoom:1;
 }
 
 .fb-content .sctp .sc-top {
@@ -251,14 +252,24 @@
   margin-left: 0.3rem;
 }
 
-.fb-content .sctp .st-bottom {
-  width: 2rem;
-  height: 2rem;
-  border: 2px dashed #F2F2F2;
-  margin-left: 0.3rem;
+.fb-content .sctp .st-bottom{
+  float: left;
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 1px dashed #F2F2F2;
+  margin: 0.1rem;
 }
-.fb-content .sctp .st-bottom img{
+.fb-content .sctp .img-body{
+  float: left;
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 0.55px solid #F2F2F2;
+  margin: 0.1rem;
+}
+.fb-content .sctp .st-bottom img,
+.fb-content .sctp .img-body img{
   width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=fabudingdan.css.map */
