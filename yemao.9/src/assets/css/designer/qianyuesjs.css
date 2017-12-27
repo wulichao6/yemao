@@ -20,6 +20,7 @@
 	line-height: 0.8rem;
 	margin: auto;
 	border-bottom: 1px solid #F2F2F2;
+  overflow: hidden;
 }
 
 .content .ys-time .qdtime .qdtime-left {
