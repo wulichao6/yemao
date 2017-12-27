@@ -1,28 +1,21 @@
 <template>
   <div>
     <!--头部导航-->
-    <xheader2 :title="title" :rightClass="rightClass"></xheader2>
-    <!--<div class="header">-->
-      <!--<div class="header-left"><img src="../../assets/images/index/back.png" /></div>-->
-      <!--<span>订单详情</span>-->
-      <!--<div class="header-right"></div>-->
-    <!--</div>-->
+    <xheader2 :title="title" :rightClass="rightClass" :collectFlag="collectFlag"></xheader2>
     <!--主体内容-->
     <div class="od-condent">
       <!--订单确认后详情页-->
       <div class="ddxq">
         <div class="ddxq-top">
-          <div class="ddxq-img"@click="toUrl('emporderimgs')">
+          <div class="ddxq-img" @click="toUrl('emporderimgs')">
             <img src='../../../static/images/bj.jpg'>
-            <div class="num">5</div>
+            <div class="num">{{imgSize}}</div>
           </div>
           <div class="ddxq-jianjie">
-            <div class="jianjie-top">
-              已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成
-            </div>
+            <div class="jianjie-top">{{order.project_title}}</div>
             <div class="jianjie-bottom">
-              <div class="db-mianji"><span>建筑设计</span>/<span class="mianji">500</span><span class="mianji">m²</span></div>
-              <div class="db-yushuan"><span>预算</span><span class="jiage">￥</span><span class="jiage">50000</span></div>
+              <div class="db-mianji"><span>{{getNameById(order.project_type)}}</span>/<span class="mianji">500</span><span class="mianji">m²</span></div>
+              <div class="db-yushuan"><span>预算</span><span class="jiage">￥</span><span class="jiage">{{order.project_budget}}</span></div>
             </div>
           </div>
         </div>
@@ -32,7 +25,7 @@
               <span><img src='../../../static/images/employer/leixin.png'></span><span>预计完成：</span>
             </div>
             <div class="box-right">
-              <span>2017-05-24</span>
+              <span>{{order.project_endTime}}</span>
             </div>
           </div>
           <div class="ddxq-box">
@@ -48,7 +41,7 @@
               <span><img src='../../../static/images/employer/02.png'></span><span>设计深度：</span>
             </div>
             <div class="box-right">
-              <span>方案</span>
+              <span v-for="item in order.project_depth">{{getDepthName(item)}}</span>
             </div>
           </div>
           <div class="ddxq-box">
@@ -56,7 +49,7 @@
                 <span><img src='../../../static/images/employer/03.png'></span><span>工时：</span>
             </div>
             <div class="box-right">
-              <span>20小时</span>
+              <span>{{order.project_workHours}}小时</span>
             </div>
           </div>
           <div class="ddxq-box" style="border: none;">
@@ -64,14 +57,14 @@
               <span><img src="../../../static/images/employer/06.png"/></span><span>地区：</span>
             </div>
             <div class="box-right">
-              <span>上海</span>
+              <span>{{order.project_region}}</span>
             </div>
           </div>
         </div>
         <div class="ddxq-bottom">
           <div class="biaoqi">订单详情</div>
           <div class="neirong">
-            <span>已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成，已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成 ，再到建筑施工图都可以完成，已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成 已有多年建筑设计工作经验，从事建筑方案到效果图</span>
+            <span>{{order.project_describe}}</span>
           </div>
           <div class="chakangengduo">点击查看更多</div>
         </div>
@@ -79,11 +72,14 @@
       <!--抢单列表设计师-->
       <div class="od-renshu">
         <div class="tu"></div>
-        <p>已有<span>3</span>位设计师抢单</p>
+        <p v-if="orderBidders.length>0">已有<span>{{orderBidders.length}}</span>位设计师抢单</p>
+        <p v-if="orderBidders.length=0">还没有设计师抢单</p>
         <div class="gengduo" @click="toUrl('emporderparts')"></div>
       </div>
+
       <div class="od-list">
-        <div class="qdsjs-list">
+
+        <div class="qdsjs-list"  v-for="bidder in orderBidders">
           <div class="qdsjs-time">
             <p>2017-10-10</p>
           </div>
@@ -110,33 +106,7 @@
             </div>
           </div>
         </div>
-        <div class="qdsjs-list">
-          <div class="qdsjs-time">
-            <p>2017-10-10</p>
-          </div>
-          <div class="qdsjs-box">
-            <div class="qb-top">
-              <div class="qt-touxiang">
-                <img src='../../../static/images/bj.jpg'>
-              </div>
-              <div class="qt-nichen">
-                <span>设计师小B</span>
-              </div>
-              <div class="chat"><img src='../../../static/images/employer/miaomiao.png'></div>
-              <div class="qt-jiage">
-                <div class="qt-time"><span>20小时</span></div>
-                <div class="qt-jingqian"><span>￥</span><span>5000</span></div>
-              </div>
-            </div>
-            <div class="qb-content">
-              已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成 再到建筑施工图都可以完成，再到建筑施工图都可以完成，再到建筑施工图都可以完成，
 
-            </div>
-            <div class="qb-botton">
-              选择设计师
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <!--底部-->
@@ -158,6 +128,7 @@
 
 <script>
   import xheader2 from '../../components/header/xheader2.vue'
+  import common from '../../../static/common';
   export default {
     components: {
       xheader2
@@ -168,17 +139,37 @@
         rightClass: 'collect',
         cover: {
           backgroundImage: 'url(' + require('../../../static/images/bj.jpg') + ')'
-        }
+        },
+
+        order_id:null,
+        user_id:null,
+        collectFlag:0,
+        order:{},
+        orderBidders:[],
+        imgSize:0
       }
     },
-    mounted: function () {
+    created: function () {
+      console.log("id:"+this.$route.query.id)
+      this.order_id = this.$route.query.id;
+      this.userInfo = common.getObjStorage("userInfo");
+      this.user_id = this.userInfo._id;
       this.zhishu();
+      this.initData();
+    },
+    mounted: function () {
     },
     methods: {
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
-//      订单详情字数限制
+      getNameById(id){
+        return common.getNameByTypeId(id);
+      },
+      getDepthName(num){
+        return num==0?"方案":num==1?"扩出":num==2?"施工":"";
+      },
+      // 订单详情字数限制
       zhishu () {
        var neirong = $(".neirong").text();
           $(".neirong").each(function() {
@@ -207,6 +198,46 @@
             flag = true;
           }
         });
+      },
+
+      initData(){
+        var _self = this;
+        if( common.isNull(_self.order_id) == true ){
+          return;
+        }
+        var params = {
+          interfaceId:'getProjectDetail',
+          order_id:_self.order_id,
+          user_id:_self.user_id
+        }
+        console.log("params:"+JSON.stringify(params))
+        _self.$axios.post('/api/mongoApi',{
+          params:params
+        }).then((response)=>{
+          console.log(response);
+          var data = response.data.data;
+          if( data ){
+            _self.collectFlag = data.collectFlag;
+            //订单
+            var order = data.order || {};
+            order.bidders = [];
+            var orderBidders = data.orderBidders || [];
+            var bidders = data.bidders || [];
+            orderBidders.forEach(function (b,j) {
+              bidders.forEach(function (u,j) {
+                if( b.user_id == u._id ){
+                  b.user_name = u.user_name;
+                  b.img = u.img;
+                }
+              })
+            })
+            _self.orderBidders = orderBidders;
+            _self.order = order;
+            if( _self.order.imgs ){
+              _self.imgSize = _self.order.imgs.length;
+            }
+          }
+        })
       }
     }
   }

@@ -140,7 +140,7 @@
       CheckerItem,
       imageUpload,
       Toast
-   },
+    },
     data () {
       return {
         userInfo:{},
@@ -223,9 +223,6 @@
 
       submit(){
         var _self = this;
-        console.log("_self.subParams.project_depth："+_self.subParams.project_depth)
-        console.log("_self.subParams.project_depth1："+_self.subParams.project_depth1)
-        console.log("_self.subParams.project_depth2："+_self.subParams.project_depth2)
         if( common.isNull(_self.subParams.user_id) == true ){
           _self.showToast("未成功获取用户信息!");
           return
@@ -260,12 +257,10 @@
           _self.showToast("请选择设计面积!");
           return
         }
-//        if( common.isNull(_self.subParams.project_depth) == true ||
-//            common.isNull(_self.subParams.project_depth1) == true ||
-//            common.isNull(_self.subParams.project_depth2) == true ){
-//          _self.showToast("请选择设计深度!");
-//          return
-//        }
+        if( _self.subParams.project_depth.length == 0 ){
+          _self.showToast("请选择设计深度!");
+          return
+        }
         if( common.isNull(_self.subParams.project_workHours) == true ){
           _self.showToast("请输入工时!");
           return
@@ -289,8 +284,19 @@
           params:params
         }).then((response)=>{
           console.log(response);
+<<<<<<< HEAD
           if(response.status==200){
              _self.toUrl("index");
+=======
+          if( response ){
+            var data = response.data;
+            if( data && data.code == 200 ){
+              _self.showToast("发布成功！");
+              _self.goback();
+            }else{
+              _self.showToast("发布失败！");
+            }
+>>>>>>> master
           }
         })
       }

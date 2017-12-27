@@ -1,6 +1,6 @@
 <template>
   <div class="header-box">
-    <x-header :left-options="{backText: ''}" :title="title"><a slot="right" :class="myRrightClass" v-tap="{ methods:setHover }"></a></x-header>
+    <x-header :left-options="{backText: ''}" :title="title"><a slot="right" :class="flag==0?right_class:right_hover_class" v-tap="{ methods:setHover }"></a></x-header>
   </div>
 </template>
 
@@ -16,23 +16,31 @@
     },
     props: {
       title: String,
-      rightClass: String
+      rightClass: String,
+      collectFlag: Number
+    },
+    created: function () {
+      this.flag = this.collectFlag;
+      this.right_class = this.rightClass;
+      this.right_hover_class = this.rightClass + ' hover';
     },
     data () {
       return {
-        myRrightClass: this.rightClass
+        flag:0,
+        right_class: "",
+        right_hover_class: "",
       }
     },
     methods: {
       setHover: function () {
-        if (this.myRrightClass === this.rightClass) {
-          this.myRrightClass = this.rightClass + ' hover'
-          this.$emit('upup', '0')// 主动触发upup方法，'hehe'为向父组件传递的数据
-          $ ('.tisi').html(' 收藏成功').show ().delay (1000).fadeOut ();
+        if ( this.flag == 0 ) {
+          this.flag = 1;
+          // this.$emit('upup', '0')// 主动触发upup方法，'hehe'为向父组件传递的数据
+          // $ ('.tisi').html(' 收藏成功').show ().delay (1000).fadeOut ();
         } else {
-          this.myRrightClass = this.rightClass
-          this.$emit('upup', '1')// 主动触发upup方法，'hehe'为向父组件传递的数据
-          $ ('.tisi').html('取消收藏').show ().delay (1000).fadeOut ();
+          this.flag = 0;
+          // this.$emit('upup', '1')// 主动触发upup方法，'hehe'为向父组件传递的数据
+          // $ ('.tisi').html('取消收藏').show ().delay (1000).fadeOut ();
         }
       }
     }

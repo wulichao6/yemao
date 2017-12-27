@@ -114,7 +114,7 @@
       <!-- 上拉加载 -->
       <scroller lock-x height="" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="100" style="padding-bottom: rem;">
         <div>
-          <div class="gz-list" v-for="order in orderList" @click="toUrl('emporder')">
+          <div class="gz-list" v-for="order in orderList" @click="toDetails(order._id)">
             <div class="gz-top">
               <div class="gz-touxiang">
                 <img :src="order.user.img" />
@@ -142,7 +142,7 @@
                 <div class="gb-wz"><span>{{order.bidders.length}}</span>人抢单</div>
               </div>
               <div class="gb-right">
-                <div class="gb-ljqd"@click.stop="grabOrder()">立即抢单</div>
+                <div class="gb-ljqd" @click.stop="grabOrder(order._id)">立即抢单</div>
               </div>
             </div>
           </div>
@@ -190,7 +190,6 @@
       // console.log('startTime: ' + this.$route.query.startTime);
       this.scrolle();
       this.initData();
-
     },
     mounted: function () {
       this.$nextTick(() => {
@@ -409,8 +408,38 @@
         })
       },
 
-      grabOrder(){
+      toDetails(id){
+        this.$router.push({name:'emporder',query:{id:id}});
+      },
 
+      grabOrder(id){
+        var userInfo = common.getObjStorage("userInfo");
+        if( common.isNull(userInfo._id) == true ){//未登录
+          this.toUrl("login");
+        }else{
+          var status = this.getBidStatus(id,userInfo._id);
+          console.log("status:"+status)
+          if( status == 0 ){//未参与
+            this.$router.push({name:'orderqiangdan',query:{id:id}});
+          }else{//已参与
+            this.$router.push({name:'emporder',query:{id:id}});
+          }
+        }
+      },
+
+      getBidStatus(oid,uid){
+        var _self = this;
+        var status = 0;//0、未参与，1、已参与
+        _self.orderList.forEach(function (item,index) {
+          if( item._id == oid ){
+            item.bidders.forEach(function (item,index) {
+              if( item.user_id == uid ){
+                status = 1;
+              }
+            })
+          }
+        })
+        return status;
       },
 
     }
