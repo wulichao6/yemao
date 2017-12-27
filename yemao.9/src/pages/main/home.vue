@@ -12,12 +12,12 @@
   import tabbar from '../../components/tabs/tabbar.vue'
   export default {
     data () {
-      return {
+      return {  
       }
     },
     created: function () {
       console.log('$route.meta.keepAlive:' + this.$route.meta.keepAlive)
-      this.$router.push({name: 'index'}) // 页面加载时跳转
+      this.$router.push({name:'index'}) // 页面加载时跳转
     },
     components: { tabbar },
     methods: {

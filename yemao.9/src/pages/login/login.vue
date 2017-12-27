@@ -80,7 +80,7 @@
       //获取短信验证码
       this.huoquyanzhengma(".msgs", ".shouji");
       //判断输入框不能为空
-      this.login(".log-btn",".shouji");
+      this.checkLogin(".log-btn",".shouji");
     },
     methods: {
       goback() {
@@ -152,7 +152,7 @@
         });
       },
       //判断输入框不能为空
-      login(anniu, shouji, valp) {
+      checkLogin(anniu, shouji, valp) {
         var obj=this;
         $(anniu).click(function () {
           var username = $.trim($(shouji).val()); //获取到手机号

@@ -110,6 +110,7 @@
       },
       toUrl: function (pagename,flag) {
         var user = common.getObjStorage("userInfo");
+        console.log(user);
         console.log("flag:"+flag);
         console.log("common.isNull(user._id):"+common.isNull(user._id));
         if( flag == true && common.isNull(user._id) == true ){

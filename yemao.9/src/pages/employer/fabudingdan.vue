@@ -206,7 +206,6 @@
         console.log('on-show',str)
       },
 
-      /**************************************/
       showToast(msg){
         this.showMark = true;
         this.showMsg = msg;
@@ -284,6 +283,7 @@
           params:params
         }).then((response)=>{
           console.log(response);
+
           if( response ){
             var data = response.data;
             if( data && data.code == 200 ){
