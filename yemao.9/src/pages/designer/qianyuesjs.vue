@@ -74,6 +74,9 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+
+</style>
 <style scoped>
   @import '../../assets/css/designer/qianyuesjs.css';
   .xmlx-kuang{
@@ -85,5 +88,6 @@
     color: #999999;
     background: white;
     outline: medium;
+    overflow: hidden;
   }
 </style>

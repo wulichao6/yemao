@@ -3,7 +3,7 @@
     <!--<div v-tap="{ methods:cgLink , pagename:'vuxtest' }" class="msg">{{ msg }}</div>-->
     <!--头部-->
     <div class="mine-top">
-      <div class="shezhi"@click="toUrl('set')"></div>
+      <div class="shezhi"@click="toUrl('set')"><img src="../../../static/images/my/shezhi1.png" /></div>
       <div class="tu-nicheng">
         <div class="touxiang"@click="toUrl('login')">
           <img src="../../../static/images/bj.jpg" />
