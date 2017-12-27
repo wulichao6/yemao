@@ -15,6 +15,7 @@
       </tab>
       <swiper v-model="index" :show-dots="false" class="swps">
         <swiper-item key="0">
+            <scroller lock-x height="" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="100">
             <div class="ddlist-sjsdai">
               <div class="ds-top"@click="toUrl('daichulixq')">
                 <div class="ds-img">
@@ -39,30 +40,7 @@
                 </div>
               </div>
             </div>
-            <div class="ddlist-sjsdai">
-              <div class="ds-top"@click="toUrl('daichulixq')">
-                <div class="ds-img">
-                  <img src="../../../static/images/bj.jpg">
-                </div>
-                <div class="ds-jianjie">
-                  <div class="jianjie-top">
-                    已有多年建筑设计工作经验，从事建筑方案到效果图，再到建筑施工图都可以完成
-                  </div>
-                  <div class="jianjie-bottom">
-                    <div class="db-leixin"><span>建筑设计</span> <span class="yuan">￥</span><span class="yuan">50000</span>
-                    </div>
-                    <div class="db-djs">7天后截止报名</div>
-                  </div>
-                </div>
-              </div>
-              <div class="ds-bottom">
-                <div class="db-right">
-                  <div class="db-qxdd">取消订单</div>
-                  <div class="db-sxdd">刷新订单</div>
-                  <div class="db-qrdd">确认订单</div>
-                </div>
-              </div>
-            </div>
+            </scroller>
         </swiper-item>
         <swiper-item key="1">
           <div class="ddlist-sjsdai">
@@ -208,28 +186,54 @@
 </template>
 
 <script>
-  import {Tab, TabItem, Swiper, SwiperItem} from 'vux'
+  import {Tab, TabItem, Swiper, SwiperItem,LoadMore, Scroller} from 'vux'
   export default {
     components: {
       Tab,
       TabItem,
       Swiper,
       SwiperItem,
+      Scroller,
+      LoadMore
     },
     data() {
       return {
         index: 0,
+        pageNo: 0,
+        pageSize: 10,
+        onFetching:false,
+        showLoading:true,
+        loadtext:"上拉加载",
+        loadmore:"上拉加载",
+        loadrefresh: '正在加载...',
+        loadnomore: '没有更多数据了',
       }
     },
+    created: function () {
+      this.initData();
+      this.addData();
+    },
     mounted: function () {
+        this.$nextTick(() => {
+            this.$refs.scrollerEvent.reset({top: 0})
+        })
+        this.$nextTick(() => {
+            this.$refs.scrollerBottom.reset({top: 0})
+        })
     },
     methods: {
-      goback() {
-        this.$router.goBack();
-      },
-      toUrl(name) {
-        this.$router.push({name: name});
-      },
+        goback() {
+            this.$router.goBack();
+        },
+        toUrl(name) {
+            this.$router.push({name: name});
+        },
+        onScrollBottom () {
+            console.log("onScrollBottom:")
+        },
+        loadMore() {
+            console.log('loadMore');
+        }
     }
   }
 </script>
