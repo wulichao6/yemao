@@ -3,6 +3,7 @@
     <div class="header">
       <div class="header-left" @click="goback"><img src="../../../static/images/back.png"/></div>
       <span>填写抢单信息</span>
+      <div class="header-right" >确定</div>
     </div>
     <!--  信息表-->
     <div class="oq-content">

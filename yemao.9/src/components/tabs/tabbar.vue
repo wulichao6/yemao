@@ -1,40 +1,43 @@
 <template>
   <footer>
     <div class="tabs">
-      <!--  :class=" activeFlag=='index' ? ' tabbar-active' : '' " vue.js三目运算添加class -->
-      <a id="index" v-tap="{ methods:cgLink , pagename:'index' }" class="tabbar-item item-index tabbar-active">
+      <!--// :class=" activeFlag=='index' ? ' tabbar-active' : '' " vue.js三目运算添加class-->
+      <a id="index" v-tap="{ methods:cgLink , pagename:'index' }" class="tabbar-item item-index" :class="$store.state.pageIndex==0 ? 'tabbar-active' : ''">
         <span class="tabbar-txt">首页</span>
       </a>
-      <a id="employer" v-tap="{ methods:cgLink , pagename:'employer' }" class="tabbar-item item-employer">
+      <a id="employer" v-tap="{ methods:cgLink , pagename:'employer' }" class="tabbar-item item-employer" :class="$store.state.pageIndex==1 ? 'tabbar-active' : ''">
         <span class="tabbar-txt">雇主</span>
       </a>
-      <a id="meow" v-tap="{ methods:cgLink , pagename:'meow' }" class="tabbar-item item-meow">
+      <a id="meow" v-tap="{ methods:cgLink , pagename:'meow' }" class="tabbar-item item-meow" :class="$store.state.pageIndex==2 ? 'tabbar-active' : ''">
         <span class="tabbar-txt">喵喵圈</span>
       </a>
-      <a id="designer" v-tap="{ methods:cgLink , pagename:'designer' }" class="tabbar-item item-designer">
+      <a id="designer" v-tap="{ methods:cgLink , pagename:'designer' }" class="tabbar-item item-designer" :class="$store.state.pageIndex==3 ? 'tabbar-active' : ''">
         <span class="tabbar-txt">设计师</span>
       </a>
-      <a id="my" v-tap="{ methods:cgLink , pagename:'my' }" class="tabbar-item item-my">
-        <span class="tabbar-txt">我的</span>
-      </a>
+      <a id="my" v-tap="{ methods:cgLink , pagename:'my' }" class="tabbar-item item-my" :class="$store.state.pageIndex==4 ? 'tabbar-active' : ''">
+      <span class="tabbar-txt">我的</span>
+    </a>
     </div>
   </footer>
 </template>
 
 <script type="text/babel">
-  import $ from '../../../utils/jquery-3.2.1.min'
+  import store from '@/vuex/store'
   export default {
     name: 'tabbar',
     data: function () {
       return {}
     },
+    store,
     methods: {
       cgLink: function (params) {
-        $('.tabbar-active').removeClass('tabbar-active')
-        if (!$('#' + params.pagename).hasClass('tabbar-active')) {
-          $('#' + params.pagename).addClass('tabbar-active')
-        }
+        var index = this.getIndexByPageName(params.pagename);
+        this.$store.state.pageIndex = index;
         this.$router.push({name: params.pagename})
+      },
+      getIndexByPageName(pagename){
+        return pagename=="index" ? 0 : pagename=="employer" ? 1
+          : pagename=="meow" ? 2 : pagename=="designer" ? 3 : pagename=="my" ? 4 : 0;
       }
     },
     created: function () {

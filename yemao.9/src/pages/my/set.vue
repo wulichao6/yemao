@@ -22,7 +22,7 @@
       </div>
     </div>
     <!--退出登陆-->
-    <div class="tcdl"@click="toUrl('login')">
+    <div class="tcdl"@click="logout()">
       <span>退出登陆</span>
     </div>
   </div>
@@ -42,6 +42,10 @@
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
+      logout(){
+        localStorage.setItem("userInfo",'{}');
+        this.goback();
+      }
     }
   }
 </script>

@@ -1,7 +1,11 @@
 
 .setp-content {
   width: 100%;
-  margin-top: 0.8rem;
+  position: fixed;
+  height: 100%;
+  background: #f2f2f2;
+  top: 0.88rem;
+  left: 0;
 }
 
 .setp-content .ymm {

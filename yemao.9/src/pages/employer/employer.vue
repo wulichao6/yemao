@@ -10,10 +10,10 @@
     </div>
     <!--状态模块-->
     <div class="gu-mokuai">
-      <div class="dingdan"@click="toUrl('fabudingdan')">
+      <div class="dingdan"@click="toUrl('fabudingdan',true)">
         发 布 项 目
       </div>
-      <div class="shouchang"@click="toUrl('myorderchuli')">
+      <div class="shouchang"@click="toUrl('myorderchuli',true)">
         我 的 订 单
       </div>
     </div>
@@ -40,11 +40,11 @@
                 <img :src="order.user.img" />
               </div>
               <div class="gz-nicheng">{{order.user.user_name}}</div>
-              <div class="gz-jiage"><span>￥</span><span>{{order.order_price}}</span></div>
+              <div class="gz-jiage"><span>￥</span><span>{{order.project_budget}}</span></div>
             </div>
             <div class="gz-timeleixin">
-              <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span>{{order.order_deadline}}<span>七天后过期</span></div>
-              <div class="gz-leixin">{{order.order_type}}<span>家装设计</span></div>
+              <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span>{{order.project_deadLine}}<span>过期</span></div>
+              <div class="gz-leixin"><span>{{getNameById(order.project_type)}}</span></div>
             </div>
             <div class="gz-content">
               <div class="tupian">
@@ -52,14 +52,13 @@
                   <img :src="img" />
                 </div>
               </div>
-              <div class="wenzhi">{{order.order_intro}}</div>
+              <div class="wenzhi">{{order.project_describe}}</div>
             </div>
             <div class="gz-bottom">
               <div class="gb-left">
                 <div class="gb-tu" v-for="bidder in order.bidders">
                   <img :src="bidder.img" />
                 </div>
-
                 <div class="gb-wz"><span>{{order.bidders.length}}</span>人抢单</div>
               </div>
               <div class="gb-right">
@@ -76,6 +75,7 @@
 
 <script>
   import {LoadMore, Scroller,} from 'vux'
+  import common from '../../../static/common';
   export default {
     components: {
       Scroller,
@@ -88,7 +88,7 @@
 
         pageNo: 0,
         pageSize: 10,
-        onFetching:false,
+        onFetching:true,
         showLoading:false,
         loadtext:"上拉加载",
         loadmore:"上拉加载",
@@ -97,7 +97,7 @@
       }
     },
     created:function () {
-      this.loadMore();
+       this.loadMore();
     },
     mounted: function () {
 //      this.$nextTick(() => {
@@ -108,8 +108,18 @@
       cgLink: function (param) {
         this.$router.push({name: param.pagename})
       },
-      toUrl: function (pagename) {
-        this.$router.push({name: pagename})
+      toUrl: function (pagename,flag) {
+        var user = common.getObjStorage("userInfo");
+        console.log("flag:"+flag);
+        console.log("common.isNull(user._id):"+common.isNull(user._id));
+        if( flag == true || common.isNull(user._id) == true ){
+          this.$router.push({name: 'login'})
+        }else{
+          this.$router.push({name: pagename})
+        }
+      },
+      getNameById(id){
+        return common.getNameByTypeId(id);
       },
       //智能排序
       znbx(){
@@ -160,8 +170,10 @@
               orderList.forEach(function (item,index) {
                 //雇主
                 orderUsers.forEach(function (u,j) {
-                  if( item.order_user_id == u._id ){
+                  if( item.user_id == u._id ){
                     item.user = u;
+                  }else{
+                    item.user = {};
                   }
                 })
                 //参与人
