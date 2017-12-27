@@ -120,11 +120,11 @@
                 <img :src="order.user.img" />
               </div>
               <div class="gz-nicheng">{{order.user.user_name}}</div>
-              <div class="gz-jiage"><span>￥</span><span>{{order.order_price}}</span></div>
+              <div class="gz-jiage"><span>￥</span><span>{{order.project_budget}}</span></div>
             </div>
             <div class="gz-timeleixin">
-              <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span>{{order.order_deadline}}<span>七天后过期</span></div>
-              <div class="gz-leixin">{{order.order_type}}<span>家装设计</span></div>
+              <div class="gz-time"><span><img src="../../../static/images/index/time.png"/></span>{{order.project_deadLine}}<span>过期</span></div>
+              <div class="gz-leixin"><span>{{getNameById(order.project_type)}}</span></div>
             </div>
             <div class="gz-content">
               <div class="tupian">
@@ -132,18 +132,17 @@
                   <img :src="img" />
                 </div>
               </div>
-              <div class="wenzhi">{{order.order_intro}}</div>
+              <div class="wenzhi">{{order.project_describe}}</div>
             </div>
             <div class="gz-bottom">
               <div class="gb-left">
                 <div class="gb-tu" v-for="bidder in order.bidders">
                   <img :src="bidder.img" />
                 </div>
-
                 <div class="gb-wz"><span>{{order.bidders.length}}</span>人抢单</div>
               </div>
               <div class="gb-right">
-                <div class="gb-ljqd"@click.stop="toUrl('orderqiangdan')">立即抢单</div>
+                <div class="gb-ljqd"@click.stop="grabOrder()">立即抢单</div>
               </div>
             </div>
           </div>
@@ -156,6 +155,7 @@
 
 <script>
   import {LoadMore, Scroller, Swiper, SwiperItem, Divider,XAddress,ChinaAddressV4Data,} from 'vux'
+  import common from '../../../static/common';
 
   export default {
     components: {
@@ -172,15 +172,14 @@
         noticeList : [],
         orderList : [],
         imgIndex: 0,
-        addressData: ChinaAddressV4Data,
-        value3: ['中山市'],
-
         znpxMark:false,
+        addressData: ChinaAddressV4Data,
+        value3: ['上海市'],
 
         pageNo: 0,
         pageSize: 10,
-        onFetching:false,
-        showLoading:true,
+        onFetching:true,
+        showLoading:false,
         loadtext:"上拉加载",
         loadmore:"上拉加载",
         loadrefresh: '正在加载...',
@@ -190,9 +189,8 @@
     created: function () {
       // console.log('startTime: ' + this.$route.query.startTime);
       this.scrolle();
-      // this.znbx();
       this.initData();
-      this.addData();
+
     },
     mounted: function () {
       this.$nextTick(() => {
@@ -260,6 +258,10 @@
         console.log('on-show',str)
       },
 
+      getNameById(id){
+        return common.getNameByTypeId(id);
+      },
+
       //下拉加载下拉加载
       onScrollBottom () {
         console.log("onScrollBottom:")
@@ -282,10 +284,10 @@
         _self.$axios.post('/api/mongoApi',{
           params:params
         }).then((response)=>{
+          console.log(response);
           if( response.data ){
             var data = response.data.data;
             if( data ){
-              console.log(data);
               //轮播图
               _self.imgList = data.imgList || [];
 
@@ -308,8 +310,10 @@
               orderList.forEach(function (item,index) {
                 //雇主
                 orderUsers.forEach(function (u,j) {
-                  if( item.order_user_id == u._id ){
+                  if( item.user_id == u._id ){
                     item.user = u;
+                  }else{
+                    item.user = {};
                   }
                 })
                 //参与人
@@ -367,8 +371,10 @@
               orderList.forEach(function (item,index) {
                 //雇主
                 orderUsers.forEach(function (u,j) {
-                  if( item.order_user_id == u._id ){
+                  if( item.user_id == u._id ){
                     item.user = u;
+                  }else{
+                    item.user = {};
                   }
                 })
                 //参与人
@@ -403,39 +409,10 @@
         })
       },
 
-      addData () {
-        var params = {
-          //修改
-          interfaceId:'updateData',
-          coll:'users',
-          data:{
-            "$set":{"phone":"1378892323"}
-          },
-          wheredata:{"_id":"006"}
-          //批量添加
-//          interfaceId:'insertMany',
-//          coll:'orderList',
-//          data:[{
-//            _id:"20171225010",
-//            order_intro:"描述4",
-//            order_price:1500.00,
-//            order_deadline:"2018-12-23 18:30:00",
-//            order_type:"type001",
-//            order_status:"3",
-//            order_user_id:"001",
-//            imgs:[
-//              "https://static.vux.li/demo/4.jpg",
-//              "https://static.vux.li/demo/4.jpg",
-//              "https://static.vux.li/demo/4.jpg"]
-//          }]
-        }
+      grabOrder(){
 
-//        this.$axios.post('/api/mongoApi',{
-//          params:params
-//        }).then((response)=>{
-//          console.log(response);
-//        })
       },
+
     }
   }
 </script>

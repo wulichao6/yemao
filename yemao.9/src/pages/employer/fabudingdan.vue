@@ -3,7 +3,7 @@
     <div class="header">
       <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
       <span>订单详情</span>
-      <div class="header-right"@click="tishikuang"><span>发布</span></div>
+      <div class="header-right" v-tap="{ methods:submit }"><span>发布</span></div>
     </div>
     <!--发布订单内容-->
     <div class="fb-content">
@@ -12,23 +12,9 @@
           <span>项目类型</span>
         </div>
         <div class="xmlx-right">
-          <select class="xmlx-kuang">
-            <option value="volvo">请选择类型</option>
-            <option value="saab">策划设计</option>
-            <option value="opel">规划设计</option>
-            <option value="audi">建筑设计</option>
-            <option value="audi">结构设计</option>
-
-            <option value="saab">给排水设计</option>
-            <option value="opel">电气设计</option>
-            <option value="audi">暖通设计</option>
-            <option value="audi">景观设计</option>
-
-            <option value="saab">室内设计</option>
-            <option value="opel">软装设计</option>
-            <option value="audi">项目经理</option>
-            <option value="audi">概预算</option>
-            <option value="audi">审图</option>
+          <select class="xmlx-kuang" v-model="subParams.project_type">
+            <option value="">请选择类型</option>
+            <option v-for="item in typeList" :value="item._id">{{item.type_name}}</option>
           </select>
         </div>
       </div>
@@ -38,17 +24,17 @@
         </div>
         <div class="xmlx-right">
           <group class="xmlx-kuang">
-            <x-address @on-hide="logHide" @on-show="logShow" raw-value title="" :list="addressData" hide-district value-text-align="right" v-model="value3"></x-address>
+            <x-address @on-hide="logHide" @on-show="logShow" raw-value title="" :list="addressData" hide-district value-text-align="right" v-model="subParams.project_region"></x-address>
           </group>
         </div>
       </div>
       <div class="xmbt">
         <div class="xmbt-top">
           <div class="xt-left"><span>项目标题</span></div>
-          <div class="xt-right"><input type="text"placeholder="请输入任务标题" /></div>
+          <div class="xt-right"><input type="text" placeholder="请输入项目标题" v-model="subParams.project_title" maxlength="20"/></div>
         </div>
         <div class="xmbt-bottom">
-          <textarea class="xt-txt" placeholder="详细描述一下任务的内容"></textarea>
+          <textarea class="xt-txt" placeholder="请详细描述一下项目的内容" v-model="subParams.project_describe" maxlength="200"></textarea>
         </div>
       </div>
       <div class="ys-time">
@@ -57,15 +43,15 @@
             <span>预算</span>
           </div>
           <div class="ys-right">
-            <input type="text"placeholder="请输入金额" />
+            <input type="text" placeholder="请输入预算金额" v-model="subParams.project_budget"/>
           </div>
         </div>
         <div class="qdtime">
           <div class="qdtime-left">
-            <span>枪单截止日期</span>
+            <span>抢单截止日期</span>
           </div>
           <div class="qdtime-right">
-              <datetime v-model="value1"></datetime>
+              <datetime v-model="subParams.project_deadLine"></datetime>
           </div>
         </div>
       </div>
@@ -75,7 +61,7 @@
             <span>设计单位</span>
           </div>
           <div class="xmbt-right">
-            <input type="text"placeholder="请输入设计个数" />
+            <input type="text" placeholder="请输入设计单位" v-model="subParams.project_unit"/>
           </div>
         </div>
         <div class="xmmj">
@@ -83,51 +69,39 @@
             <span>设计面积</span>
           </div>
           <div class="xmbt-right">
-            <input type="text"placeholder="请输入设计面积" />
-          </div>
-        </div>
-        <div class="gs">
-          <div class="xmbt-left">
-            <span>个数</span>
-          </div>
-          <div class="xmbt-right">
-            <input type="text"placeholder="请输入个数" />
+            <input type="text"placeholder="请输入设计面积" v-model="subParams.project_area"/>
           </div>
         </div>
         <div class="sjsd">
           <div class="sjsd-top">设计深度</div>
           <div class="sjsd-bottom">
             <div class="fanan">
-              <!--<ul>-->
-                <!--<li>方案</li>-->
-                <!--<li>扩出</li>-->
-                <!--<li>施工</li>-->
-              <!--</ul>-->
               <checker
                 type="checkbox"
                 selected-item-class="demo5-item-selected"
-              >
-                <checker-item :key="0" :value="0" class="fa">
-                   方案
-                </checker-item>
-                <checker-item :key="1" :value="1"class="fa">
-                  扩出
-                </checker-item>
-                <checker-item :key="2" :value="2"class="fa">
-                  施工
-                </checker-item>
+                @on-change="onChange" v-model="subParams.project_depth">
+                <checker-item key="0" value="0" class="fa">方案</checker-item>
+                <checker-item key="1" value="1" class="fa">扩出</checker-item>
+                <checker-item key="2" value="2" class="fa">施工</checker-item>
               </checker>
             </div>
           </div>
         </div>
         <div class="gongshi">
-          <div class="gsh-top">工时</div>
+          <div class="gs">
+            <div class="xmbt-left">
+              <span>工时</span>
+            </div>
+            <div class="xmbt-right">
+              <input type="text"placeholder="请输入工时" v-model="subParams.project_workHours"/>
+            </div>
+          </div>
           <div class="gsh-bottom">
             <div class="gb-left">
               <span>设计起止时间</span>
             </div>
             <div class="gb-right">
-              <span><datetime v-model="value2" class="shijian"></datetime></span> / <span><datetime v-model="value4"class="shijian"></datetime></span>
+              <span><datetime v-model="subParams.project_startTime" class="shijian"></datetime></span> / <span><datetime v-model="subParams.project_endTime" class="shijian"></datetime></span>
             </div>
           </div>
         </div>
@@ -149,12 +123,14 @@
         发布成功
       </div>
     </div>
+    <toast v-model="showMark" :time="1000" type="text" width="5rem">{{showMsg}}</toast>
   </div>
 </template>
 
 <script>
   import imageUpload from '../../components/upload/image-upload.vue'
-  import {XAddress,ChinaAddressV4Data,Datetime, Group,Checker, CheckerItem,} from 'vux'
+  import {XAddress,ChinaAddressV4Data,Datetime, Group,Checker, CheckerItem, Toast } from 'vux'
+  import common from '../../../static/common';
   export default {
     components: {
       XAddress,
@@ -162,21 +138,48 @@
       Group,
       Checker,
       CheckerItem,
-      imageUpload
-    },
+      imageUpload,
+      Toast
+   },
     data () {
       return {
+        userInfo:{},
         imgList:[],
         isShow:true,
-
+        typeList:[],
+        subParams:{
+          user_id:"",
+          project_type:"",
+          project_region:['上海市'],
+          project_title:"",
+          project_describe:"",
+          project_budget:"",
+          project_deadLine:"",
+          project_unit:"",
+          project_area:"",
+          project_depth:[],
+          project_workHours:"",
+          project_startTime:"",
+          project_endTime:"",
+          project_winBidder:"",
+          imgs:[]
+        },
+        showMark:false,
+        showMsg:"",
         addressData: ChinaAddressV4Data,
-        value3: ['中山市'],
-        value1: '2015-11-12',
-        value2: '2015-10-12',
-        value4: '2025-10-12',
       }
     },
-    mounted: function () {
+    created: function () {
+      this.userInfo = common.getObjStorage("userInfo");
+      this.subParams.user_id = this.userInfo._id;
+
+      var timeStamp = common.getCurrentTimeStamp();
+      var dateStr = common.timeStamp2String(timeStamp,"ymd");
+      this.subParams.project_deadLine=dateStr;
+      this.subParams.project_startTime=dateStr;
+      this.subParams.project_endTime=dateStr;
+
+      this.typeList = common.getProjectTypes();
     },
     methods: {
       goback(){
@@ -185,42 +188,108 @@
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
       },
-      showPlugin () {
-        this.$vux.datetime.show({
-          cancelText: '取消',
-          confirmText: '确定',
-          format: 'YYYY-MM-DD HH',
-          value: '2017-05-20 18',
-          onConfirm (val) {
-            console.log('plugin confirm', val)
-          },
-        })
-      },
       // 地区
       logHide (str) {
         var obj = this;
         console.log('on-hide', str)
         if( str == true ){
-          console.log('value', obj.value3)
-          if( obj.value3[0] == '110000' || obj.value3[0] == '120000' ||
-            obj.value3[0] == '310000' || obj.value3[0] == '500000' ){
-            obj.value3[1] = '--';
+          console.log('value', obj.subParams.project_region)
+          if( obj.subParams.project_region[0] == '110000' || obj.subParams.project_region[0] == '120000' ||
+            obj.subParams.project_region[0] == '310000' || obj.subParams.project_region[0] == '500000' ){
+            obj.subParams.project_region[1] = '--';
           }else{
-            obj.value3[0] = '--';
+            obj.subParams.project_region[0] = '--';
           }
         }
       },
       logShow (str) {
         console.log('on-show',str)
       },
-      //提示框
-      tishikuang(){
-          $ ('.tisi').show ().delay (1000).fadeOut ();
+
+      /**************************************/
+      showToast(msg){
+        this.showMark = true;
+        this.showMsg = msg;
       },
 
       triggerFile(){
         console.log("trigger:")
-         document.getElementById("img-upload").click();
+        document.getElementById("img-upload").click();
+      },
+
+      onChange(val){
+        console.log("onChange："+val)
+      },
+
+      submit(){
+        var _self = this;
+        console.log("_self.subParams.project_depth："+_self.subParams.project_depth)
+        console.log("_self.subParams.project_depth1："+_self.subParams.project_depth1)
+        console.log("_self.subParams.project_depth2："+_self.subParams.project_depth2)
+        if( common.isNull(_self.subParams.user_id) == true ){
+          _self.showToast("未成功获取用户信息!");
+          return
+        }
+        if( common.isNull(_self.subParams.project_type) == true ){
+          _self.showToast("请选择项目类型!");
+          return
+        }
+        if( _self.subParams.project_region.length < 2 ){
+          _self.showToast("请选择项目地区!");
+          return
+        }else{
+
+        }
+        if( common.isNull(_self.subParams.project_title) == true ){
+          _self.showToast("请输入项目标题!");
+          return
+        }
+        if( common.isNull(_self.subParams.project_describe) == true ){
+          _self.showToast("请输入项目描述!");
+          return
+        }
+        if( common.isNull(_self.subParams.project_budget) == true ){
+          _self.showToast("请输入预算金额!");
+          return
+        }
+        if( common.isNull(_self.subParams.project_unit) == true ){
+          _self.showToast("请输入设计单位!");
+          return
+        }
+        if( common.isNull(_self.subParams.project_area) == true ){
+          _self.showToast("请选择设计面积!");
+          return
+        }
+//        if( common.isNull(_self.subParams.project_depth) == true ||
+//            common.isNull(_self.subParams.project_depth1) == true ||
+//            common.isNull(_self.subParams.project_depth2) == true ){
+//          _self.showToast("请选择设计深度!");
+//          return
+//        }
+        if( common.isNull(_self.subParams.project_workHours) == true ){
+          _self.showToast("请输入工时!");
+          return
+        }
+        if( common.dateCompare(_self.subParams.project_deadLine,_self.subParams.project_startTime) == false ){
+          _self.showToast("开始时间不能小于抢单截止日期!");
+          return
+        }
+        if( common.dateCompare(_self.subParams.project_startTime,_self.subParams.project_endTime) == false ){
+          _self.showToast("截止时间不能小于开始日期!");
+          return
+        }
+        var params = {
+        //批量添加
+        interfaceId:'insertData',
+          coll:'orderList',
+          data:_self.subParams
+        }
+
+        this.$axios.post('/api/mongoApi',{
+          params:params
+        }).then((response)=>{
+          console.log(response);
+        })
       }
 
     }
@@ -272,6 +341,7 @@
   }
   .demo5-item-selected {
     background: #f65aa6;
+    color:#fff;
   }
   /*提示框*/
   .tishikuang .tisi {

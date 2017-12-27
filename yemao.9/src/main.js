@@ -7,6 +7,7 @@ import vueTap from 'v-tap'
 import { Datetime, Group } from 'vux'
 import $ from '../utils/jquery-3.2.1.min';
 import axios from 'axios'
+import store from './vuex/store'
 
 Vue.config.productionTip = false
 
@@ -28,6 +29,7 @@ Vue.prototype.$axios = axios;
 new Vue({
   el: '#app',
   router,
+  store,//使用store
   template: '<App/>',
   components: { App }
 })

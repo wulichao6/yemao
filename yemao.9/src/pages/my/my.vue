@@ -3,12 +3,12 @@
     <!--<div v-tap="{ methods:cgLink , pagename:'vuxtest' }" class="msg">{{ msg }}</div>-->
     <!--头部-->
     <div class="mine-top">
-      <div class="shezhi"@click="toUrl('set')"></div>
+      <div class="shezhi" v-tap="{ methods:toSet }"></div>
       <div class="tu-nicheng">
-        <div class="touxiang"@click="toUrl('login')">
-          <img src="../../../static/images/bj.jpg" />
+        <div class="touxiang" v-tap="{ methods:modifyAvatar }">
+          <img :src="userInfo.img || defultAvatar" />
         </div>
-        <div class="nicheng"@click="toUrl('login')"><span>点击登陆</span></div>
+        <div class="nicheng"><span>{{userInfo.user_name || tips}}</span></div>
       </div>
     </div>
     <!--消息栏-->
@@ -96,14 +96,23 @@
 </template>
 
 <script>
+  import common from '../../../static/common';
   export default {
     data () {
       return {
-
+        userInfo:{},
+        defultAvatar:"../../../static/images/bj.jpg",
+        tips:"点击登录"
       }
     },
-    mounted: function () {
+    created: function () {
+      console.log("created:")
       this.tanchuang();
+    },
+    activated: function () {
+      console.log("activated:")
+      var _self = this;
+      _self.userInfo = common.getObjStorage("userInfo");
     },
     methods: {
       goback(){
@@ -111,6 +120,14 @@
       },
       toUrl: function (pagename) {
         this.$router.push({name: pagename})
+      },
+      toSet: function () {
+        var _self = this;
+        if( _self.userInfo._id != null ){
+          _self.toUrl('set');
+        }else{
+          _self.toUrl('login');
+        }
       },
       //		弹窗
       tanchuang(){
@@ -120,7 +137,17 @@
         $("#qx").click(function(){
           $(".pop").hide();
         });
-      }
+      },
+
+      modifyAvatar: function () {
+        var _self = this;
+        console.log("_self.userInfo:"+_self.userInfo._id)
+        if( _self.userInfo._id != null ){
+          console.log("修改头像。。")
+        }else{
+          _self.toUrl('login');
+        }
+      },
     }
   }
 </script>

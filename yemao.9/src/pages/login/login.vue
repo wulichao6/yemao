@@ -15,7 +15,7 @@
     <div class="login-shuru">
       <p class="tishi"></p>
       <div class="ls-shouji">
-        <input type="text"class="shouji"id="phone" placeholder="手机号">
+        <input v-model="phone" type="text" class="shouji" id="phone" placeholder="手机号">
         <span class="del">×</span>
       </div>
       <div class="ls-yanzheng">
@@ -48,15 +48,27 @@
         </div>
       </div>
     </div>
+
+    <toast v-model="showMark" :time="1000" type="text" width="5rem">{{showMsg}}</toast>
   </div>
 </template>
 
 <script>
+  import { Toast, } from 'vux'
+  import store from '@/vuex/store'
+  import common from '../../../static/common';
   export default {
+    components: {
+      Toast,
+    },
     data () {
       return {
+        phone:"",
+        showMark:false,
+        showMsg:"",
       }
     },
+    store,
     created: function () {
     },
     mounted:function(){
@@ -158,11 +170,49 @@
               return false;
             } else {
               $('.tishi').text("");
-               obj.toUrl('index');
+              obj.submit();
             }
           })
         })
-      }
+      },
+
+      /*************************************/
+      showToast(msg){
+        this.showMark = true;
+        this.showMsg = msg;
+      },
+      submit () {
+        var _self = this;
+        var params = {
+          interfaceId:'queryData',
+          coll:'users',
+          where:{
+            "phone":_self.phone
+          }
+        }
+
+        _self.$axios.post('/api/mongoApi',{
+          params:params
+        }).then((response)=>{
+          var data = response.data.data;
+          if( data ){
+            console.log("data:"+JSON.stringify(data))
+            if( data.length == 1 ){
+              common.setStorage("userInfo",data[0]);
+              this.$store.state.pageIndex = 0;
+              _self.toUrl('index');
+            }else if( data.length == 0 ){
+              _self.showToast("用户不存在！")
+            }else if( data.length > 1 ){
+              _self.showToast("帐户重复，请联系管理员！")
+            }
+          }else{
+            _self.showToast("用户不存在！")
+          }
+        })
+      },
+
+
     },
   }
 </script>
