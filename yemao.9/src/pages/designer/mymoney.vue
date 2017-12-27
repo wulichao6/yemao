@@ -2,7 +2,7 @@
   <div >
     <!--头部导航-->
     <div class="header">
-      <div class="header-left"@click="goback"><img src="../../../static/images/back.png" /></div>
+      <div class="header-left"@click="toUrl('designer')"><img src="../../../static/images/back.png" /></div>
       <span>我的钱包</span>
       <div class="header-right"@click="toUrl('tixian')">提现</div>
     </div>

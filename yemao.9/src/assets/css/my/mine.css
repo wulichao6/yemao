@@ -15,9 +15,12 @@
 	height: 0.4rem;
 	right: 0.4rem;
 	top: 0.6rem;
-	background: #4E4E4E;
+	/*background: #4E4E4E;*/
 }
-
+.mine-top .shezhi img{
+  width: 100%;
+  display: block;
+}
 .mine-top .tu-nicheng {
 	position: absolute;
 	width: 100%;
