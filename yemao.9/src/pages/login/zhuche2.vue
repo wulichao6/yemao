@@ -9,7 +9,7 @@
     <div class="login-shuru">
       <p class="tishi"></p>
       <div class="ls-shouji">
-        <input type="password"class="shouji mima" placeholder="密码"/>
+        <input type="password"class="shouji mima" placeholder="密码" v-model="param.password"/>
         <span class="del">×</span>
       </div>
       <div class="ls-shouji">
@@ -17,7 +17,7 @@
         <span class="del">×</span>
       </div>
     </div>
-    <div class="log-btn"><span>完成</span></div>
+    <div class="log-btn" @click="register()"><span>完成</span></div>
   </div>
 </template>
 
@@ -25,6 +25,9 @@
   export default {
     data () {
       return {
+        param:{
+            password:null
+        }
       }
     },
     mounted: function () {
@@ -104,7 +107,39 @@
 
           }
         })
-      }
+      },
+
+        register(){   
+            let _self = this;
+            let nickname = common.op_localStorage().get('nickname');
+            let mobile_phone = common.op_localStorage().get('mobile_phone');
+            let verifying_code = common.op_localStorage().get('verifying_code');
+            let data = {nickname,mobile_phone,verifying_code}
+            let params= {};
+            params.data = data;
+            params.data.password = _self.param.password;
+            
+            params.interfaceId = "insertData";
+            params.coll= "users";
+            console.log(params);
+
+            _self.$axios.post('/api/mongoApi',{
+                params:params
+            })
+            .then(
+                function(response){
+                    if(response.data){  
+                        console.log(response);
+                        console.log(response.data);
+                // 显示
+              console.log(this.$vux);
+
+                    }     
+                }
+            )     
+        }
+
+      
     }
   }
 </script>

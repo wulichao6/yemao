@@ -7,6 +7,7 @@ import vueTap from 'v-tap'
 import { Datetime, Group } from 'vux'
 import $ from '../utils/jquery-3.2.1.min';
 import axios from 'axios'
+import common from '../static/common.js'
 
 Vue.config.productionTip = false
 
@@ -20,6 +21,7 @@ Vue.component(Group.name, Group)
 // jquery
 window.jQuery = $
 window.$ = $
+window.common = common;
 
 // axios
 Vue.prototype.$axios = axios;
