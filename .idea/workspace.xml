@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="484209dd-951b-4b3c-9d6f-b10fae1f04c6" name="默认的" comment="nothing">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yemao.9/src/components/header/xheader2.vue" afterPath="$PROJECT_DIR$/yemao.9/src/components/header/xheader2.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yemao.9/src/pages/employer/employer.vue" afterPath="$PROJECT_DIR$/yemao.9/src/pages/employer/employer.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yemao.9/src/pages/employer/fabudingdan.vue" afterPath="$PROJECT_DIR$/yemao.9/src/pages/employer/fabudingdan.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yemao.9/src/pages/employer/order.vue" afterPath="$PROJECT_DIR$/yemao.9/src/pages/employer/order.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yemao.9/src/pages/employer/orderqiangdan.vue" afterPath="$PROJECT_DIR$/yemao.9/src/pages/employer/orderqiangdan.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yemao.9/src/pages/index/index.vue" afterPath="$PROJECT_DIR$/yemao.9/src/pages/index/index.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +20,23 @@
         <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/index/index.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="222">
-              <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="261" selection-end-column="8" />
+              <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#scroller#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#load-more#0;n#div#0;n#scroller#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#5466#5562#0" expanded="true" />
+                <marker date="1514370517767" expanded="true" signature="13792:13800" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="13792:13808" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="13792:13812" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="13830:14654" ph="..." />
+                <marker date="1514370517767" expanded="true" signature="13854:13923" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="13937:13982" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="14003:14107" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="14128:14162" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="14185:14219" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="14239:14273" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="14416:14646" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="14737:14869" ph="..." />
+                <marker date="1514370517767" expanded="true" signature="14790:14819" ph="{...}" />
+                <marker date="1514370517767" expanded="true" signature="14832:14861" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -52,6 +58,7 @@
             <state relative-caret-position="124">
               <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
               <folding>
+                <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="e#4570#4629#0" expanded="true" />
               </folding>
             </state>
@@ -282,15 +289,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\src\server" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\static" />
       <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\src\components\list" />
       <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\src\server" />
       <recent name="E:\yemao2\CAT\yemao.9\static" />
       <recent name="E:\yemao2\CAT\yemao.9\src\assets\css\my" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace-webstorm\CAT\yemao.9\src\server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -458,11 +465,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514272628416</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="123456">
+      <created>1514370451351</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1514370451352</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148349000" />
+    <option name="totallyTimeSpent" value="148373000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -478,12 +492,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20038168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29943502" sideWeight="0.5127227" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29943502" sideWeight="0.5152672" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.49491096" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.4923664" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29943502" sideWeight="0.48727736" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29943502" sideWeight="0.48473284" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -500,6 +514,7 @@
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29943502" sideWeight="0.49742457" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20038168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -526,7 +541,8 @@
     <MESSAGE value="首页接口调试" />
     <MESSAGE value="接口调试" />
     <MESSAGE value="nothing" />
-    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
+    <MESSAGE value="123456" />
+    <option name="LAST_COMMIT_MESSAGE" value="123456" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -711,7 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="122" column="8" lean-forward="false" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,9 +836,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1940">
           <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
-          <folding>
-            <element signature="e#1044#1071#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -857,11 +867,23 @@
     <entry file="file://$PROJECT_DIR$/yemao.9/src/pages/index/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
-          <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="261" selection-end-column="8" />
+          <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#scroller#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#load-more#0;n#div#0;n#scroller#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#5466#5562#0" expanded="true" />
+            <marker date="1514370517767" expanded="true" signature="13792:13800" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="13792:13808" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="13792:13812" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="13830:14654" ph="..." />
+            <marker date="1514370517767" expanded="true" signature="13854:13923" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="13937:13982" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="14003:14107" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="14128:14162" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="14185:14219" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="14239:14273" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="14416:14646" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="14737:14869" ph="..." />
+            <marker date="1514370517767" expanded="true" signature="14790:14819" ph="{...}" />
+            <marker date="1514370517767" expanded="true" signature="14832:14861" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -897,6 +919,7 @@
         <state relative-caret-position="124">
           <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
           <folding>
+            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="e#4570#4629#0" expanded="true" />
           </folding>
         </state>
